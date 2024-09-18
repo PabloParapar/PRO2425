@@ -1,0 +1,13 @@
+package ud1;
+
+/**
+ *
+ * @author lopparpab
+ */
+public class UD1 {
+
+    public static void main(String[] args) {
+        System.out.println("Hola mundo");
+    }
+    
+}
