@@ -1,4 +1,128 @@
 package UD1.src.ud1;
 
+import java.sql.SQLOutput;
+import java.util.Arrays;
+
 public class Boletin1 {
+    public static void main(String[] args){
+        System.out.println("Hola Mundo");
+
+        //1)
+
+        //2)
+
+        //3)
+
+        //4)
+        System.out.println("\n\tEjercicio 4\n");
+        char aMin = '\u0061';
+        char zMin = '\u007A';
+        System.out.println(aMin);
+        System.out.println(zMin);
+        System.out.println(zMin-aMin+1);
+
+        //5)
+        System.out.println("\n\tEjercicio 5\n");
+        int a = 5, b = 10, intermediario = 0;
+        System.out.println(a+" y "+b+" con "+intermediario);
+        intermediario = a;
+        a = b;
+        b = intermediario;
+        System.out.println(a+" y "+b+" con "+intermediario);
+
+        //vuelvo a probarlo para comprobar que funcione
+
+        intermediario = a;
+        a = b;
+        b = intermediario;
+        System.out.println(a+" y "+b+" con "+intermediario);
+
+        //6)
+        System.out.println("\n\tEjercicio 6 \n");
+        char eVariado;
+        eVariado = 'e';
+        System.out.println("1ª forma de escribir "+eVariado+" con Unicode");
+        eVariado = '\144';
+        eVariado = '\145';
+        System.out.println("2ª forma de escribir "+eVariado+" con sistema de codificación octal");
+        eVariado = '\u0064';
+        eVariado = '\u0065';
+        System.out.println("3ª forma de escribir "+eVariado+" con sistema de codificación hexadecimal");
+
+        //7)
+        int i1 = 10;
+        int i2 = 3;
+        double d1 = 12.5;
+        double d2 = 2.0;
+
+        System.out.println("|\ta) El resultado será "+ i1/i2 +", al no ser una variable real en coma flotante no incluye decimales");
+        System.out.println("|\tb) El resultado será "+ i1%i2 +", muestra como entero la parte sobrante de la operación anterior");
+        System.out.println("|\tc) El resultado será "+ d1/d2 +", al ser una variable double incluye la parte decimal sin perder información");
+        System.out.println("|\td) El resultado será "+ d1%d2 +", al ser una variable double incluye la parte decimal sin perder información");
+        System.out.println("|\te) El resultado será "+ d1/i2 +", al ser una variable double incluye la parte decimal, en este caso pierde información por ser un decimal periódico puro");
+        System.out.println("|\tf) El resultado será "+ d1%i2 +", al ser una variable double incluye la parte decimal con la info que se pierde en la anterior");
+
+        //8)
+        System.out.println("\n\tEjercicio 8 \n");
+        int q = 2;
+        int n = 10;
+        System.out.println(q = ++n*3);
+        System.out.println(q = n++*3);
+
+        System.out.println("a) Se asigna a q el valor de n incrementado en 1 y multiplicado después por 3");
+        System.out.println("b) Se asigna a q el valor de n multiplicado por 3 e incrementado después en 1");
+
+        //9)
+        System.out.println("\n\tEjercicio 9 \n");
+        //a) -6*7+2*3/4-8
+        double op1 = -6*7+ (double) (2 * 3) /4-8;
+        System.out.println("|\ta) -6*7+2*3/4-8");
+        System.out.println("|\t\t Primer paso -> Multiplicaciones y Divisiones de izquierda a derecha\r\t\t -6*7+2*3/4-8 = -42+1.5-8");
+        System.out.println("|\t\t Segundo paso -> Sumas y Restas de izquierda a a derecha\r\t\t -42+1.5-8 = -48.5");
+        System.out.println("a) Según Java "+op1);
+
+        /*b) ((3+2)%2-15)/2*5
+        Primer paso -> Operaciones dentro de paréntesis
+        ((3+2)%2-15)/2*5 -> (5%2-15)/2*5
+        Segundo paso -> Operaciones dentro de paréntesis, Primero módulo y después restas
+        (5%2-15)/2*5 -> -14/2*5
+        Tercer paso -> Multiplicaciones y divisiones de izquierda a derecha
+        -14/2*5 -> -35
+        */
+        System.out.println("b) Según Java "+ ((3+2)%2-15)/2*5);
+
+        /*c) 3 + 6 * 14 % 3
+        Primer paso -> Multiplicaciones y Módulo de izquierda a derecha
+        3+6*14%3 -> 3+84%3 -> 3+0 -> 3
+        */
+        System.out.println("c) Según Java "+ 3+6*14%3);
+
+        /*d) 8 + 7 * 3 + 4 * 6 / 2 % 4
+        Primer paso -> Multiplicaciones, Divisiones y Módulo
+        8+7*3+4*6/2%4 -> 8+21+24/2%4 -> 8+21+12%4 -> 8+21+0
+        Segundo Paso -> Sumas y restas de izquierda a derecha
+        8+21 -> 29
+         */
+        System.out.println("d) Según Java " + (8+7*3+4*6/2%4));
+
+        //Ejercicio 10
+
+        double x = 1, y = 4, z = 10;
+        final double PI = 3.1416;
+
+        /* a) 2 * x + 0.5 + y - 1 / 5 * z
+        1º -> 2 + 0.5 + y - 1 / 5 * z ->
+        2º -> 2 + 0.5 + y - 0.2 * z ->
+        3ª -> 2 + 0.5 + y - 2 ->
+        4ª -> 2.5 + y - 2 ->
+        5ª -> 6.5 - 2 ->
+        6ª -> 4.5
+        */
+        System.out.println(2 * x + 0.5 +y - (double) 1 / 5 * z);
+
+        /*
+        
+
+         */
+    }
 }
