@@ -120,9 +120,31 @@ public class Boletin1 {
         */
         System.out.println(2 * x + 0.5 +y - (double) 1 / 5 * z);
 
-        /*
-        
-
+        /* b) 4 / y + PI * x / z
+        1º -> 1 + PI * x / z
+        2º -> 1 + PI / z
+        3º -> 1 + 0.31416
+        4º -> 1.31416
          */
+        System.out.println(4 / y + PI * x / z);
+
+        /* c) y - 2 / z + 4 * y / 2
+        1º -> y - 0.2 + 16 / 2
+        2º -> y - 0.2 + 8
+        3º -> 3.8 + 8
+        4º -> 11.8
+         */
+        System.out.println(y - 2 / z + 4 * y / 2);
+
+        //EJERCICIO 11
+        System.out.println("\n\tEjercicio 11 \n");
+        int ej11 = 50;
+        //a)
+        System.out.println(ej11);
+        ej11 = ej11 << 3;
+        System.out.println(ej11);
+        //b)
+        System.out.println((byte)ej11);
+
     }
 }
