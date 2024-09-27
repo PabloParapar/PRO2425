@@ -144,7 +144,86 @@ public class Boletin1 {
         ej11 = ej11 << 3;
         System.out.println(ej11);
         //b)
-        System.out.println((byte)ej11);
+        byte ej11b;
+        ej11b = (byte) ej11;
+        System.out.println(ej11b);
+        /*el valor de la variable es 400, es mayor que el rango disponible en el primitivo byte,
+        que va de -128 a 127, el complemento a 2 de 400 es 144, al "llenar" los bits hasta +127
+        salta un bit que se "pierde" y cubre los 16 sobrante llegando al valor de -112
+        -128 + 16 -> -112
+        */
+
+        //EJERCICIO 12
+        System.out.println("\n\tEjercicio 12 \n");
+        int miInt = 9;
+        double miDoble = miInt;
+
+        System.out.println(miDoble);
+        System.out.println(miInt);
+
+        /*
+        El código funciona correctamente, muestra el valor de miDoble y el valor de miInt
+        El valor de miDoble viene dado por miInt, muestra los decimales y el valor entero
+        donde no se ve pérdida de información.
+         */
+
+        //EJERCICIO 13
+        System.out.println("\n\tEjercicio 13 \n");
+        miDoble = 9.78d;
+        miInt = (int)miDoble;
+        System.out.println(miDoble);
+        System.out.println(miInt);
+/*
+        Para que funcione correctamente hay que hacerle casting a la indentificación
+        de miInt con el valor de miDoble, donde perderá la información decimal
+*/
+        //EJERCICIO 14
+        System.out.println("\n\tEjercicio 14 \n");
+        int segundos = 86455;
+        int dia = segundos/(24*60*60);
+        int hora = (segundos%(24*60*60))/(60*60);
+        int minuto = (segundos%(60*60))/60;
+        int segundo = segundos%60;
+        System.out.println(segundos + " segundos corresponden a: " + dia + " dias, " + hora + " horas, " + minuto + " minutos y " + segundo + " segundos.");
+
+        //EJERCICIO 15
+        System.out.println("\n\tEjercicio 15 \n");
+        int ej15 = 4321;
+        int ej15millares = ej15/1000;
+        int ej15centenas = (ej15 - ej15millares*1000)/100;
+        int ej15decenas = (ej15 - ej15millares*1000 - ej15centenas*100)/10;
+        int ej15unidades = ej15 - ej15millares*1000 - ej15centenas*100 - ej15decenas*10;
+        System.out.println("El número " + ej15 + " son: \na)\t"+ ej15millares +"\tmillares\nb)\t" + ej15centenas + "\tcentenas\nc)\t" + ej15decenas + "\tdecenas\nd)\t" + ej15unidades + "\tunidades");
+
+        //EJERCICIO 16
+        System.out.println("\n\tEjercicio 16 \n");
+        int contador = 8;
+        contador = ++contador - (contador/10)*10;
+        System.out.println(contador);
+        contador = ++contador - (contador/10)*10;
+        System.out.println(contador);
+        contador = ++contador - (contador/10)*10;
+        System.out.println(contador);
+        contador = ++contador - (contador/10)*10;
+        System.out.println(contador);
+
+        //EJERCICIO 17
+        System.out.println("\n\tEjercicio 17 \n");
+        int ej17n = 10, ej17p = 4, ej17q = 2;
+        double ej17z;
+        //a) ej17z = ej17n / ej17p;
+        ej17z = ej17n / ej17p;
+        System.out.println("1º\t"+ ej17z + "->\tse le asigna a z el valor de la division de los enteros n y p,\n" +
+                "\t\t\tal ser enteros guardará la división sin la parte decimal aunque después z muestre su valor decimal");
+        ej17z = (double) ej17n / ej17p;
+        System.out.println("2º\t"+ ej17z + "->\tse le asigna a z el valor de la division de los enteros n y p,\n" +
+                "\t\t\tal hacer casting en el numerador para que sea double guarda la parte decimal de la operación");
+        ej17z = (double) (ej17n / ej17p);
+        System.out.println("3º\t"+ ej17z + "->\tse le asigna a z el valor de la division de los enteros n y p,\n" +
+                "\t\t\tal haber una operación con paréntesis se hace antes de aplicar el casting");
+        //d) ej17z += ej17n;
+        //e) ej17q *= ej17z;
+        //f) ej17z += 2;
 
     }
 }
