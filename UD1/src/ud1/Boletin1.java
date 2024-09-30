@@ -1,5 +1,6 @@
 package UD1.src.ud1;
 
+import java.security.spec.RSAOtherPrimeInfo;
 import java.sql.SQLOutput;
 import java.util.Arrays;
 
@@ -207,8 +208,9 @@ public class Boletin1 {
         contador = ++contador - (contador/10)*10;
         System.out.println(contador);
 
+        //Revisalo, igual es más fácil con el módulo
+
         //EJERCICIO 17
-        System.out.println("\n\tEjercicio 17 \n");
         int ej17n = 10, ej17p = 4, ej17q = 2;
         double ej17z;
         //a) ej17z = ej17n / ej17p;
@@ -222,8 +224,70 @@ public class Boletin1 {
         System.out.println("3º\t"+ ej17z + "->\tse le asigna a z el valor de la division de los enteros n y p,\n" +
                 "\t\t\tal haber una operación con paréntesis se hace antes de aplicar el casting");
         //d) ej17z += ej17n;
+        ej17z += ej17n;
+        System.out.println("4º\t"+ ej17z + "->\tse le suma y asigna a z el valor de la variable n");
         //e) ej17q *= ej17z;
+        ej17q *= ej17z;
+        System.out.println("5º\t"+ ej17q + "->\tse le multiplica y asigna a q el valor de la variable z");
         //f) ej17z += 2;
+        ej17z += 2;
+        System.out.println("6º\t"+ ej17z + "->\tse le suma y asigna a z el valor 2");
+
+
+
+        //EJERCICIO 18
+        System.out.println("\n\tEjercicio 18 \n");
+        //EJERCICIO 19
+        System.out.println("\n\tEjercicio 19 \n");
+        //EJERCICIO 20
+        System.out.println("\n\tEjercicio 20 \n");
+        //Crea un proyecto que calcule la media real de tres números enteros
+
+        int ej20a = 1, ej20b = 2, ej20c = 3;
+        System.out.println("La media real entre " + ej20a + ", "+ej20b+" y "+ej20c +" es "+(double)(ej20a+ej20b+ej20c)/3);
+
+        //EJERCICIO 21
+        double ej21a = 1.1, ej21b = 2.2, ej21c = 3.3;
+        System.out.println("La media entre " + ej21a + ", "+ej21b+" y "+ej21c +" es "+(ej21a+ej21b+ej21c)/3);
+        System.out.println("\n\tEjercicio 21 \n");
+
+        //EJERCICIO 22
+        System.out.println("\n\tEjercicio 22 \n");
+        double lado = 0.5;
+        double area = lado*lado;
+        double perimetro = 4*lado;
+        System.out.println("lado = "+lado+" cm\narea = "+area+"cm^2\nperimetro = "+perimetro+" cm");
+        //EJERCICIO 23
+        System.out.println("\n\tEjercicio 23 \n");
+        double ingreso = 5000;
+        double intereses = 0.06;
+        double dineroAnual = ingreso+(ingreso*intereses);
+        System.out.println("tras un año tendremos "+ dineroAnual);
+
+        //EJERCICIO 24
+        System.out.println("\n\tEjercicio 24 \n");
+        int casillasLado = 300000;
+        long totalCasillas = (long) casillasLado *casillasLado;
+        System.out.println("De un tablero de " +casillasLado+ " casillas de lado tendremos un total de "+totalCasillas+ " casillas");
+
+        //EJERCICIO 25
+        System.out.println("\n\tEjercicio 25 \n");
+        int m25 = 1, n25 = 1, p25 = 1, q25 = 1, x25 = 1, y25 = 1, a25 = 2, b25 = 1;
+        //a)
+        double ej25a = (m25/n25)*(p25+q25);
+        System.out.println(ej25a);
+        //b)
+        double ej25b = m25/n25+1;
+        System.out.println(ej25b);
+        //c)
+        double ej25c = (m25+1)/n25;
+        System.out.println(ej25c);
+        //d)
+        double ej25d = m25 + n25;
+        System.out.println(ej25d);
+        //e)
+        double ej25e = ((x25+y25)*(x25+y25))*(a25-b25);
+        System.out.println(ej25e);
 
     }
 }
