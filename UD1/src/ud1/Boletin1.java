@@ -289,5 +289,69 @@ public class Boletin1 {
         double ej25e = ((x25+y25)*(x25+y25))*(a25-b25);
         System.out.println(ej25e);
 
+        //EJERCICIO 26
+        System.out.println("\n\tEjercicio 26 \n");
+        double pie, pulgada, yarda, centimetro, metro;
+        pie = 1;
+        pulgada = pie/12;
+        yarda = pie*3;
+        centimetro = pulgada/2.54;
+        metro = 100*centimetro;
+        System.out.println(pie + " pies equivalen a:\n\t-\t"+pulgada+" pulgadas.\n\t-\t"+yarda+" yardas.\n\t-\t"+centimetro+" centímetros.\n\t-\t"+metro+" metros.");
+        pie = 25;
+        pulgada = pie/12;
+        yarda = pie*3;
+        centimetro = pulgada/2.54;
+        metro = 100*centimetro;
+        System.out.println(pie + " pies equivalen a:\n\t-\t"+pulgada+" pulgadas.\n\t-\t"+yarda+" yardas.\n\t-\t"+centimetro+" centímetros.\n\t-\t"+metro+" metros.");
+        pie = 500;
+        pulgada = pie/12;
+        yarda = pie*3;
+        centimetro = pulgada/2.54;
+        metro = 100*centimetro;
+        System.out.println(pie + " pies equivalen a:\n\t-\t"+pulgada+" pulgadas.\n\t-\t"+yarda+" yardas.\n\t-\t"+centimetro+" centímetros.\n\t-\t"+metro+" metros.");
+        //EJERCICIO 27
+        System.out.println("\n\tEjercicio 27 \n");
+        //final double PI = 3.1416; lo dejo comentado porque ya está la constante PI en el proyecto, pero sería declarado e identificado de esta manera
+        double radian, grados;
+        radian = 1;
+        grados = radian*PI/180;
+        System.out.println(radian+" radianes son "+grados+"º");
+        radian = 180;
+        grados = radian*PI/180;
+        System.out.println(radian+" radianes son "+grados+"º");
+        //EJERCICIO 28
+        System.out.println("\n\tEjercicio 28 \n");
+        int a28 = 2, b28 = 10, c28 = 2, resultado;
+
+        resultado = -b28 + (b28*b28 - 4*a28*c28)/(2*a28) + b28/a28;
+        System.out.println("El resultado es "+resultado);
+        //EJERCICIO 29
+        System.out.println("\n\tEjercicio 29 \n");
+        final double G = 6.673e-8;
+        double masa1, masa2, distancia, fuerzaG;
+
+        masa1 = 400000; //en gramos
+        masa2 = 8000; //en gramos
+        distancia = 25; //en centimetros
+        fuerzaG = G*masa1*masa2/(distancia*distancia); // en dinas
+        System.out.println("Entre dos objetos de "+masa1+" y "+masa2+" gramos,\na una distancia de "+distancia+" centímetros,\nexistirá una fuerza de "+fuerzaG+" dinas");
+        //EJERCICIO 30
+        System.out.println("\n\tEjercicio 30 \n");
+        final double C = 2.997925e10; //en metros/segundo
+        double masa30 = 50, energia; //en gramos / en ergios
+        //según la fórmula del enunciado
+        energia = masa30*masa30*masa30*C;
+        System.out.println("Un objeto de "+masa30+" gramos se convierte en "+energia+" ergios");
+        //EJERCICIO 31
+        System.out.println("\n\tEjercicio 31 \n");
+        int inversion = 10000; //en €
+        inversion += inversion/10; //incremento del 10%
+        System.out.println("1º año\t=\t"+inversion+"€");
+        inversion -= 500; //pérdida de 500
+        System.out.println("2º año\t=\t"+inversion+"€");
+        inversion += inversion*12/100; //incremento del 12%
+        System.out.println("3º año\t=\t"+inversion+"€");
+
     }
 }
