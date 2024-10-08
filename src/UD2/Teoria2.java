@@ -1,4 +1,4 @@
-package UD2;
+package src.UD2;
 
 public class Teoria2 {
     public static void main(String[] args) {

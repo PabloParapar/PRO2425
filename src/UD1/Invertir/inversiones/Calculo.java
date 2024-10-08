@@ -1,4 +1,4 @@
-package UD1.Invertir.inversiones;
+package src.UD1.Invertir.inversiones;
 
 public class Calculo {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package UD1.Figuras.triangulos;
+package src.UD1.Figuras.triangulos;
 
 public class Operaciones {
     public static void main(String[] args) {

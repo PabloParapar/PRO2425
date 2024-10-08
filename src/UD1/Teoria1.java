@@ -1,6 +1,4 @@
-package UD1.src.ud1;
-
-import java.util.Arrays;
+package src.UD1;
 
 public class Teoria1 {
     public static void main(String[] args) {

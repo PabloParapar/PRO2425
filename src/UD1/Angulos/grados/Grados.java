@@ -1,4 +1,4 @@
-package UD1.Angulos.grados;
+package src.UD1.Angulos.grados;
 
 public class Grados {
     public static void main(String[] args) {

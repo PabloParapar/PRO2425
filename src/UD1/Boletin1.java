@@ -1,8 +1,4 @@
-package UD1.src.ud1;
-
-import java.security.spec.RSAOtherPrimeInfo;
-import java.sql.SQLOutput;
-import java.util.Arrays;
+package src.UD1;
 
 public class Boletin1 {
     public static void main(String[] args){
@@ -451,15 +447,15 @@ public class Boletin1 {
         System.out.println("Sueldo líquido = "+sueldoLiquido);
         //EJERCICIO 40
         System.out.println("\n\tBoletín 1 | Ejercicio 40\n");
-        System.out.println("\t|\t Resuelto en UD1.Figuras.triangulos.Operaciones");
+        System.out.println("\t|\t Resuelto en src.UD1.Figuras.triangulos.Operaciones");
         //EJERCICIO 41
         System.out.println("\n\tBoletín 1 | Ejercicio 41\n");
-        System.out.println("\t|\t Resuelto en UD1.Invertir.inversiones.Calculo");
+        System.out.println("\t|\t Resuelto en src.UD1.Invertir.inversiones.Calculo");
         //EJERCICIO 42
         System.out.println("\n\tBoletín 1 | Ejercicio 42\n");
-        System.out.println("\t|\t Resuelto en UD1.Angulos.grados.Grados");
+        System.out.println("\t|\t Resuelto en src.UD1.Angulos.grados.Grados");
         //EJERCICIO 43
         System.out.println("\n\tBoletín 1 | Ejercicio 43\n");
-        System.out.println("\t|\t Resuelto en UD1.Circulos.circulo.Calculos");
+        System.out.println("\t|\t Resuelto en src.UD1.Circulos.circulo.Calculos");
     }
 }
