@@ -127,13 +127,21 @@ public class Boletin21 {
         turnoA = !turnoA;
 
         //EJERCICIO 4
-        System.out.println("\n\tBoletin 2 1 | Ejercicio 3\n");
+        System.out.println("\n\tBoletin 2 1 | Ejercicio 4\n");
+
+        int lecturaFila = 4, lecturaColumna = 0;
+
+        //boolean lecturaMatriz = lecturaFila > 1 && lecturaFila < 6 && lecturaColumna > 1 && lecturaColumna < 6;
+        System.out.println("¿El elemento está dentro de la matriz? "+(lecturaFila > 1 && lecturaFila < 6 && lecturaColumna > 1 && lecturaColumna < 6));
+        lecturaFila =3; lecturaColumna = 4;
+        System.out.println("¿El elemento está dentro de la matriz? "+(lecturaFila > 1 && lecturaFila < 6 && lecturaColumna > 1 && lecturaColumna < 6));
+
 
         //EJERCICIO 5
-        System.out.println("\n\tBoletin 2 1 | Ejercicio 3\n");
+        System.out.println("\n\tBoletin 2 1 | Ejercicio 5\n");
 
         //EJERCICIO 6
-        System.out.println("\n\tBoletin 2 1 | Ejercicio 3\n");
+        System.out.println("\n\tBoletin 2 1 | Ejercicio 6\n");
 
     }
 }
