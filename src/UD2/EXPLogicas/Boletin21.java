@@ -140,8 +140,37 @@ public class Boletin21 {
         //EJERCICIO 5
         System.out.println("\n\tBoletin 2 1 | Ejercicio 5\n");
 
+        int cantidadMenu = 10, entrada = 5;
+
+        boolean numeroValido = entrada >= 1 && entrada <= cantidadMenu;
+        System.out.println("Inserte su pedido:\n"+entrada+"\nSu pedido es "+numeroValido);
+
         //EJERCICIO 6
         System.out.println("\n\tBoletin 2 1 | Ejercicio 6\n");
+        //a)
+        int notaUnidad1 = 3, notaUnidad2 = 5, notaUnidad3 = 5;
+        double notaMedia = (notaUnidad1+notaUnidad2+notaUnidad3)/3;
+        boolean alumnoAprueba = notaMedia >= 5;
+        System.out.println("El alumno ha aprobado? "+alumnoAprueba);
+        //b)
+        int puntosExtra = 5;
+        alumnoAprueba = notaMedia+puntosExtra >= 5;
+        System.out.println("El alumno ha aprobado? "+alumnoAprueba);
+        //c)
+        alumnoAprueba = notaMedia+puntosExtra >= 5 && notaMedia >= 4;
+        System.out.println("El alumno ha aprobado? "+alumnoAprueba);
+        //d) REVISA AQUI QUE TE LIASTE CON EL alumnoAprueba
+        int trabajoUnidad1 = 5, trabajoUnidad2 = 7, trabajoUnidad3 = 6;
+        double notaMediaTrabajos = (trabajoUnidad1+trabajoUnidad2+trabajoUnidad3)/3;
+        notaMedia = (notaUnidad1+notaUnidad2+notaUnidad3+notaMediaTrabajos)/4;
+        alumnoAprueba = notaMedia >= 5 && notaMedia >= 4;
+        System.out.println("El alumno ha aprobado? "+alumnoAprueba);
+        //e)
+        notaMedia = (notaUnidad1+notaUnidad2+notaUnidad3)/3*0.8+notaMediaTrabajos*0.2;
+        alumnoAprueba = notaMedia >= 5 && notaMedia >= 4;
+        System.out.println("El alumno ha aprobado? "+alumnoAprueba);
+        //f)
+        alumnoAprueba = notaMedia >= 5 && notaMedia >= 4;
 
     }
 }
