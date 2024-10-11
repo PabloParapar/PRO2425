@@ -153,24 +153,23 @@ public class Boletin21 {
         boolean alumnoAprueba = notaMedia >= 5;
         System.out.println("El alumno ha aprobado? "+alumnoAprueba);
         //b)
-        int puntosExtra = 5;
+        int puntosExtra = 3;
         alumnoAprueba = notaMedia+puntosExtra >= 5;
         System.out.println("El alumno ha aprobado? "+alumnoAprueba);
         //c)
         alumnoAprueba = notaMedia+puntosExtra >= 5 && notaMedia >= 4;
         System.out.println("El alumno ha aprobado? "+alumnoAprueba);
-        //d) REVISA AQUI QUE TE LIASTE CON EL alumnoAprueba
+        //d)
         int trabajoUnidad1 = 5, trabajoUnidad2 = 7, trabajoUnidad3 = 6;
-        double notaMediaTrabajos = (trabajoUnidad1+trabajoUnidad2+trabajoUnidad3)/3;
-        notaMedia = (notaUnidad1+notaUnidad2+notaUnidad3+notaMediaTrabajos)/4;
-        alumnoAprueba = notaMedia >= 5 && notaMedia >= 4;
+        double notaMediaTrabajos = (trabajoUnidad1+trabajoUnidad2+trabajoUnidad3)/3, notaMediaTotal = (notaUnidad1+notaUnidad2+notaUnidad3+notaMediaTrabajos)/4;
+        alumnoAprueba = notaMediaTotal >= 5 && notaMedia >= 4;
         System.out.println("El alumno ha aprobado? "+alumnoAprueba);
         //e)
-        notaMedia = (notaUnidad1+notaUnidad2+notaUnidad3)/3*0.8+notaMediaTrabajos*0.2;
-        alumnoAprueba = notaMedia >= 5 && notaMedia >= 4;
+        notaMediaTotal = notaMedia*0.8+notaMediaTrabajos*0.2;
+        alumnoAprueba = notaMediaTotal >= 5 && notaMedia >= 4;
         System.out.println("El alumno ha aprobado? "+alumnoAprueba);
         //f)
-        alumnoAprueba = notaMedia >= 5 && notaMedia >= 4;
-
+        alumnoAprueba = notaMediaTotal >= 5 && notaMedia >= 4 && notaMediaTrabajos <= 4;
+        System.out.println("El alumno ha aprobado? "+alumnoAprueba);
     }
 }

@@ -80,7 +80,7 @@ public class Teoria2 {
         //Jueves, 10 de Octubre de 2024
 
         edad = 2;
-        //Código sin anidar
+        //Código sin anidar. Es poco eficiente si para la última condición tiene que comprobar todas las anteriores
         System.out.println("\nEsta persona tiene " + edad + " años");
         if (edad <= 3) {
             System.out.println("Esta persona es un bebé");
@@ -101,27 +101,8 @@ public class Teoria2 {
             System.out.println("Esta persona es anciana");
         }
 
-        /*
-        if (edad <= 17) {
-            if (edad < 3) {
-                System.out.println("bebé");
-            } else {
-                if (edad >= 3 && edad <= 11) {
-                    System.out.println("primaria");
-                }
-            }
-        } else {
-            if () {
-
-            } else {
-
-            }
-
-        }*/
-
-
         edad = 52;
-        //Código anidado
+        //Código anidado. Poco Eficiente si para llegar a la última condición debe comprobar todas las anteriores
         System.out.println("\nEsta persona tiene " + edad + " años");
 
         if (edad <= 3) {
@@ -145,6 +126,31 @@ public class Teoria2 {
                         }
                     }
                 }
+            }
+        }
+        /*
+        Código mejor anidado. Victor nos recomienda esta versión, al segmentar en dos partes
+        nos permite ahorrar pasos a la hora de comprobar las condiciones.
+        Si la variable valiera 80 no necesitaría comprobar todas las condiciones como ocurría en las anteriores.
+        */
+        edad = 70;
+        if (edad <= 17) {
+            if (edad < 3) {
+                System.out.println("bebé");
+            } else if (edad <= 11) {
+                System.out.println("primaria");
+            } else {
+                System.out.println("secundaria");
+            }
+        } else {
+            if (edad <= 66) {
+                if (edad <= 35) {
+                    System.out.println("joven");
+                } else {
+                    System.out.println("adulto");
+                }
+            } else {
+                System.out.println("anciano");
             }
         }
     }
