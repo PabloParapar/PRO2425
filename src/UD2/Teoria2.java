@@ -153,6 +153,86 @@ public class Teoria2 {
                 System.out.println("anciano");
             }
         }
+
+        //MIÉRCOLES 16/10/2024
+
+        //Version if sin anidar
+        System.out.println("\nDia con if sin anidar");
+        int dia = 1;
+        if(dia == 1) {
+            System.out.println("Lunes");
+        }
+        if(dia == 2){
+            System.out.println("Martes");
+        }
+        if(dia == 3){
+            System.out.println("Miércoles");
+        }
+        if(dia == 4){
+            System.out.println("Jueves");
+        }
+        if(dia == 5){
+            System.out.println("Viernes");
+        }
+        if(dia > 5){
+            System.out.println("Fin de Semana");
+        }
+        //Version if else Anidada
+        System.out.println("\nDia con if else anidado");
+
+        if(dia <= 5){
+            if(dia <= 3){
+                if(dia <=2){
+                    if (dia <=1){
+                        System.out.println("Lunes");
+                    } else {
+                        System.out.println("Martes");
+                    }
+                } else {
+                    System.out.println("Miércoles");
+                }
+            } else if(dia < 5){
+                System.out.println("Jueves");
+            }else {
+                System.out.println("Viernes");
+            }
+        } else {
+            System.out.println("Fin de Semana");
+        }
+
+        //Version Switch
+        System.out.println("\nDia con Switch case");
+        switch (dia){
+            case 1:
+                System.out.println("Lunes");
+                break;
+            case 2:
+                System.out.println("Martes");
+                break;
+            case 3:
+                System.out.println("Miércoles");
+                break;
+            case 4:
+                System.out.println("Jueves");
+                break;
+            case 5:
+                System.out.println("Viernes");
+                break;
+            default:
+                System.out.println("Fin de Semana");
+        }
+
+        switch (dia){
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+                System.out.println("Dia Laborable");
+                break;
+            default:
+                System.out.println("Fin de Semana");
+        }
     }
 }
 

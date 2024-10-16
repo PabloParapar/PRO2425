@@ -176,10 +176,37 @@ public class Boletin22 {
         }
 
         System.out.println(enteroN+" se redondea a "+redondeoN);
+
         //EJERCICIO 8
         System.out.println("\n\tBoletin 2 2 | Ejercicio 8\n");
+
+        int mes = 3;
+        switch (mes){
+            case 2: //Febrero
+                System.out.println("28 días");
+                break;
+            case 1: //Enero
+            case 3: //Marzo
+            case 5: //Mayo
+            case 7: //Julio
+            case 8: //Agosto
+            case 10: //Octubre
+            case 12: //Diciembre
+                System.out.println("31 días");
+                break;
+            case 4: //Abril
+            case 6: //Junio
+            case 9: //Septiembre
+            case 11: //Noviembre
+                System.out.println("30 días");
+                break;
+        }
+
         //EJERCICIO 9
         System.out.println("\n\tBoletin 2 2 | Ejercicio 9\n");
+
+        
+
         //EJERCICIO 10
         System.out.println("\n\tBoletin 2 2 | Ejercicio 10\n");
         //EJERCICIO 11
