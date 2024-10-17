@@ -205,14 +205,65 @@ public class Boletin22 {
         //EJERCICIO 9
         System.out.println("\n\tBoletin 2 2 | Ejercicio 9\n");
 
-        
+        int anho = 1929;
+        int a9 = anho%19;
+        int b9 = anho%4;
+        int c9 = anho%7;
+        int d9 = (19*a9+24)%30;
+        int e9 = (2*b9+4*c9+6*d9+5)%7;
+        int f9 = 22+d9+e9;
+
+        if(f9 <= 31){
+            System.out.println(f9+" de Marzo");
+        } else {
+            System.out.println(f9-31+" de Abril");
+        }
 
         //EJERCICIO 10
         System.out.println("\n\tBoletin 2 2 | Ejercicio 10\n");
+
+        int numeroBisiesto = 1800;
+        if(numeroBisiesto%4 == 0){
+            if(numeroBisiesto%100 == 0){
+                if(numeroBisiesto%400 == 0){
+                    System.out.println(numeroBisiesto+" es bisiesto");
+                } else {
+                    System.out.println(numeroBisiesto+" no es bisiesto;");
+                }
+            } else {
+                System.out.println(numeroBisiesto+" es bisiesto");
+            }
+        } else {
+            System.out.println(numeroBisiesto+" no es bisiesto");
+        }
+
+
         //EJERCICIO 11
         System.out.println("\n\tBoletin 2 2 | Ejercicio 11\n");
+
+        int a11, b11, c11;
+        a11 = 5;
+        b11 = 4;
+        c11 = 3;
+
+        if(a11 > b11){
+            if(a11 > c11){
+                System.out.println(a11+" es el mayor");
+            } else {
+                System.out.println(c11+" es el mayor");
+            }
+        } else if(b11 > c11) {
+            System.out.println(b11+" es el mayor");
+        } else{
+            System.out.println(c11+" es el mayor");
+        }
+
         //EJERCICIO 12
         System.out.println("\n\tBoletin 2 2 | Ejercicio 12\n");
+
+        
+
+        /*
         //EJERCICIO 13
         System.out.println("\n\tBoletin 2 2 | Ejercicio 13\n");
         //EJERCICIO 14
@@ -227,6 +278,6 @@ public class Boletin22 {
         System.out.println("\n\tBoletin 2 2 | Ejercicio 18\n");
         //EJERCICIO 19
         System.out.println("\n\tBoletin 2 2 | Ejercicio 19\n");
-
+*/
     }
 }
