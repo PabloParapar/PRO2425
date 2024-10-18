@@ -1,5 +1,5 @@
 package src.UD2.EXPLogicas;
-
+import java.math.*;
 public class Boletin22 {
     public static void main(String[] args) {
         //EJERCICIO 1
@@ -261,15 +261,84 @@ public class Boletin22 {
         //EJERCICIO 12
         System.out.println("\n\tBoletin 2 2 | Ejercicio 12\n");
 
-        
+        double factura, kilometraje;
+        kilometraje = 2000;
+        if(kilometraje >= 300){
+            if(kilometraje <= 1000){
+                factura = 30 + (kilometraje-300)*0.2;
+            } else {
+                factura = 30 + 700*0.2 + (kilometraje-1000)*0.15;
+            }
+        } else {
+            factura = 30;
+        }
 
-        /*
+        System.out.println("Kilometraje =\t"+kilometraje+" km\nfactura =\t\t"+factura+" €");
+
         //EJERCICIO 13
         System.out.println("\n\tBoletin 2 2 | Ejercicio 13\n");
+
+        //Con error [14681,15681] + [70001,79999] + [88888,111111]
+        int numeroSerie= 2000;
+        if(numeroSerie <= 111111){
+            if(numeroSerie >= 88888){
+                System.out.println(numeroSerie+" es defectuoso");
+            } else if(numeroSerie > 79999) {
+                System.out.println(numeroSerie+" no es defectuoso");
+            } else if(numeroSerie > 70000){
+                System.out.println(numeroSerie+" es defectuoso");
+            } else if(numeroSerie > 15681){
+                System.out.println(numeroSerie+" no es defectuoso");
+            } else if(numeroSerie > 14680){
+                System.out.println(numeroSerie+" es defectuoso");
+            } else {
+                System.out.println(numeroSerie+" no es defectuoso");
+            }
+        } else {
+            System.out.println(numeroSerie+" no es defectuoso");
+        }
+
         //EJERCICIO 14
         System.out.println("\n\tBoletin 2 2 | Ejercicio 14\n");
+
+        int a14=100, b14=10, c14=60, d14=80;
+        double notaMedia= ((double) (a14+b14+c14+d14))/4;
+        if(notaMedia < 90){
+            if(notaMedia >= 70){
+                if(notaMedia >= 80) {
+                    System.out.println(notaMedia+" es B");
+                } else {
+                    System.out.println(notaMedia+" es C");
+                }
+            } else if(notaMedia >= 60) {
+                System.out.println(notaMedia+" es D");
+            } else {
+                System.out.println(notaMedia+" es E");
+            }
+        } else {
+            System.out.println(notaMedia+" es A");
+        }
+
         //EJERCICIO 15
         System.out.println("\n\tBoletin 2 2 | Ejercicio 15\n");
+
+        double a15, b15, c15, discriminante, parteReal, parteImaginaria;
+        a15 = 1;
+        b15 = 10;
+        c15 = 15;
+        parteReal = -1*b15/(2*a15);
+        discriminante = b15*b15-4*a15*c15;
+        parteImaginaria = Math.sqrt(discriminante);
+        System.out.println(parteReal + ", "+discriminante+", "+parteImaginaria);
+
+        if(a15 == 0){
+            System.out.println("Una Solución:\n\tx1 = "+(-1*c15/b15));
+        } else {
+
+        }
+        //PENDIENTE DE TERMINAR
+
+        /*
         //EJERCICIO 16
         System.out.println("\n\tBoletin 2 2 | Ejercicio 16\n");
         //EJERCICIO 17
