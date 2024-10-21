@@ -1,65 +1,47 @@
 package src.UD2.EXPLogicas;
 
 import java.math.*;
+import java.util.Scanner;
 
 public class Boletin22 {
     public static void main(String[] args) {
         //EJERCICIO 1
         System.out.println("\n\tBoletin 2 2 | Ejercicio 1\n");
-
-        int nota = 2;
+        System.out.println("Introduzca la nota del alumno: ");
+        Scanner ejercicio1 = new Scanner(System.in);
+        int nota = ejercicio1.nextInt();
 
         if (nota <= 10 && nota >= 0) {
             System.out.println("La nota " + nota + " es correcta");
         } else {
             System.out.println("La nota " + nota + " es incorrecta");
         }
-
-        nota = -5;
-        if (nota <= 10 && nota >= 0) {
-            System.out.println("La nota " + nota + " es correcta");
-        } else {
-            System.out.println("La nota " + nota + " es incorrecta");
-        }
-
-        nota = 12;
-        if (nota <= 10 && nota >= 0) {
-            System.out.println("La nota " + nota + " es correcta");
-        } else {
-            System.out.println("La nota " + nota + " es incorrecta");
-        }
+        ejercicio1.close();
 
         //EJERCICIO 2
         System.out.println("\n\tBoletin 2 2 | Ejercicio 2\n");
+        System.out.println("Introduzca la nota del alumno: ");
+        Scanner ejercicio2 = new Scanner(System.in);
+        int nota2 = ejercicio2.nextInt();
 
-        nota = 6;
-        if (nota <= 10 && nota >= 0) {
-            System.out.println("La nota " + nota + " es correcta");
-            if (nota >= 5) {
+        if (nota2 <= 10 && nota2 >= 0) {
+            System.out.println("La nota " + nota2 + " es correcta");
+            if (nota2 >= 5) {
                 System.out.println("Usted está aprobado");
             } else {
                 System.out.println("Usted está suspenso");
             }
         } else {
-            System.out.println("La nota " + nota + " es incorrecta");
+            System.out.println("La nota " + nota2 + " es incorrecta");
         }
-        nota = 3;
-        if (nota <= 10 && nota >= 0) {
-            System.out.println("La nota " + nota + " es correcta");
-            if (nota >= 5) {
-                System.out.println("Usted está aprobado");
-            } else {
-                System.out.println("Usted está suspenso");
-            }
-        } else {
-            System.out.println("La nota " + nota + " es incorrecta");
-        }
+        ejercicio2.close();
 
         //EJERCICIO 3
         System.out.println("\n\tBoletin 2 2 | Ejercicio 3\n");
+        System.out.println("Introduzca un número entero: ");
+        Scanner ejercicio3 = new Scanner(System.in);
+        int numeroEntero = ejercicio3.nextInt();
 
-        int numeroEntero = 1;
-
         if (numeroEntero != 0) {
             if (numeroEntero % 2 == 0) {
                 System.out.println("El número " + numeroEntero + " es par");
@@ -68,27 +50,7 @@ public class Boletin22 {
             }
         } else {
             System.out.println("Su número es cero");
-        }
-        numeroEntero = 1254;
-        if (numeroEntero != 0) {
-            if (numeroEntero % 2 == 0) {
-                System.out.println("El número " + numeroEntero + " es par");
-            } else {
-                System.out.println("El número " + numeroEntero + " es impar");
-            }
-        } else {
-            System.out.println("Su número es cero");
-        }
-        numeroEntero = 0;
-        if (numeroEntero != 0) {
-            if (numeroEntero % 2 == 0) {
-                System.out.println("El número " + numeroEntero + " es par");
-            } else {
-                System.out.println("El número " + numeroEntero + " es impar");
-            }
-        } else {
-            System.out.println("Su número es cero");
-        }
+        } ejercicio3.close();
 
         //EJERCICIO 4
         System.out.println("\n\tBoletin 2 2 | Ejercicio 4\n");

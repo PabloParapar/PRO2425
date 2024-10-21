@@ -1,5 +1,7 @@
 package src.UD2.EXPLogicas;
 
+import java.util.Scanner;
+
 public class Boletin21 {
     public static void main(String[] args) {
 
@@ -139,11 +141,12 @@ public class Boletin21 {
 
         //EJERCICIO 5
         System.out.println("\n\tBoletin 2 1 | Ejercicio 5\n");
-
-        int cantidadMenu = 10, entrada = 5;
+        Scanner ejercicio5 = new Scanner(System.in);
+        System.out.println("Inserte su número de pedido: ");
+        int cantidadMenu = 10, entrada = ejercicio5.nextInt();
 
         boolean numeroValido = entrada >= 1 && entrada <= cantidadMenu;
-        System.out.println("Inserte su pedido:\n"+entrada+"\nSu pedido es "+numeroValido);
+        System.out.println("Su pedido "+entrada+" es "+numeroValido);
 
         //EJERCICIO 6
         System.out.println("\n\tBoletin 2 1 | Ejercicio 6\n");
