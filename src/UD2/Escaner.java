@@ -12,7 +12,7 @@ public class Escaner {
         String apellido2 = src.next();
         int edad = src.nextInt();
 
-        System.out.println("Nombre : " + nombre + " - " + "Apellidos : " + apellido2 +" "+ apellido2+" - "+" Edad : "+edad);
+        System.out.println("Nombre : " + nombre + " - " + "Apellidos : " + apellido1 +" "+ apellido2+" - "+" Edad : "+edad);
         src.close(); // cierra el Scanner
     }
 }

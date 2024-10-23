@@ -159,31 +159,31 @@ public class Teoria2 {
         //Version if sin anidar
         System.out.println("\nDia con if sin anidar");
         int dia = 1;
-        if(dia == 1) {
+        if (dia == 1) {
             System.out.println("Lunes");
         }
-        if(dia == 2){
+        if (dia == 2) {
             System.out.println("Martes");
         }
-        if(dia == 3){
+        if (dia == 3) {
             System.out.println("Miércoles");
         }
-        if(dia == 4){
+        if (dia == 4) {
             System.out.println("Jueves");
         }
-        if(dia == 5){
+        if (dia == 5) {
             System.out.println("Viernes");
         }
-        if(dia > 5){
+        if (dia > 5) {
             System.out.println("Fin de Semana");
         }
         //Version if else Anidada
         System.out.println("\nDia con if else anidado");
 
-        if(dia <= 5){
-            if(dia <= 3){
-                if(dia <=2){
-                    if (dia <=1){
+        if (dia <= 5) {
+            if (dia <= 3) {
+                if (dia <= 2) {
+                    if (dia <= 1) {
                         System.out.println("Lunes");
                     } else {
                         System.out.println("Martes");
@@ -191,9 +191,9 @@ public class Teoria2 {
                 } else {
                     System.out.println("Miércoles");
                 }
-            } else if(dia < 5){
+            } else if (dia < 5) {
                 System.out.println("Jueves");
-            }else {
+            } else {
                 System.out.println("Viernes");
             }
         } else {
@@ -202,7 +202,7 @@ public class Teoria2 {
 
         //Version Switch
         System.out.println("\nDia con Switch case");
-        switch (dia){
+        switch (dia) {
             case 1:
                 System.out.println("Lunes");
                 break;
@@ -222,7 +222,7 @@ public class Teoria2 {
                 System.out.println("Fin de Semana");
         }
 
-        switch (dia){
+        switch (dia) {
             case 1:
             case 2:
             case 3:
