@@ -5,6 +5,13 @@ import java.util.*;
 
 public class Boletin23 {
     public static void main(String[] args) {
+        String reset = "\u001b[0m";
+        String snooze = "\033[30m";
+        String saltado = "\033[31m";
+        String terminado = "\033[32m";
+        String incubadora = "\033[35m";
+        String pendiente = "\33[33m";
+        String destacado = "\033[36m";
         /*
         Negro:      \033[30m
         Rojo:       \033[31m
@@ -16,33 +23,34 @@ public class Boletin23 {
         Cyan:       \033[36m
         Reset:      \u001b[0m
         */
+        //MENÚ EJERCICIOS
         System.out.println(
-                "\n                        Unidad Didáctica 2 | Boletín 2 3\n\n" +
-                        "        ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n" +
-                        "        ┃                   Estructura repetitiva \033[36mfor\u001B[0m                   ┃\n" +
-                        "        ┠───────┬───────┬───────┬───────┬───────┬───────┬───────┬───────┨\n" +
-                        "        ┃    \033[32m1\u001B[0m  │    \033[32m2\u001B[0m  │    \033[32m3\u001B[0m  │    \033[32m4\u001B[0m  │    \033[32m5\u001B[0m  │    \033[32m6\u001B[0m  │    \033[32m7\u001B[0m  │    \033[32m8\u001B[0m  ┃\n" +
-                        "        ┠───────┼───────┼───────┼───────┼───────┼───────┼───────┼───────┨\n" +
-                        "        ┃    \033[32m9\u001B[0m  │   \033[32m10\u001B[0m  │   \033[31m11\u001B[0m  │   \033[32m12\u001B[0m  │   \033[32m13\u001B[0m  │   \033[32m14\u001B[0m  │   \033[32m15\u001B[0m  │   \033[32m16\u001B[0m  ┃\n" +
-                        "        ┠───────┼───────┼───────┼───────┼───────┼───────┼───────┼───────┨\n" +
-                        "        ┃   \033[32m17\u001B[0m  │   \033[32m18\u001B[0m  │   \033[32m19\u001B[0m  │   \033[32m20\u001B[0m  │   \033[32m21\u001B[0m  │   \033[32m22\u001B[0m  │   \033[32m23\u001B[0m  │   \033[32m24\u001B[0m  ┃\n" +
-                        "        ┣━━━━━━━┷━━━━━━━┷━━━━━━━┷━━━━━━━┷━━━━━━━┷━━━━━━━┷━━━━━━━┷━━━━━━━┫\n" +
-                        "        ┃                  Estructura repetitiva \033[36mwhile\u001B[0m                  ┃\n" +
-                        "        ┠────────────┬────────────┬────────────┬────────────┬───────────┨\n" +
-                        "        ┃     \033[30m25\u001B[0m     │     \033[30m26\u001B[0m     │     \033[30m27\u001B[0m     │     \033[30m28\u001B[0m     │     \033[30m29\u001B[0m    ┃\n" +
-                        "        ┠────────────┼────────────┼────────────┼────────────┼───────────┨\n" +
-                        "        ┃     \033[30m30\u001B[0m     │     \033[30m31\u001B[0m     │     \033[30m32\u001B[0m     │     \033[30m33\u001B[0m     │     \033[30m34\u001B[0m    ┃\n" +
-                        "        ┣━━━━━━━━━━━━┷━━━━━━━━━━━━┷━━━━━━━━━━━━┷━━━━━━━━━━━━┷━━━━━━━━━━━┫\n" +
-                        "        ┃                 Estructura repetitiva \033[36mdo-while\u001B[0m                ┃\n" +
-                        "        ┠────────────┬────────────┬────────────┬────────────┬───────────┨\n" +
-                        "        ┃     \033[30m35\u001B[0m     │     \033[30m36\u001B[0m     │     \033[30m37\u001B[0m     │     \033[30m38\u001B[0m     │     \033[30m39\u001B[0m    ┃\n" +
-                        "        ┣━━━━━━━━━━━━┷━━━━━━━━━━━━┷━━━━━━━━━━━━┷━━━━━━━━━━━━┷━━━━━━━━━━━┫\n" +
-                        "        ┃           Ejercicios de estructura repetitiva libre           ┃\n" +
-                        "        ┠────────────┬────────────┬────────────┬────────────┬───────────┨\n" +
-                        "        ┃     \033[30m40\u001B[0m     │     \033[30m41\u001B[0m     │     \033[30m42\u001B[0m     │     \033[30m43\u001B[0m     │     \033[30m44\u001B[0m    ┃\n" +
-                        "        ┠────────────┼────────────┼────────────┼────────────┼───────────┨\n" +
-                        "        ┃     \033[30m45\u001B[0m     │     \033[30m46\u001B[0m     │     \033[30m47\u001B[0m     │     \033[30m48\u001B[0m     │      0    ┃\n" +
-                        "        ┗━━━━━━━━━━━━┷━━━━━━━━━━━━┷━━━━━━━━━━━━┷━━━━━━━━━━━━┷━━━━━━━━━━━┛\n\n" +
+                "\n                     Unidad Didáctica 2 | Boletín 2 3\n\n" +
+                        "        ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n" +
+                        "        ┃               Estructura repetitiva " + destacado + "for" + reset + "               ┃\n" +
+                        "        ┠──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┨\n" +
+                        "        ┃   " + terminado + "1" + reset + "  │   " + terminado + "2" + reset + "  │   " + terminado + "3" + reset + "  │   " + terminado + "4" + reset + "  │   " + terminado + "5" + reset + "  │   " + terminado + "6" + reset + "  │   " + terminado + "7" + reset + "  │   " + terminado + "8" + reset + "  ┃\n" +
+                        "        ┠──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┨\n" +
+                        "        ┃   " + terminado + "9" + reset + "  │  " + terminado + "10" + reset + "  │  " + terminado + "11" + reset + "  │  " + terminado + "12" + reset + "  │  " + terminado + "13" + reset + "  │  " + terminado + "14" + reset + "  │  " + terminado + "15" + reset + "  │  " + terminado + "16" + reset + "  ┃\n" +
+                        "        ┠──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┨\n" +
+                        "        ┃  " + terminado + "17" + reset + "  │  " + terminado + "18" + reset + "  │  " + terminado + "19" + reset + "  │  " + terminado + "20" + reset + "  │  " + terminado + "21" + reset + "  │  " + terminado + "22" + reset + "  │  " + terminado + "23" + reset + "  │  " + terminado + "24" + reset + "  ┃\n" +
+                        "        ┣━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┫\n" +
+                        "        ┃              Estructura repetitiva " + destacado + "while" + reset + "              ┃\n" +
+                        "        ┠───────────┬──────────┬──────────┬──────────┬──────────┨\n" +
+                        "        ┃     " + snooze + "25" + reset + "    │    " + snooze + "26" + reset + "    │    " + snooze + "27" + reset + "    │    " + snooze + "28" + reset + "    │    " + snooze + "29" + reset + "    ┃\n" +
+                        "        ┠───────────┼──────────┼──────────┼──────────┼──────────┨\n" +
+                        "        ┃     " + snooze + "30" + reset + "    │    " + snooze + "31" + reset + "    │    " + snooze + "32" + reset + "    │    " + snooze + "33" + reset + "    │    " + snooze + "34" + reset + "    ┃\n" +
+                        "        ┣━━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┫\n" +
+                        "        ┃             Estructura repetitiva " + destacado + "do-while" + reset + "            ┃\n" +
+                        "        ┠───────────┬──────────┬──────────┬──────────┬──────────┨\n" +
+                        "        ┃     " + snooze + "35" + reset + "    │    " + snooze + "36" + reset + "    │    " + snooze + "37" + reset + "    │    " + snooze + "38" + reset + "    │    " + snooze + "39" + reset + "    ┃\n" +
+                        "        ┣━━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┫\n" +
+                        "        ┃       Ejercicios de estructura repetitiva libre       ┃\n" +
+                        "        ┠───────────┬──────────┬──────────┬──────────┬──────────┨\n" +
+                        "        ┃     " + snooze + "40" + reset + "    │    " + snooze + "41" + reset + "    │    " + snooze + "42" + reset + "    │    " + snooze + "43" + reset + "    │    " + snooze + "44" + reset + "    ┃\n" +
+                        "        ┠───────────┼──────────┼──────────┼──────────┼──────────┨\n" +
+                        "        ┃     " + snooze + "45" + reset + "    │    " + snooze + "46" + reset + "    │    " + snooze + "47" + reset + "    │    " + snooze + "48" + reset + "    │     0    ┃\n" +
+                        "        ┗━━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┛\n\n" +
                         "        Introduzca el número del ejercicio que desea ejecutar: ");
         Scanner boletin23 = new Scanner(System.in);
         int numeroEjercicio = boletin23.nextInt();
@@ -73,7 +81,7 @@ public class Boletin23 {
                     System.out.println("Quedan " + i + " números por introducir: ");
                     numero += ejercicio2.nextInt();
                 }
-                System.out.println("La media es " + (numero / 5));
+                System.out.println("La media es " + (numero / 5.0));
                 ejercicio2.close();
                 break;
 
@@ -89,7 +97,7 @@ public class Boletin23 {
                     System.out.println("Introduzca un número, quedan " + i + " números por introducir: ");
                     numero += ejercicio3.nextInt();
                 }
-                System.out.println("La media entre los " + i3 + " números dados es: " + (numero / i3));
+                System.out.println("La media entre los " + i3 + " números dados es: " + ((double) numero / i3));
                 ejercicio3.close();
                 break;
 
@@ -142,11 +150,15 @@ public class Boletin23 {
                 int i6 = ejercicio6.nextInt();
                 double sumaSerie = 0;
 
-                for (int i = 1; i <= i6; i++) {
-                    sumaSerie += (double) (5 * i) / (2 * Math.pow(3, i));
-                    //System.out.println(sumaSerie);
+                for (int i = 0; i <= i6 - 1; i++) {
+                    if (i == 0) {
+                        sumaSerie = 0;
+                    } else {
+                        sumaSerie += (double) (5 * i) / (2 * Math.pow(3, i));
+                        //System.out.println(sumaSerie);
+                    }
                 }
-                System.out.println(sumaSerie);
+                System.out.println("La suma de los primeros " + i6 + " términos de la serie es igual a " + sumaSerie);
                 ejercicio6.close();
                 break;
 
@@ -161,7 +173,7 @@ public class Boletin23 {
 
                 for (int i = 1; i <= i7; i++) {
                     sumaSerie7 += i / Math.pow(2, i);
-                    System.out.println(sumaSerie7);
+                    //System.out.println(sumaSerie7);
                 }
                 System.out.println("Resultado de la suma de los primeros " + i7 + " términos de la serie:\n" + sumaSerie7);
                 ejercicio7.close();
@@ -205,7 +217,7 @@ public class Boletin23 {
                 System.out.println("¿De qué número quiere calcular su factorial?");
                 Scanner ejercicio9 = new Scanner(System.in);
                 int factorial = ejercicio9.nextInt();
-                int resultadoFactorial = 1;
+                long resultadoFactorial = 1;
                 switch (factorial) {
                     case 0:
                     case 1:
@@ -244,7 +256,31 @@ public class Boletin23 {
             case 11:
 
                 System.out.println("\n\tBoletin 2 3 | Ejercicio 11\n" + "Dados 'n' números por el usuario, indica el mayor, el menor y la media\n");
-                System.out.println("AÚN POR RESOLVER");
+
+                int numeroMayor, numeroMenor, cantidad, numeroEntrada;
+                double mediaNumero = 0;
+                Scanner ejercicio11 = new Scanner(System.in);
+                System.out.println("¿Cuántos números quiere procesar?\n");
+                cantidad = ejercicio11.nextInt();
+                System.out.println("Indica cuáles son: \n");
+                numeroMayor = 0;
+                numeroMenor = 0;
+                for (int i = 1; i <= cantidad; i++) {
+                    numeroEntrada = ejercicio11.nextInt();
+                    mediaNumero += numeroEntrada;
+                    if (i == 1) {
+                        numeroMayor = numeroEntrada;
+                        numeroMenor = numeroEntrada;
+                    } else {
+                        if (numeroMayor < numeroEntrada) {
+                            numeroMayor = numeroEntrada;
+                        } else if (numeroMenor > numeroEntrada) {
+                            numeroMenor = numeroEntrada;
+                        }
+                    }
+                }
+                System.out.println("Número Mayor\t=\t" + numeroMayor + "\nNúmero Menor\t=\t" + numeroMenor + "\nMedia Aritmética\t=\t" + mediaNumero / cantidad);
+                ejercicio11.close();
                 break;
 
             //EJERCICIO 12
@@ -275,7 +311,7 @@ public class Boletin23 {
             //EJERCICIO 13
             case 13:
 
-                System.out.println("\n\tBoletin 2 3 | Ejercicio 13\n"+"Calcula el siguiente sumatorio y productorio hasta un numero 'n' dado por el usuario\n");
+                System.out.println("\n\tBoletin 2 3 | Ejercicio 13\n" + "Calcula el siguiente sumatorio y productorio hasta un numero 'n' dado por el usuario\n");
                 Scanner ejercicio13 = new Scanner(System.in);
                 int numeroSumatorio = ejercicio13.nextInt();
                 double sumatorio, productorio, terminoSumatorio;
@@ -283,7 +319,7 @@ public class Boletin23 {
                 productorio = 1;
                 for (int i = 1; i <= numeroSumatorio; i++) {
                     terminoSumatorio = 1.0 / i;
-                    if( i>=numeroSumatorio) {
+                    if (i >= numeroSumatorio) {
                         for (int j = numeroSumatorio; j <= i; j++) {
                             productorio *= j;
                             //System.out.println(i + ", " + j + ", productorio: " + productorio);
@@ -292,7 +328,7 @@ public class Boletin23 {
                     sumatorio += terminoSumatorio + productorio;
                     //System.out.println(i + ", sumatorio: " + sumatorio);
                 }
-                System.out.println("Resultado: "+sumatorio);
+                System.out.println("Resultado: " + sumatorio);
                 /*
                 A efectos prácticos, se reduce al sumatorio de ( 1 / i ) + n
                  */
@@ -302,7 +338,7 @@ public class Boletin23 {
             //EJERCICIO 14
             case 14:
 
-                System.out.println("\n\tBoletin 2 3 | Ejercicio 14\n"+"Muestra en pantalla todos los divisores de un número 'n' dado por el usuario\n");
+                System.out.println("\n\tBoletin 2 3 | Ejercicio 14\n" + "Muestra en pantalla todos los divisores de un número 'n' dado por el usuario\n");
                 System.out.println("¿De qué número desea saber sus divisores?");
                 Scanner ejercicio14 = new Scanner(System.in);
                 int numeroDivisores = ejercicio14.nextInt();
@@ -318,7 +354,7 @@ public class Boletin23 {
             //EJERCICIO 15
             case 15:
 
-                System.out.println("\n\tBoletin 2 3 | Ejercicio 15\n"+"Calcula el cuadrado de los 10 primeros números pares\n");
+                System.out.println("\n\tBoletin 2 3 | Ejercicio 15\n" + "Calcula el cuadrado de los 10 primeros números pares\n");
 
                 System.out.println("El cuadrado de los primeros 10 números pares son:");
                 for (int i = 2; i <= 20; i += 2) {
@@ -329,14 +365,14 @@ public class Boletin23 {
             //EJERCICIO 16
             case 16:
 
-                System.out.println("\n\tBoletin 2 3 | Ejercicio 16\n"+"Dadas por el usuario una base y un exponente máximo calcular las potencias de la base hasta llegar al exponente máximo\n");
+                System.out.println("\n\tBoletin 2 3 | Ejercicio 16\n" + "Dadas por el usuario una base y un exponente máximo calcular las potencias de la base hasta llegar al exponente máximo\n");
                 Scanner ejercicio16 = new Scanner(System.in);
                 System.out.println("¿De qué número quiere calcular las potencias?");
                 int base = ejercicio16.nextInt();
                 System.out.println("Indique la potencia más alta a la que desea elevar " + base);
                 int potencia = ejercicio16.nextInt();
                 for (int i = 1; i <= potencia; i++) {
-                    System.out.println(base + " ^ " + i + " = " + Math.pow(base, i));
+                    System.out.println(base + " ^ " + i + " = " + (int)Math.pow(base, i));
                 }
                 ejercicio16.close();
                 break;
@@ -344,7 +380,7 @@ public class Boletin23 {
             //EJERCICIO 17
             case 17:
 
-                System.out.println("\n\tBoletin 2 3 | Ejercicio 17\n"+"Comprobar la velocidad de dos códigos distintos para efectuar la misma tarea y mostrar el más rápido\n");
+                System.out.println("\n\tBoletin 2 3 | Ejercicio 17\n" + "Comprobar la velocidad de dos códigos distintos para efectuar la misma tarea y mostrar el más rápido\n");
 
                 long tiempoInicio1 = System.currentTimeMillis();
                 for (int i = 1; i <= 1000000; i++) {
@@ -375,7 +411,7 @@ public class Boletin23 {
             case 18:
 
                 //EJERCICIO 18
-                System.out.println("\n\tBoletin 2 3 | Ejercicio 18\n"+"Dado un rango, calcular los cubos de los impares dentro del rango\n");
+                System.out.println("\n\tBoletin 2 3 | Ejercicio 18\n" + "Dado un rango, calcular los cubos de los impares dentro del rango\n");
 
                 Scanner ejercicio18 = new Scanner(System.in);
                 System.out.println("Indica el primer número del intervalo a comprobar");
@@ -393,7 +429,7 @@ public class Boletin23 {
             //EJERCICIO 19
             case 19:
 
-                System.out.println("\n\tBoletin 2 3 | Ejercicio 19\n"+"Dados dos años, calcular los años bisiestos dentro del rango de los años dados\n");
+                System.out.println("\n\tBoletin 2 3 | Ejercicio 19\n" + "Dados dos años, calcular los años bisiestos dentro del rango de los años dados\n");
 
                 Scanner ejercicio19 = new Scanner(System.in);
                 System.out.println("Indica el año del incio del intervalo a comprobar");
@@ -418,7 +454,7 @@ public class Boletin23 {
             //EJERCICIO 20
             case 20:
 
-                System.out.println("\n\tBoletin 2 3 | Ejercicio 20\n"+"Mostrar en pantalla el triángulo de Floyd ascendente y descendente dado el número de filas\n");
+                System.out.println("\n\tBoletin 2 3 | Ejercicio 20\n" + "Mostrar en pantalla el triángulo de Floyd ascendente y descendente dado el número de filas\n");
                 System.out.println("Indica cuántas filas tendrá el triángulo de Floyd");
                 Scanner ejercicio20 = new Scanner(System.in);
                 int filasFloyd = ejercicio20.nextInt();
@@ -446,7 +482,7 @@ public class Boletin23 {
             //EJERCICIO 21
             case 21:
 
-                System.out.println("\n\tBoletin 2 3 | Ejercicio 21\n"+"Muestra en pantalla un menú con opciones indicadas por un número\n");
+                System.out.println("\n\tBoletin 2 3 | Ejercicio 21\n" + "Muestra en pantalla un menú con opciones indicadas por un número\n");
 
                 System.out.println("\t1.\tCuadrado.\n\t2.\tRectángulo.\n\t3.\tTriángulo\n\t4.\tCírculo.\n\t0.\tSalir.\n\nSeleccione una opción del menú");
                 Scanner ejercicio21 = new Scanner(System.in);
@@ -476,7 +512,7 @@ public class Boletin23 {
             //EJERCICIO 22
             case 22:
 
-                System.out.println("\n\tBoletin 2 3 | Ejercicio 22\n"+"Calcular el cuadrado de un número 'n' dado por el usuario, usando únicamente sumas\n");
+                System.out.println("\n\tBoletin 2 3 | Ejercicio 22\n" + "Calcular el cuadrado de un número 'n' dado por el usuario, usando únicamente sumas\n");
 
                 Scanner ejercicio22 = new Scanner(System.in);
                 int numeroBase = ejercicio22.nextInt();
@@ -485,14 +521,14 @@ public class Boletin23 {
                 for (int i = 0; i < numeroBase; i++) {
                     numeroCuadrado += (1 + 2 * i);
                 }
-                System.out.println(numeroCuadrado);
+                System.out.println("El cuadrado de "+numeroBase+" es "+numeroCuadrado);
                 ejercicio22.close();
                 break;
 
             //EJERCICIO 23
             case 23:
 
-                System.out.println("\n\tBoletin 2 3 | Ejercicio 23\n"+"Multiplicar dos números sin usar el operador de multiplicación\n");
+                System.out.println("\n\tBoletin 2 3 | Ejercicio 23\n" + "Multiplicar dos números sin usar el operador de multiplicación\n");
 
                 Scanner ejercicio23 = new Scanner(System.in);
                 int producto1 = ejercicio23.nextInt();
@@ -501,14 +537,14 @@ public class Boletin23 {
                 for (int i = 1; i <= producto2; i++) {
                     productoFinal += producto1;
                 }
-                System.out.println(productoFinal);
+                System.out.println("El producto entre "+producto1+" y "+producto2+" es igual a "+productoFinal);
                 ejercicio23.close();
                 break;
 
             //EJERCICIO 24
             case 24:
 
-                System.out.println("\n\tBoletin 2 3 | Ejercicio 24\n"+"Calcular la división entera y resto entre dos números dados sin utilizar los operadores de división y módulo\n");
+                System.out.println("\n\tBoletin 2 3 | Ejercicio 24\n" + "Calcular la división entera y resto entre dos números dados sin utilizar los operadores de división y módulo\n");
 
                 Scanner ejercicio24 = new Scanner(System.in);
                 System.out.println("Indica un Dividendo: ");
@@ -724,7 +760,11 @@ public class Boletin23 {
                 System.out.println("\n\tBoletin 2 3 | Ejercicio 48\n");
                 System.out.println("SIN EMPEZAR");
 
+                break;
 
+            default:
+                System.out.println("Ese no sale en el boletin, escoge otro: \n");
+                break;
         }
     }
 }
