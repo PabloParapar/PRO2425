@@ -1,5 +1,7 @@
 package src.UD2;
 
+import java.util.Scanner;
+
 public class Teoria2 {
     public static void main(String[] args) {
         // 07 de Octubre de 2024
@@ -233,7 +235,26 @@ public class Teoria2 {
             default:
                 System.out.println("Fin de Semana");
         }
-    }
-}
+        //Jueves 24 de Octubre de 2024
+
+        for (int i = 0; i < 10; i++){
+            System.out.println("El número es "+i);
+        }
+        for (int i = 0; i < 5; i++){
+            System.out.println("El número es "+i);
+        }
+        //Cada variable i es accesible únicamente desde for
+
+        Scanner in = new Scanner(System.in);
+        System.out.println("Numero de iteraciones: ");
+        int iteracion;
+        for ( iteracion = in.nextInt(); iteracion > 0 ; iteracion--) {
+            //..
+        }
+        int iteracion2;
+        for ( iteracion2 = in.nextInt(); iteracion > 0 ; iteracion--) {
+            //...
+        }
+}}
 
 
