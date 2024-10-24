@@ -245,6 +245,7 @@ public class Boletin22 {
                 } else {
                     System.out.println("En " + anhoPascua + " Pascua es el " + (f9 - 31) + " de Abril");
                 }
+                ejercicio9.close();
                 break;
 
             //EJERCICIO 10
@@ -442,7 +443,7 @@ public class Boletin22 {
 
             //EJERCICIO 17
             case 17:
-                System.out.println("\n\tBoletin 2 2 | Ejercicio 17\n"+"Dados 'x' y 'n' resuelve el siguiente cálculo\n");
+                System.out.println("\n\tBoletin 2 2 | Ejercicio 17\n" + "Dados 'x' y 'n' resuelve el siguiente cálculo\n");
 
                 System.out.println("Ingresa los valores de 'x' y 'n': ");
                 Scanner ejercicio17 = new Scanner(System.in);
@@ -482,21 +483,21 @@ public class Boletin22 {
                         System.out.println("El resultado es 1");
                     } else {
                         calculoStirling = Math.sqrt(2 * PI * n18) * Math.pow((n18 / EULER), n18);
-                        System.out.println("Factorial con la fórmula de Stirling = "+calculoStirling);
+                        System.out.println("Factorial con la fórmula de Stirling = " + calculoStirling);
                     }
                 }
                 // Comparativa
                 long factorialReal = 1;
-                for(int i = 1; i<=n18; i++){
+                for (int i = 1; i <= n18; i++) {
                     factorialReal *= i;
                 }
-                System.out.println("Factorial Real = "+factorialReal);
+                System.out.println("Factorial Real = " + factorialReal);
                 ejercicio18.close();
                 break;
 
             //EJERCICIO 19
             case 19:
-                System.out.println("\n\tBoletin 2 2 | Ejercicio 19\n"+"Calcula si un péndulo se detendrá antes en la Tierra que en Marte");
+                System.out.println("\n\tBoletin 2 2 | Ejercicio 19\n" + "Calcula si un péndulo se detendrá antes en la Tierra que en Marte");
 
                 System.out.println("Ingresa la Longitud del péndulo (L): ");
                 Scanner ejercicio19 = new Scanner(System.in);

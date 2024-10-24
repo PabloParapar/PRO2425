@@ -372,7 +372,7 @@ public class Boletin23 {
                 System.out.println("Indique la potencia más alta a la que desea elevar " + base);
                 int potencia = ejercicio16.nextInt();
                 for (int i = 1; i <= potencia; i++) {
-                    System.out.println(base + " ^ " + i + " = " + (int)Math.pow(base, i));
+                    System.out.println(base + " ^ " + i + " = " + (int) Math.pow(base, i));
                 }
                 ejercicio16.close();
                 break;
@@ -521,7 +521,7 @@ public class Boletin23 {
                 for (int i = 0; i < numeroBase; i++) {
                     numeroCuadrado += (1 + 2 * i);
                 }
-                System.out.println("El cuadrado de "+numeroBase+" es "+numeroCuadrado);
+                System.out.println("El cuadrado de " + numeroBase + " es " + numeroCuadrado);
                 ejercicio22.close();
                 break;
 
@@ -537,7 +537,7 @@ public class Boletin23 {
                 for (int i = 1; i <= producto2; i++) {
                     productoFinal += producto1;
                 }
-                System.out.println("El producto entre "+producto1+" y "+producto2+" es igual a "+productoFinal);
+                System.out.println("El producto entre " + producto1 + " y " + producto2 + " es igual a " + productoFinal);
                 ejercicio23.close();
                 break;
 
