@@ -237,24 +237,43 @@ public class Teoria2 {
         }
         //Jueves 24 de Octubre de 2024
 
-        for (int i = 0; i < 10; i++){
-            System.out.println("El número es "+i);
+        for (int i = 0; i < 10; i++) {
+            System.out.println("El número es " + i);
         }
-        for (int i = 0; i < 5; i++){
-            System.out.println("El número es "+i);
+        for (int i = 0; i < 5; i++) {
+            System.out.println("El número es " + i);
         }
         //Cada variable i es accesible únicamente desde for
 
         Scanner in = new Scanner(System.in);
         System.out.println("Numero de iteraciones: ");
         int iteracion;
-        for ( iteracion = in.nextInt(); iteracion > 0 ; iteracion--) {
+        for (iteracion = in.nextInt(); iteracion > 0; iteracion--) {
             //..
         }
         int iteracion2;
-        for ( iteracion2 = in.nextInt(); iteracion > 0 ; iteracion--) {
+        for (iteracion2 = in.nextInt(); iteracion > 0; iteracion--) {
             //...
         }
-}}
+
+        //Viernes, 25 de Octubre de 2024
+
+        //while
+
+        int a = 5;
+        while ( a < 10 ){
+            System.out.println("Prueba");
+            a++;
+        }
+
+        //do-while
+
+        do {
+            System.out.println("prueba do-while");
+            a++;
+        }while (a<=10);
+        //El do-while se ejecutará una vez como mínimo, la condición determina si continuará ejecutándose
+    }
+}
 
 

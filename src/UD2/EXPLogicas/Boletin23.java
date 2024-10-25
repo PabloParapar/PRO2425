@@ -37,13 +37,13 @@ public class Boletin23 {
                         "        ┣━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┫\n" +
                         "        ┃              Estructura repetitiva " + destacado + "while" + reset + "              ┃\n" +
                         "        ┠───────────┬──────────┬──────────┬──────────┬──────────┨\n" +
-                        "        ┃     " + snooze + "25" + reset + "    │    " + snooze + "26" + reset + "    │    " + snooze + "27" + reset + "    │    " + snooze + "28" + reset + "    │    " + snooze + "29" + reset + "    ┃\n" +
+                        "        ┃     " + terminado + "25" + reset + "    │    " + terminado + "26" + reset + "    │    " + incubadora + "27" + reset + "    │    " + incubadora + "28" + reset + "    │    " + incubadora + "29" + reset + "    ┃\n" +
                         "        ┠───────────┼──────────┼──────────┼──────────┼──────────┨\n" +
-                        "        ┃     " + snooze + "30" + reset + "    │    " + snooze + "31" + reset + "    │    " + snooze + "32" + reset + "    │    " + snooze + "33" + reset + "    │    " + snooze + "34" + reset + "    ┃\n" +
+                        "        ┃     " + incubadora + "30" + reset + "    │    " + incubadora + "31" + reset + "    │    " + incubadora + "32" + reset + "    │    " + incubadora + "33" + reset + "    │    " + incubadora + "34" + reset + "    ┃\n" +
                         "        ┣━━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┫\n" +
                         "        ┃             Estructura repetitiva " + destacado + "do-while" + reset + "            ┃\n" +
                         "        ┠───────────┬──────────┬──────────┬──────────┬──────────┨\n" +
-                        "        ┃     " + snooze + "35" + reset + "    │    " + snooze + "36" + reset + "    │    " + snooze + "37" + reset + "    │    " + snooze + "38" + reset + "    │    " + snooze + "39" + reset + "    ┃\n" +
+                        "        ┃     " + incubadora + "35" + reset + "    │    " + incubadora + "36" + reset + "    │    " + incubadora + "37" + reset + "    │    " + incubadora + "38" + reset + "    │    " + incubadora + "39" + reset + "    ┃\n" +
                         "        ┣━━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┫\n" +
                         "        ┃       Ejercicios de estructura repetitiva libre       ┃\n" +
                         "        ┠───────────┬──────────┬──────────┬──────────┬──────────┨\n" +
@@ -569,16 +569,42 @@ public class Boletin23 {
             //EJERCICIO 25
             case 25:
 
-                System.out.println("\n\tBoletin 2 3 | Ejercicio 25\n");
-                System.out.println("SIN EMPEZAR");
+                System.out.println("\n\tBoletin 2 3 | Ejercicio 25\n" + "Indicar cuántas veces se ejecuta la 'acción' y con qué valor termina la variable 'contador'");
+
+                System.out.println("Algoritmo:\n" + "int contador = 0;\n" +
+                        "                while (contador < 10){\n" +
+                        "                    contador = contador + 1;\n" +
+                        "                    if(contador == 10){\n" +
+                        "                        accion;\n" +
+                        "                    }\n" +
+                        "                }\n\n" +
+                        "Dado el código, el contador llegará a 10 y terminará ejecutando una vez la acción");
+                int contador = 0;
+                while (contador < 10) {
+                    contador = contador + 1;
+                    if (contador == 10) {
+                        System.out.println("ACCIÓN\nContador = " + contador);
+                    }
+                }
                 break;
 
             //EJERCICIO 26
             case 26:
 
-                System.out.println("\n\tBoletin 2 3 | Ejercicio 26\n");
-                System.out.println("SIN EMPEZAR");
-
+                System.out.println("\n\tBoletin 2 3 | Ejercicio 26\n" + "Leer los números enteros por teclados hasta que se introduzca el 0. Indicar cuántos son negativos");
+                Scanner ejercicio26 = new Scanner(System.in);
+                int contadorNegativos = 0;
+                System.out.println("Ingrese un número entero:");
+                int numero26 = ejercicio26.nextInt();
+                while (numero26 != 0){
+                    if (numero26 < 0){
+                        System.out.println("Números negativos: "+ ++contadorNegativos);
+                    } else {
+                        System.out.println("Número Positivo");
+                    }
+                    numero26 = ejercicio26.nextInt();
+                }
+                System.out.println("Se han ingresado "+contadorNegativos+" números negativos.");
                 break;
 
             //EJERCICIO 27
