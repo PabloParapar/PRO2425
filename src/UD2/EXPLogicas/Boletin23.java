@@ -10,7 +10,7 @@ public class Boletin23 {
         String saltado = "\033[31m";
         String terminado = "\033[32m";
         String incubadora = "\033[35m";
-        String pendiente = "\33[33m";
+        String enProceso = "\33[33m";
         String destacado = "\033[36m";
         /*
         Negro:      \033[30m
@@ -37,9 +37,9 @@ public class Boletin23 {
                         "        ┣━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┫\n" +
                         "        ┃              Estructura repetitiva " + destacado + "while" + reset + "              ┃\n" +
                         "        ┠───────────┬──────────┬──────────┬──────────┬──────────┨\n" +
-                        "        ┃     " + terminado + "25" + reset + "    │    " + terminado + "26" + reset + "    │    " + incubadora + "27" + reset + "    │    " + incubadora + "28" + reset + "    │    " + incubadora + "29" + reset + "    ┃\n" +
+                        "        ┃     " + terminado + "25" + reset + "    │    " + terminado + "26" + reset + "    │    " + terminado + "27" + reset + "    │    " + terminado + "28" + reset + "    │    " + terminado + "29" + reset + "    ┃\n" +
                         "        ┠───────────┼──────────┼──────────┼──────────┼──────────┨\n" +
-                        "        ┃     " + incubadora + "30" + reset + "    │    " + incubadora + "31" + reset + "    │    " + incubadora + "32" + reset + "    │    " + incubadora + "33" + reset + "    │    " + incubadora + "34" + reset + "    ┃\n" +
+                        "        ┃     " + terminado + "30" + reset + "    │    " + terminado + "31" + reset + "    │    " + terminado + "32" + reset + "    │    " + terminado + "33" + reset + "    │    " + terminado + "34" + reset + "    ┃\n" +
                         "        ┣━━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┫\n" +
                         "        ┃             Estructura repetitiva " + destacado + "do-while" + reset + "            ┃\n" +
                         "        ┠───────────┬──────────┬──────────┬──────────┬──────────┨\n" +
@@ -432,7 +432,7 @@ public class Boletin23 {
                 System.out.println("\n\tBoletin 2 3 | Ejercicio 19\n" + "Dados dos años, calcular los años bisiestos dentro del rango de los años dados\n");
 
                 Scanner ejercicio19 = new Scanner(System.in);
-                System.out.println("Indica el año del incio del intervalo a comprobar");
+                System.out.println("Indica el año del inicio del intervalo a comprobar");
                 int anhoInicio = ejercicio19.nextInt();
                 System.out.println("Indica el año del final del intervalo a comprobar");
                 int anhoFinal = ejercicio19.nextInt();
@@ -596,78 +596,239 @@ public class Boletin23 {
                 int contadorNegativos = 0;
                 System.out.println("Ingrese un número entero:");
                 int numero26 = ejercicio26.nextInt();
-                while (numero26 != 0){
-                    if (numero26 < 0){
-                        System.out.println("Números negativos: "+ ++contadorNegativos);
+                while (numero26 != 0) {
+                    if (numero26 < 0) {
+                        System.out.println("Números negativos: " + ++contadorNegativos);
                     } else {
                         System.out.println("Número Positivo");
                     }
                     numero26 = ejercicio26.nextInt();
                 }
-                System.out.println("Se han ingresado "+contadorNegativos+" números negativos.");
+                System.out.println("Se han ingresado " + contadorNegativos + " números negativos.");
                 break;
 
             //EJERCICIO 27
             case 27:
 
-                System.out.println("\n\tBoletin 2 3 | Ejercicio 27\n");
-                System.out.println("SIN EMPEZAR");
+                System.out.println("\n\tBoletin 2 3 | Ejercicio 27\n" + "La exponencial de un número real 'a' se puede aproximar con el sumatorio de una serie:\n\ta)\tAproxiamar el resultado para n = 20\n\tb)\tAproximar el resultado hasta que algún término de la serie sea menor que 0,001\n\nIngresa el valor de 'a':");
 
+                Scanner ejercicio27 = new Scanner(System.in);
+                int a = ejercicio27.nextInt();
+                int n27 = 1;
+                long factorial27 = 1;
+                double serieExponente = 0;
+                while (n27 <= 20) {
+                    factorial27 *= n27;
+                    serieExponente += Math.pow(a, n27) / factorial27;
+                    n27++;
+                    //System.out.println(factorial27+" "+serieExponente+" "+n27);
+                }
+                serieExponente++; //Por el primer término n=0 [a^0/0! = 1/1 = 1]
+                System.out.println("a)\tSe analiza e^" + a + " = " + serieExponente + " en 20 pasos.");
+
+                n27 = 1;
+                factorial27 = 1;
+                serieExponente = 0;
+                while (Math.pow(a, n27) / factorial27 >= 0.001) {
+                    factorial27 *= n27;
+
+                    serieExponente += Math.pow(a, n27) / factorial27;
+                    n27++;
+                    //System.out.println(factorial27 + " " + serieExponente + " " + n27);
+                }
+                serieExponente++; //Por el primer término n=0 [a^0/0! = 1/1 = 1]
+                System.out.println("b)\tSe aproxima e^" + a + " = " + serieExponente + " en " + n27 + " pasos.");
+                ejercicio27.close();
                 break;
 
             //EJERCICIO 28
             case 28:
+                System.out.println("\n\tBoletin 2 3 | Ejercicio 28\n" + "Escribir un algoritmo que calcule la raíz cuadrada de un número 'a' mediante la sucesión dada:\n\nIngresa el valor de 'a':");
 
-                System.out.println("\n\tBoletin 2 3 | Ejercicio 28\n");
-                System.out.println("SIN EMPEZAR");
-
+                Scanner ejercicio28 = new Scanner(System.in);
+                int a28 = ejercicio28.nextInt();
+                int contadorSucesion = 1;
+                double sucesionRaiz = a28;
+                System.out.println("X0 = " + a28);
+                while (Math.abs(Math.pow(sucesionRaiz, 2) - a28) > 0.00000000000001) {
+                    sucesionRaiz = (sucesionRaiz + (a28 / sucesionRaiz)) / 2;
+                    System.out.println("X" + contadorSucesion + " = " + sucesionRaiz);
+                    contadorSucesion++;
+                }
+                System.out.println("\nResultado de la sucesión = " + sucesionRaiz + " en " + contadorSucesion + " pasos");
+                ejercicio28.close();
                 break;
 
             //EJERCICIO 29
             case 29:
 
-                System.out.println("\n\tBoletin 2 3 | Ejercicio 29\n");
-                System.out.println("SIN EMPEZAR");
-
+                System.out.println("\n\tBoletin 2 3 | Ejercicio 29\n" + "Determina si un número entero es primo o no, indicando el número de divisiones que se realizaron para ello: \n\nIngresa el valor del número a comprobar: ");
+                Scanner ejercicio29 = new Scanner(System.in);
+                int numeroPrimo = ejercicio29.nextInt();
+                int contadorPrimo = 2;
+                while (numeroPrimo >= contadorPrimo && numeroPrimo % contadorPrimo != 0) {
+                    contadorPrimo++;
+                }
+                if (numeroPrimo != contadorPrimo) {
+                    System.out.println("El número " + numeroPrimo + " no es primo. Comprobado en " + contadorPrimo + " pasos.");
+                } else {
+                    System.out.println("El número " + numeroPrimo + " es primo. Comprobado en " + contadorPrimo + " pasos.");
+                }
+                ejercicio29.close();
                 break;
 
-            //EJERCICIO 30
+            //EJERCICIO 30 | Me está dando error el segundo método para valores de la forma númeroPrimo^2
             case 30:
 
-                System.out.println("\n\tBoletin 2 3 | Ejercicio 30\n");
-                System.out.println("SIN EMPEZAR");
+                System.out.println("\n\tBoletin 2 3 | Ejercicio 30\n" + "Comprueba el código del ejercicio 29 optimizando el cálculo del número primo dividiéndolo hasta la raíz cuadrada del número 'n' en vez de hasta el número 'n-1': \n\nIngresa el número para comprobar si es primo: ");
+                Scanner ejercicio30 = new Scanner(System.in);
+                int numeroPrimo30 = ejercicio30.nextInt();
+                int contadorPrimo1 = 2;
+                while (numeroPrimo30 >= contadorPrimo1 && numeroPrimo30 % contadorPrimo1 != 0) {
+                    contadorPrimo1++;
+                }
+                if (numeroPrimo30 != contadorPrimo1) {
+                    System.out.println("El número " + numeroPrimo30 + " no es primo. Comprobado con el primer método en " + contadorPrimo1 + " pasos.");
+                } else {
+                    System.out.println("El número " + numeroPrimo30 + " es primo. Comprobado con el segundo método en " + contadorPrimo1 + " pasos.");
+                }
 
+                contadorPrimo1 = 2;
+                while (Math.sqrt(numeroPrimo30) >= contadorPrimo1 && numeroPrimo30 % contadorPrimo1 != 0) {
+                    contadorPrimo1++;
+                }
+                if (Math.sqrt(numeroPrimo30) < contadorPrimo1) {
+                    System.out.println(terminado + "El número " + numeroPrimo30 + " es primo. Comprobado en " + contadorPrimo1 + " pasos." + reset);
+                } else {
+                    System.out.println("El número " + numeroPrimo30 + " no es primo. Comprobado en " + contadorPrimo1 + " pasos.");
+                }
+                ejercicio30.close();
                 break;
 
             //EJERCICIO 31
             case 31:
-                System.out.println("\n\tBoletin 2 3 | Ejercicio 31\n");
-                System.out.println("SIN EMPEZAR");
+                System.out.println("\n\tBoletin 2 3 | Ejercicio 31\n" + "Mediante la mejora del código del ejercicio 30, calcular los números primos dentro del rango entre dos números ingresados por el usuario: \n\nIngresa el número del principio del rango: ");
 
+                Scanner ejercicio31 = new Scanner(System.in);
+                int numeroPrimoInicio = ejercicio31.nextInt();
+                System.out.println("Ingresa el número del final del rango: ");
+                int numeroPrimoFinal = ejercicio31.nextInt();
+
+                int contadorPrimo31 = 2;
+                int numeroPrimo31 = numeroPrimoInicio;
+                while (numeroPrimo31 <= numeroPrimoFinal) {
+                    while (Math.sqrt(numeroPrimo31) >= contadorPrimo31 && numeroPrimo31 % contadorPrimo31 != 0) {
+                        contadorPrimo31++;
+                    }
+                    if (Math.sqrt(numeroPrimo31) < contadorPrimo31) {
+                        System.out.println(terminado + "El número " + numeroPrimo31 + " es primo. Comprobado en " + contadorPrimo31 + " pasos." + reset);
+                    } else {
+                        System.out.println("El número " + numeroPrimo31 + " no es primo. Comprobado en " + contadorPrimo31 + " pasos.");
+                    }
+                    contadorPrimo31 = 2;
+                    numeroPrimo31++;
+                }
                 break;
 
-            //EJERCICIO 32
+            //EJERCICIO 32 | Muestra 51 porque el 1 no se considera primo.
             case 32:
 
-                System.out.println("\n\tBoletin 2 3 | Ejercicio 32\n");
-                System.out.println("SIN EMPEZAR");
+                System.out.println("\n\tBoletin 2 3 | Ejercicio 32\n" + "Muestra los 50 primeros números primos");
 
+                int divisorPrimo32 = 2;
+                int contador32 = 0;
+                int numeroPrimo32 = 1;
+                while (contador32 <= 50) {
+                    while (Math.sqrt(numeroPrimo32) >= divisorPrimo32 && numeroPrimo32 % divisorPrimo32 != 0) {
+                        divisorPrimo32++;
+                    }
+                    if (Math.sqrt(numeroPrimo32) < divisorPrimo32) {
+                        System.out.println(terminado + "El número " + numeroPrimo32 + " es primo.");
+                        contador32++;
+                    } else {
+                    }
+                    divisorPrimo32 = 2;
+                    numeroPrimo32++;
+                }
                 break;
 
             //EJERCICIO 33
             case 33:
 
-                System.out.println("\n\tBoletin 2 3 | Ejercicio 33\n");
-                System.out.println("SIN EMPEZAR");
+                System.out.println("\n\tBoletin 2 3 | Ejercicio 33\n" + "Calcular la cantidad mínima de billetes y monedas necesarias para cubrir el valor dado por el usuario: \n\nIngresa el valor a comprobar: ");
+
+                Scanner ejercicio33 = new Scanner(System.in);
+                int entradaDinero = ejercicio33.nextInt();
+                int dinero = entradaDinero, billete200 = 0, billete100 = 0, billete20 = 0, billete10 = 0, billete5 = 0, moneda2 = 0, moneda1 = 0;
+                while (dinero != 0) {
+                    if (dinero >= 200) {
+                        dinero -= 200;
+                        billete200++;
+                    } else if (dinero >= 100) {
+                        dinero -= 100;
+                        billete100++;
+                    } else if (dinero >= 20) {
+                        dinero -= 20;
+                        billete20++;
+                    } else if (dinero >= 10) {
+                        dinero -= 10;
+                        billete10++;
+                    } else if (dinero >= 5) {
+                        dinero -= 5;
+                        billete5++;
+                    } else if (dinero >= 2) {
+                        dinero -= 2;
+                        moneda2++;
+                    } else {
+                        dinero -= 1;
+                        moneda1++;
+                    }
+                }
+                System.out.printf(entradaDinero + " serían: ");
+                if (billete200 != 0) {
+                    System.out.printf(billete200 + " Billetes de 200€, ");
+                }
+                if (billete100 != 0) {
+                    System.out.printf(billete100 + " Billetes de 100€, ");
+                }
+                if (billete20 != 0) {
+                    System.out.printf(billete20 + " Billetes de 20€, ");
+                }
+                if (billete10 != 0) {
+                    System.out.printf(billete10 + " Billetes de 10€, ");
+                }
+                if (billete5 != 0) {
+                    System.out.printf(billete5 + " Billetes de 5€, ");
+                }
+                if (moneda2 != 0) {
+                    System.out.printf(moneda2 + " Monedas de 2€, ");
+                }
+                if (moneda1 != 0) {
+                    System.out.printf(moneda1 + " Monedas de 1€");
+                }
 
                 break;
 
             //EJERCICIO 34
             case 34:
 
-                System.out.println("\n\tBoletin 2 3 | Ejercicio 34\n");
-                System.out.println("SIN EMPEZAR");
+                System.out.println("\n\tBoletin 2 3 | Ejercicio 34\n" + "Ingresa un número decimal y conviértelo a número binario: \n\nIngresa un número decimal");
 
+                int contadorBinario = 0;
+                Scanner ejercicio34 = new Scanner(System.in);
+                int EntradaDecimal = ejercicio34.nextInt();
+                int numeroDecimal = EntradaDecimal;
+                String binario = "";
+                while (contadorBinario < 32) {
+                    if (numeroDecimal >= 0) {
+                        binario += "0";
+                    } else {
+                        binario += "1";
+                    }
+                    numeroDecimal = numeroDecimal << 1;
+                    contadorBinario++;
+                }
+                System.out.println(EntradaDecimal + " = " + binario);
 
                 break;
 
