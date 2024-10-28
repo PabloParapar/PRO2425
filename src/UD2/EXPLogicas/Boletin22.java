@@ -10,7 +10,7 @@ public class Boletin22 {
         String saltado = "\033[31m";
         String terminado = "\033[32m";
         String incubadora = "\033[35m";
-        String pendiente = "\33[33m";
+        String enProceso = "\33[33m";
         String destacado = "\033[36m";
         //MENÚ EJERCICIOS
         System.out.println(

@@ -4,8 +4,27 @@ import java.util.Scanner;
 
 public class Boletin21 {
     public static void main(String[] args) {
+        String reset = "\u001b[0m";
+        String snooze = "\033[30m";
+        String saltado = "\033[31m";
+        String terminado = "\033[32m";
+        String incubadora = "\033[35m";
+        String enProceso = "\33[33m";
+        String destacado = "\033[36m";
+        // MENÚ EJERCICIOS
         Scanner boletin21 = new Scanner(System.in);
-        System.out.println("Introduzca el número de ejercicio que desea ejecutar: ");
+        System.out.println(
+                "\n                   Unidad Didáctica 2 | Boletín 2 1\n\n" +
+                        "        ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n" +
+                        "        ┃                  Expresiones Lógicas                  ┃\n" +
+                        "        ┠───────────────────────────┬───────────────────────────┨\n" +
+                        "        ┃             " + terminado + "1" + reset + "             │             " + terminado + "2" + reset + "             ┃\n" +
+                        "        ┠───────────────────────────┼───────────────────────────┨\n" +
+                        "        ┃             " + terminado + "3" + reset + "             │             " + terminado + "4" + reset + "             ┃\n" +
+                        "        ┠───────────────────────────┼───────────────────────────┨\n" +
+                        "        ┃             " + terminado + "5" + reset + "             │             " + terminado + "6" + reset + "             ┃\n" +
+                        "        ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n\n" +
+                        "         Introduzca el número del ejercicio que desea ejecutar: ");
         int numeroEjercicio = boletin21.nextInt();
         switch (numeroEjercicio) {
 
@@ -174,19 +193,22 @@ public class Boletin21 {
                 alumnoAprueba = notaMedia + puntosExtra >= 5;
                 System.out.println("El alumno ha aprobado con los puntos extra? " + alumnoAprueba);
                 //c)
-                System.out.println("Para que el alumno pueda aprobar la nota media debe ser, mayor que 4");
+                System.out.println("c)\tPara que el alumno pueda aprobar, la nota media debe ser mayor que 4");
                 alumnoAprueba = notaMedia + puntosExtra >= 5 && notaMedia >= 4;
                 System.out.println("El alumno ha aprobado? " + alumnoAprueba);
                 //d)
-                int trabajoUnidad1 = 5, trabajoUnidad2 = 7, trabajoUnidad3 = 6;
+                System.out.println("d)\tEl profesor decide que la nota media de los trabajos de las 3 unidades didácticas también influya en la nota final. Determina si el alumno aprueba:\n\nIngresa las notas de los trabajos de las 3 unidades didácticas:");
+                int trabajoUnidad1 = ejercicio6.nextInt(), trabajoUnidad2 = ejercicio6.nextInt(), trabajoUnidad3 = ejercicio6.nextInt();
                 double notaMediaTrabajos = (trabajoUnidad1 + trabajoUnidad2 + trabajoUnidad3) / 3, notaMediaTotal = (notaUnidad1 + notaUnidad2 + notaUnidad3 + notaMediaTrabajos) / 4;
                 alumnoAprueba = notaMediaTotal >= 5 && notaMedia >= 4;
                 System.out.println("El alumno ha aprobado? " + alumnoAprueba);
                 //e)
+                System.out.println("e)\tEl profesor decide que la nota media de los trabajos de las 3 unidades didácticas influya en la nota final un 20% y la nota media de los exámenes un 80%:");
                 notaMediaTotal = notaMedia * 0.8 + notaMediaTrabajos * 0.2;
                 alumnoAprueba = notaMediaTotal >= 5 && notaMedia >= 4;
                 System.out.println("El alumno ha aprobado? " + alumnoAprueba);
                 //f)
+                System.out.println("f)\tEl profesor decide que la nota media de los trabajos de las 3 unidades didácticas influya en la nota final un 20% y la nota media de los exámenes un 80%, pero si la nota media de los trabajos es menor que 4, el alumno no aprueba:");
                 alumnoAprueba = notaMediaTotal >= 5 && notaMedia >= 4 && notaMediaTrabajos <= 4;
                 System.out.println("El alumno ha aprobado? " + alumnoAprueba);
                 break;
