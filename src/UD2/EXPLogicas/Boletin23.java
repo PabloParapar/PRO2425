@@ -43,7 +43,7 @@ public class Boletin23 {
                         "        ┣━━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┫\n" +
                         "        ┃             Estructura repetitiva " + destacado + "do-while" + reset + "            ┃\n" +
                         "        ┠───────────┬──────────┬──────────┬──────────┬──────────┨\n" +
-                        "        ┃     " + incubadora + "35" + reset + "    │    " + incubadora + "36" + reset + "    │    " + incubadora + "37" + reset + "    │    " + incubadora + "38" + reset + "    │    " + incubadora + "39" + reset + "    ┃\n" +
+                        "        ┃     " + terminado + "35" + reset + "    │    " + terminado + "36" + reset + "    │    " + terminado + "37" + reset + "    │    " + terminado + "38" + reset + "    │    " + enProceso + "39" + reset + "    ┃\n" +
                         "        ┣━━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┫\n" +
                         "        ┃       Ejercicios de estructura repetitiva libre       ┃\n" +
                         "        ┠───────────┬──────────┬──────────┬──────────┬──────────┨\n" +
@@ -836,40 +836,95 @@ public class Boletin23 {
 
             //EJERCICIO 35
             case 35:
-                System.out.println("\n\tBoletin 2 3 | Ejercicio 35\n");
-                System.out.println("SIN EMPEZAR");
+                System.out.println("\n\tBoletin 2 3 | Ejercicio 35\n" + "Escribe un algoritmo que calcule a qué temperatura se consigue explotar una lata de refresco cerrada.\n");
+                double temperatura = 18;
+                double presion;
+                System.out.println("Temperatura Ambiente = " + temperatura + " ºC\n");
+                do {
+                    presion = 0.00105 * Math.pow(temperatura++, 2) + 0.0042 * temperatura + 1.352;
+                    System.out.println("Temperatura = " + temperatura + " ºC\tPresión = " + presion + " atmósferas");
+                } while (presion <= 3.2);
+                System.out.println("Temperatura = " + temperatura + " ºC\tPresión = " + presion + " atmósferas | Ha explotado");
 
                 break;
 
             //EJERCICIO 36
             case 36:
-                System.out.println("\n\tBoletin 2 3 | Ejercicio 36\n");
-                System.out.println("SIN EMPEZAR");
+                System.out.println("\n\tBoletin 2 3 | Ejercicio 36\n" + "Solicitar al usuario que teclee un número dentro de un bucle. Mostrar la suma de los números positivos introducidos y finalizar el bucle cuando teclee el 0.\n");
+
+                Scanner ejercicio36 = new Scanner(System.in);
+                System.out.println("Ingresa un número entero:");
+                int numeroEntrada36 = ejercicio36.nextInt();
+                int sumaPositivos = 0;
+                do {
+                    if (numeroEntrada36 > 0) {
+                        sumaPositivos += numeroEntrada36;
+                        System.out.println("Suma enteros positivos ingresados = " + sumaPositivos);
+                    } else {
+                        System.out.println("Suma enteros positivos ingresados = " + sumaPositivos);
+                    }
+                    System.out.println("\nIngresa otro número: ");
+                    numeroEntrada36 = ejercicio36.nextInt();
+                } while (numeroEntrada36 != 0);
+                System.out.println("Fin de Sumas\nSuma enteros positivos ingresados = " + sumaPositivos);
 
                 break;
 
             //EJERCICIO 37
             case 37:
 
-                System.out.println("\n\tBoletin 2 3 | Ejercicio 37\n");
-                System.out.println("SIN EMPEZAR");
-
+                System.out.println("\n\tBoletin 2 3 | Ejercicio 37\n" + "¿Para qué tres números enteros consecutivos su producto es 800 veces su suma?");
+                int numeroConsecutivo = 0;
+                do {
+                    numeroConsecutivo++;
+                } while (numeroConsecutivo * (numeroConsecutivo + 1) * (numeroConsecutivo + 2) != 800 * (numeroConsecutivo + (numeroConsecutivo + 1) + (numeroConsecutivo + 2)));
+                System.out.println("Los números consecutivos que cumplen este caso son: \n - " + numeroConsecutivo + "\n - " + (numeroConsecutivo + 1) + "\n - " + (numeroConsecutivo + 2));
                 break;
 
             //EJERCICIO 38
             case 38:
 
-                System.out.println("\n\tBoletin 2 3 | Ejercicio 38\n");
-                System.out.println("SIN EMPEZAR");
-
+                System.out.println("\n\tBoletin 2 3 | Ejercicio 38\n" + "Encuentra el primer valor 'n' para el que la siguiente suma excede a 10000:\n1+2+3+4+...+n.\n");
+                int sumaSerie38 = 0;
+                int numero38 = 0;
+                do {
+                    numero38++;
+                    sumaSerie38 += numero38;
+                    //System.out.println(numero38+": "+sumaSerie38);
+                } while (sumaSerie38 < 10000);
+                System.out.println("El número que excede la serie es: " + numero38);
 
                 break;
 
             //EJERCICIO 39
             case 39:
 
-                System.out.println("\n\tBoletin 2 3 | Ejercicio 39\n");
-                System.out.println("SIN EMPEZAR");
+                System.out.println("\n\tBoletin 2 3 | Ejercicio 39\n" + "Encuentra los 3 primeros números perfectos");
+                int contadorPerfecto = 0;
+                int numeroPerfecto = 6;
+                int divisorPerfecto = 1;
+                int sumatorioPerfecto = 0;
+                int contador39 = 1;
+                do {
+                    if (sumatorioPerfecto == numeroPerfecto) {
+                        if (sumatorioPerfecto == numeroPerfecto) {
+                            System.out.println("Numero Perfecto = " + numeroPerfecto);
+                            contadorPerfecto++;
+                            numeroPerfecto++;
+                            contador39 = 1;
+                        } else {
+                            System.out.println(numeroPerfecto+" no es perfecto");
+                            numeroPerfecto++;
+                            contador39 = 1;
+                        }
+                    } else if (numeroPerfecto % contador39 == 0) {
+                        divisorPerfecto *= contador39;
+                        sumatorioPerfecto += contador39;
+                        contador39++;
+                    } else {
+                        contador39++;
+                    }
+                } while (contadorPerfecto != 3);
 
                 break;
 
