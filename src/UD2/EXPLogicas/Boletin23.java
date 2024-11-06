@@ -1,5 +1,6 @@
 package src.UD2.EXPLogicas;
 
+import javax.print.attribute.standard.Media;
 import java.text.DecimalFormat;
 import java.util.*;
 
@@ -47,7 +48,7 @@ public class Boletin23 {
                         "        ┣━━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┫\n" +
                         "        ┃       Ejercicios de estructura repetitiva libre       ┃\n" +
                         "        ┠───────────┬──────────┬──────────┬──────────┬──────────┨\n" +
-                        "        ┃     " + incubadora + "40" + reset + "    │    " + incubadora + "41" + reset + "    │    " + incubadora + "42" + reset + "    │    " + incubadora + "43" + reset + "    │    " + incubadora + "44" + reset + "    ┃\n" +
+                        "        ┃     " + terminado + "40" + reset + "    │    " + terminado + "41" + reset + "    │    " + enProceso + "42" + reset + "    │    " + incubadora + "43" + reset + "    │    " + incubadora + "44" + reset + "    ┃\n" +
                         "        ┠───────────┼──────────┼──────────┼──────────┼──────────┨\n" +
                         "        ┃     " + incubadora + "45" + reset + "    │    " + incubadora + "46" + reset + "    │    " + incubadora + "47" + reset + "    │    " + incubadora + "48" + reset + "    │     0    ┃\n" +
                         "        ┗━━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┛\n\n" +
@@ -904,27 +905,6 @@ public class Boletin23 {
                 int numeroPerfecto = 6;
                 int divisorPerfecto = 1;
                 int sumatorioPerfecto = 0;
-                int contador39 = 1;
-                /*do {
-                    if (sumatorioPerfecto == numeroPerfecto) {
-                        if (sumatorioPerfecto == numeroPerfecto) {
-                            System.out.println("Numero Perfecto = " + numeroPerfecto);
-                            contadorPerfecto++;
-                            numeroPerfecto++;
-                            contador39 = 1;
-                        } else {
-                            System.out.println(numeroPerfecto+" no es perfecto");
-                            numeroPerfecto++;
-                            contador39 = 1;
-                        }
-                    } else if (numeroPerfecto % contador39 == 0) {
-                        divisorPerfecto *= contador39;
-                        sumatorioPerfecto += contador39;
-                        contador39++;
-                    } else {
-                        contador39++;
-                    }
-                } while (contadorPerfecto != 3);*/
                 do {
                     if(divisorPerfecto >= numeroPerfecto){
                         if (sumatorioPerfecto == numeroPerfecto){
@@ -955,30 +935,78 @@ public class Boletin23 {
             //EJERCICIO 40
             case 40:
 
-                System.out.println("\n\tBoletin 2 3 | Ejercicio 40\n");
-                System.out.println("SIN EMPEZAR");
+                System.out.println("\n\tBoletin 2 3 | Ejercicio 40\n"+"Aceptar números hasta que se introduzca uno que no esté en secuencia ascendente.");
+                Scanner ejercicio40 = new Scanner(System.in);
+                System.out.println("Ingresa un número:");
+                int numeroActual = ejercicio40.nextInt();
+                int numeroPrevio = numeroActual -1;
 
-
+                while(numeroActual > numeroPrevio){
+                    System.out.println("Ingresa otro:");
+                    numeroPrevio = numeroActual;
+                    numeroActual = ejercicio40.nextInt();
+                }
+                System.out.println("Suficientes...");
                 break;
 
             //EJERCICIO 41
             case 41:
 
-                System.out.println("\n\tBoletin 2 3 | Ejercicio 41\n");
-                System.out.println("SIN EMPEZAR");
+                System.out.println("\n\tBoletin 2 3 | Ejercicio 41\n"+"Igual que el anterior, pero especifica antes si es ascendente o descendente:");
+                System.out.println("Es ascendente o descendente?(a/d)");
+                Scanner ejercicio41 = new Scanner(System.in);
+                String entrada = ejercicio41.next();
+                switch (entrada){
+                    case "a":
+                        System.out.println("Ingresa un número:");
+                        int numeroActualAscendente = ejercicio41.nextInt();
+                        int numeroPrevioAscendente = numeroActualAscendente -1;
 
+                        while(numeroActualAscendente > numeroPrevioAscendente){
+                            System.out.println("Ingresa otro:");
+                            numeroPrevioAscendente = numeroActualAscendente;
+                            numeroActualAscendente = ejercicio41.nextInt();
+                        }
+                        System.out.println("Suficientes...");
+                        break;
+                    case "d":
+                        System.out.println("Ingresa un número:");
+                        int numeroActualDescendente = ejercicio41.nextInt();
+                        int numeroPrevioDescendente = numeroActualDescendente + 1;
+                        while(numeroActualDescendente < numeroPrevioDescendente){
+                            System.out.println("Ingresa otro:");
+                            numeroPrevioDescendente = numeroActualDescendente;
+                            numeroActualDescendente = ejercicio41.nextInt();
+                        }
+                        System.out.println("Suficientes...");
+                        break;
+                    default:
+                        System.out.println("Repite por favor");
+                        break;
+                }
 
                 break;
 
             //EJERCICIO 42
             case 42:
-
+/*
                 System.out.println("\n\tBoletin 2 3 | Ejercicio 42\n");
-                System.out.println("SIN EMPEZAR");
+                Scanner ejercicio42 = new Scanner(System.in);
+                int numero1 = 0, numero2, contador42 = 1;
+                int entrada42 = ejercicio42.nextInt();
+                double distancia1, distancia2, sumatorioDistancia, MediaDistancia;
 
+                do{
+                    distancia1 = numero1 + numero2;
+                    numero1 = numero2;
+                    numero2 = ejercicio42.nextInt();
+                    sumatorioDistancia ;
+                } while (entrada42 != 0);
+                MediaDistancia = sumatorioDistancia / contador42;
+                System.out.println("La media es "+MediaDistancia);
 
                 break;
-
+*/
             //EJERCICIO 43
             case 43:
 
