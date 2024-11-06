@@ -989,24 +989,26 @@ public class Boletin23 {
 
             //EJERCICIO 42
             case 42:
-/*
+
                 System.out.println("\n\tBoletin 2 3 | Ejercicio 42\n");
                 Scanner ejercicio42 = new Scanner(System.in);
                 int numero1 = 0, numero2, contador42 = 1;
                 int entrada42 = ejercicio42.nextInt();
-                double distancia1, distancia2, sumatorioDistancia, MediaDistancia;
+                double distancia, sumatorioDistancia = 0, MediaDistancia;
 
                 do{
-                    distancia1 = numero1 + numero2;
-                    numero1 = numero2;
                     numero2 = ejercicio42.nextInt();
-                    sumatorioDistancia ;
-                } while (entrada42 != 0);
+//HAY AQUÍ UNA GAMBADA CONSIDERABLE, SI SON DOS NUMEROS POSITIVOS TIENE QUE RESTAR.
+                    distancia = Math.abs(numero1) + Math.abs(numero2);
+                    sumatorioDistancia += distancia;
+                    contador42++;
+                    numero1 = numero2;
+                } while (ejercicio42.nextInt() != 0);
                 MediaDistancia = sumatorioDistancia / contador42;
                 System.out.println("La media es "+MediaDistancia);
 
                 break;
-*/
+
             //EJERCICIO 43
             case 43:
 
