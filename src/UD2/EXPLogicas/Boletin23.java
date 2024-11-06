@@ -906,20 +906,20 @@ public class Boletin23 {
                 int divisorPerfecto = 1;
                 int sumatorioPerfecto = 0;
                 do {
-                    if(divisorPerfecto >= numeroPerfecto){
-                        if (sumatorioPerfecto == numeroPerfecto){
-                            System.out.println("El número "+ numeroPerfecto++ +" es perfecto");
+                    if (divisorPerfecto >= numeroPerfecto) {
+                        if (sumatorioPerfecto == numeroPerfecto) {
+                            System.out.println("El número " + numeroPerfecto++ + " es perfecto");
                             sumatorioPerfecto = 0;
                             divisorPerfecto = 1;
                             contadorPerfecto++;
-                        } else{
+                        } else {
                             //System.out.println("El número " +numeroPerfecto++ +" no es perfecto");
                             numeroPerfecto++;
                             sumatorioPerfecto = 0;
                             divisorPerfecto = 1;
                         }
                     } else if (divisorPerfecto < numeroPerfecto) {
-                        if (numeroPerfecto % divisorPerfecto == 0){
+                        if (numeroPerfecto % divisorPerfecto == 0) {
                             sumatorioPerfecto += divisorPerfecto++;
 
                         } else {
@@ -935,13 +935,13 @@ public class Boletin23 {
             //EJERCICIO 40
             case 40:
 
-                System.out.println("\n\tBoletin 2 3 | Ejercicio 40\n"+"Aceptar números hasta que se introduzca uno que no esté en secuencia ascendente.");
+                System.out.println("\n\tBoletin 2 3 | Ejercicio 40\n" + "Aceptar números hasta que se introduzca uno que no esté en secuencia ascendente.");
                 Scanner ejercicio40 = new Scanner(System.in);
                 System.out.println("Ingresa un número:");
                 int numeroActual = ejercicio40.nextInt();
-                int numeroPrevio = numeroActual -1;
+                int numeroPrevio = numeroActual - 1;
 
-                while(numeroActual > numeroPrevio){
+                while (numeroActual > numeroPrevio) {
                     System.out.println("Ingresa otro:");
                     numeroPrevio = numeroActual;
                     numeroActual = ejercicio40.nextInt();
@@ -952,17 +952,17 @@ public class Boletin23 {
             //EJERCICIO 41
             case 41:
 
-                System.out.println("\n\tBoletin 2 3 | Ejercicio 41\n"+"Igual que el anterior, pero especifica antes si es ascendente o descendente:");
+                System.out.println("\n\tBoletin 2 3 | Ejercicio 41\n" + "Igual que el anterior, pero especifica antes si es ascendente o descendente:");
                 System.out.println("Es ascendente o descendente?(a/d)");
                 Scanner ejercicio41 = new Scanner(System.in);
                 String entrada = ejercicio41.next();
-                switch (entrada){
+                switch (entrada) {
                     case "a":
                         System.out.println("Ingresa un número:");
                         int numeroActualAscendente = ejercicio41.nextInt();
-                        int numeroPrevioAscendente = numeroActualAscendente -1;
+                        int numeroPrevioAscendente = numeroActualAscendente - 1;
 
-                        while(numeroActualAscendente > numeroPrevioAscendente){
+                        while (numeroActualAscendente > numeroPrevioAscendente) {
                             System.out.println("Ingresa otro:");
                             numeroPrevioAscendente = numeroActualAscendente;
                             numeroActualAscendente = ejercicio41.nextInt();
@@ -973,7 +973,7 @@ public class Boletin23 {
                         System.out.println("Ingresa un número:");
                         int numeroActualDescendente = ejercicio41.nextInt();
                         int numeroPrevioDescendente = numeroActualDescendente + 1;
-                        while(numeroActualDescendente < numeroPrevioDescendente){
+                        while (numeroActualDescendente < numeroPrevioDescendente) {
                             System.out.println("Ingresa otro:");
                             numeroPrevioDescendente = numeroActualDescendente;
                             numeroActualDescendente = ejercicio41.nextInt();
@@ -996,7 +996,7 @@ public class Boletin23 {
                 int entrada42 = ejercicio42.nextInt();
                 double distancia, sumatorioDistancia = 0, MediaDistancia;
 
-                do{
+                do {
                     numero2 = ejercicio42.nextInt();
 //HAY AQUÍ UNA GAMBADA CONSIDERABLE, SI SON DOS NUMEROS POSITIVOS TIENE QUE RESTAR.
                     distancia = Math.abs(numero1) + Math.abs(numero2);
@@ -1005,7 +1005,7 @@ public class Boletin23 {
                     numero1 = numero2;
                 } while (ejercicio42.nextInt() != 0);
                 MediaDistancia = sumatorioDistancia / contador42;
-                System.out.println("La media es "+MediaDistancia);
+                System.out.println("La media es " + MediaDistancia);
 
                 break;
 
