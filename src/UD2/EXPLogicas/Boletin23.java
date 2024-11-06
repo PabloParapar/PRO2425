@@ -43,13 +43,13 @@ public class Boletin23 {
                         "        ┣━━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┫\n" +
                         "        ┃             Estructura repetitiva " + destacado + "do-while" + reset + "            ┃\n" +
                         "        ┠───────────┬──────────┬──────────┬──────────┬──────────┨\n" +
-                        "        ┃     " + terminado + "35" + reset + "    │    " + terminado + "36" + reset + "    │    " + terminado + "37" + reset + "    │    " + terminado + "38" + reset + "    │    " + enProceso + "39" + reset + "    ┃\n" +
+                        "        ┃     " + terminado + "35" + reset + "    │    " + terminado + "36" + reset + "    │    " + terminado + "37" + reset + "    │    " + terminado + "38" + reset + "    │    " + terminado + "39" + reset + "    ┃\n" +
                         "        ┣━━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┫\n" +
                         "        ┃       Ejercicios de estructura repetitiva libre       ┃\n" +
                         "        ┠───────────┬──────────┬──────────┬──────────┬──────────┨\n" +
-                        "        ┃     " + snooze + "40" + reset + "    │    " + snooze + "41" + reset + "    │    " + snooze + "42" + reset + "    │    " + snooze + "43" + reset + "    │    " + snooze + "44" + reset + "    ┃\n" +
+                        "        ┃     " + incubadora + "40" + reset + "    │    " + incubadora + "41" + reset + "    │    " + incubadora + "42" + reset + "    │    " + incubadora + "43" + reset + "    │    " + incubadora + "44" + reset + "    ┃\n" +
                         "        ┠───────────┼──────────┼──────────┼──────────┼──────────┨\n" +
-                        "        ┃     " + snooze + "45" + reset + "    │    " + snooze + "46" + reset + "    │    " + snooze + "47" + reset + "    │    " + snooze + "48" + reset + "    │     0    ┃\n" +
+                        "        ┃     " + incubadora + "45" + reset + "    │    " + incubadora + "46" + reset + "    │    " + incubadora + "47" + reset + "    │    " + incubadora + "48" + reset + "    │     0    ┃\n" +
                         "        ┗━━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┛\n\n" +
                         "        Introduzca el número del ejercicio que desea ejecutar: ");
         Scanner boletin23 = new Scanner(System.in);
@@ -905,7 +905,7 @@ public class Boletin23 {
                 int divisorPerfecto = 1;
                 int sumatorioPerfecto = 0;
                 int contador39 = 1;
-                do {
+                /*do {
                     if (sumatorioPerfecto == numeroPerfecto) {
                         if (sumatorioPerfecto == numeroPerfecto) {
                             System.out.println("Numero Perfecto = " + numeroPerfecto);
@@ -924,7 +924,29 @@ public class Boletin23 {
                     } else {
                         contador39++;
                     }
-                } while (contadorPerfecto != 3);
+                } while (contadorPerfecto != 3);*/
+                do {
+                    if(divisorPerfecto >= numeroPerfecto){
+                        if (sumatorioPerfecto == numeroPerfecto){
+                            System.out.println("El número "+ numeroPerfecto++ +" es perfecto");
+                            sumatorioPerfecto = 0;
+                            divisorPerfecto = 1;
+                            contadorPerfecto++;
+                        } else{
+                            //System.out.println("El número " +numeroPerfecto++ +" no es perfecto");
+                            numeroPerfecto++;
+                            sumatorioPerfecto = 0;
+                            divisorPerfecto = 1;
+                        }
+                    } else if (divisorPerfecto < numeroPerfecto) {
+                        if (numeroPerfecto % divisorPerfecto == 0){
+                            sumatorioPerfecto += divisorPerfecto++;
+
+                        } else {
+                            divisorPerfecto++;
+                        }
+                    }
+                } while (contadorPerfecto < 3);
 
                 break;
 
