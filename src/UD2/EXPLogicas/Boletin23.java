@@ -48,7 +48,7 @@ public class Boletin23 {
                         "        ┣━━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┫\n" +
                         "        ┃       Ejercicios de estructura repetitiva libre       ┃\n" +
                         "        ┠───────────┬──────────┬──────────┬──────────┬──────────┨\n" +
-                        "        ┃     " + terminado + "40" + reset + "    │    " + terminado + "41" + reset + "    │    " + enProceso + "42" + reset + "    │    " + incubadora + "43" + reset + "    │    " + incubadora + "44" + reset + "    ┃\n" +
+                        "        ┃     " + terminado + "40" + reset + "    │    " + terminado + "41" + reset + "    │    " + terminado + "42" + reset + "    │    " + enProceso + "43" + reset + "    │    " + incubadora + "44" + reset + "    ┃\n" +
                         "        ┠───────────┼──────────┼──────────┼──────────┼──────────┨\n" +
                         "        ┃     " + incubadora + "45" + reset + "    │    " + incubadora + "46" + reset + "    │    " + incubadora + "47" + reset + "    │    " + incubadora + "48" + reset + "    │     0    ┃\n" +
                         "        ┗━━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┛\n\n" +
@@ -990,30 +990,40 @@ public class Boletin23 {
             //EJERCICIO 42
             case 42:
 
-                System.out.println("\n\tBoletin 2 3 | Ejercicio 42\n");
+                System.out.println("\n\tBoletin 2 3 | Ejercicio 42\n"+"Ingresa una serie de números hasta cerrar con 0, entonces calcular la media de las distancias entre ellos:");
                 Scanner ejercicio42 = new Scanner(System.in);
-                int numero1 = 0, numero2, contador42 = 1;
-                int entrada42 = ejercicio42.nextInt();
+                int numero1 = 0, numero2, contador42 = 0;
                 double distancia, sumatorioDistancia = 0, MediaDistancia;
 
-                do {
-                    numero2 = ejercicio42.nextInt();
-//HAY AQUÍ UNA GAMBADA CONSIDERABLE, SI SON DOS NUMEROS POSITIVOS TIENE QUE RESTAR.
-                    distancia = Math.abs(numero1) + Math.abs(numero2);
+                numero2 = ejercicio42.nextInt();
+                while (numero2 != 0) {
+
+                    distancia = Math.max(numero1,numero2) - Math.min(numero1,numero2);
                     sumatorioDistancia += distancia;
                     contador42++;
                     numero1 = numero2;
-                } while (ejercicio42.nextInt() != 0);
+                    numero2 = ejercicio42.nextInt();
+                }
                 MediaDistancia = sumatorioDistancia / contador42;
-                System.out.println("La media es " + MediaDistancia);
+                System.out.println("La media de las distancias es " + MediaDistancia);
 
                 break;
 
             //EJERCICIO 43
             case 43:
 
-                System.out.println("\n\tBoletin 2 3 | Ejercicio 43\n");
-                System.out.println("SIN EMPEZAR");
+                System.out.println("\n\tBoletin 2 3 | Ejercicio 43\n"+"Ejecuta el Algoritmo de Euclides para hayar el máximo común divisor de dos números dados:");
+                Scanner ejercicio43 = new Scanner(System.in);
+                int a43 = ejercicio43.nextInt();
+                int b43 = ejercicio43.nextInt();
+                int q43, r43 = 1, numerador = Math.max(a43,b43), denominador = Math.min(a43, b43);
+                while (r43 != 0){
+                    q43 = numerador / denominador;
+                    r43 = numerador % denominador;
+                    numerador = denominador;
+                    denominador = r43;
+                }
+                System.out.println("El máximo común divisor de "+a43+" y "+b43+" es "+numerador);
 
                 break;
 
