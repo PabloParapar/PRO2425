@@ -1,5 +1,6 @@
 package src.UD3;
 
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Boletin3 {
@@ -17,7 +18,7 @@ public class Boletin3 {
                         "        ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n" +
                         "        ┃                      Ejercicios de " + destacado + "métodos" + reset + "                      ┃\n" +
                         "        ┠──────────┬──────────┬──────────┬──────────┬──────────┬──────────┨\n" +
-                        "        ┃    " + terminado + " 1" + reset + "    │    " + terminado + " 2" + reset + "    │    " + enProceso + " 3" + reset + "    │    " + incubadora + " 4" + reset + "    │    " + incubadora + " 5" + reset + "    │    " + incubadora + " 6" + reset + "    ┃\n" +
+                        "        ┃    " + terminado + " 1" + reset + "    │    " + terminado + " 2" + reset + "    │    " + terminado + " 3" + reset + "    │    " + terminado + " 4" + reset + "    │    " + enProceso + " 5" + reset + "    │    " + incubadora + " 6" + reset + "    ┃\n" +
                         "        ┠──────────┼──────────┼──────────┼──────────┼──────────┼──────────┨\n" +
                         "        ┃    " + incubadora + " 7" + reset + "    │    " + incubadora + " 8" + reset + "    │    " + incubadora + " 9" + reset + "    │    " + incubadora + "10" + reset + "    │    " + incubadora + "11" + reset + "    │          ┃\n" +
                         "        ┣━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┫\n" +
@@ -64,54 +65,30 @@ public class Boletin3 {
         while (ejercicio != 0) {
             switch (ejercicio) {
                 case 1:
-                    Scanner ejercicio1 = new Scanner(System.in);
-                    System.out.println("\n\tBoletin 3 | Ejercicio 1\n" + "Ingresa un mes y un año para mostrar en pantalla cuántos días tiene ese mes:");
-
-                    System.out.println("\nIngresa el mes [1-12]:");
-                    int mes = ejercicio1.nextInt();
-                    while (mes < 1 || mes > 12) {
-                        System.out.println("Mes no válido, vuelve a intentarlo:");
-                        mes = ejercicio1.nextInt();
-                    }
-                    System.out.println("\nIngresa el año:");
-                    int anho = ejercicio1.nextInt();
-                    System.out.println("\nEl mes " + mes + " del año " + anho + " tiene " + ejercicio1(mes, anho) + " días\n");
+                    int mes = entrada.nextInt();
+                    int anho = entrada.nextInt();
+                    System.out.println("Tiene " + ejercicio1(mes, anho) + " días");
                     break;
 
                 case 2:
-                    Scanner ejercicio2 = new Scanner(System.in);
-                    System.out.println("\n\tBoletin 3 | Ejercicio 2\n" + "Ingresa una fecha en formato dd/mm/aaaa y valida si es correcta o no con el método del ejercicio 1:");
-                    System.out.println("\nIngresa la fecha (dd/mm/aaaa):");
-
-                    byte dia2 = ejercicio2.nextByte();
-                    byte mes2 = ejercicio2.nextByte();
-                    short anho2 = ejercicio2.nextShort();
-                    ejercicio2(dia2, mes2, anho2);
+                    ejercicio2(entrada);
 
                     break;
 
                 case 3:
-
-                    Scanner ejercicio3 = new Scanner(System.in);
-                    System.out.println("\n\tBoletin 3 | Ejercicio 3\n" + "Ingresa la medida de los 3 lados de un triángulo para ver si es equilátero, isósceles o escaleno:");
-                    System.out.println("\nIngresa los lados del triángulo");
-                    int ladoTriangulo1 = ejercicio3.nextInt();
-                    int ladoTriangulo2 = ejercicio3.nextInt();
-                    int ladoTriangulo3 = ejercicio3.nextInt();
-                    ejercicio3(ladoTriangulo1, ladoTriangulo2, ladoTriangulo3);
+                    ejercicio3(entrada);
 
                     break;
 
                 case 4:
-                    System.out.println("\n\tBoletin 3 | Ejercicio 4\n" + "Comprueba si el caracter ingresado es una vocal o una consonante");
-                    Scanner ejercicio4 = new Scanner(System.in);
-                    System.out.println("¿Qué quieres comprobar?\n1 · Vocales\n2 · Consonantes");
-                    String letras = ejercicio4.next();
-                    ejercicio4(letras);
+                    ejercicio4(entrada);
 
                     break;
 
                 case 5:
+                    ejercicio5(entrada);
+
+                    break;
                 case 6:
                 case 7:
                 case 8:
@@ -187,6 +164,15 @@ public class Boletin3 {
     }
 
     private static int ejercicio1(int mes, int anho) {
+        System.out.println("\n\tBoletin 3 | Ejercicio 1\n" + "Ingresa un mes y un año para mostrar en pantalla cuántos días tiene ese mes:");
+
+        System.out.println("\nIngresa el mes [1-12]:");
+
+        while (mes < 1 || mes > 12) {
+            System.out.println("Mes no válido, vuelve a intentarlo:");
+        }
+        System.out.println("\nIngresa el año:");
+
         int dias = 0;
         switch (mes) {
             case 1:
@@ -211,14 +197,18 @@ public class Boletin3 {
                     dias = 28;
                 }
                 break;
-            default:
-                System.out.println("Mes no válido");
-                break;
         }
         return dias;
     }
 
-    private static void ejercicio2(byte dia, byte mes, short anho) {
+    private static void ejercicio2(Scanner entrada) {
+        System.out.println("\n\tBoletin 3 | Ejercicio 2\n" + "Ingresa una fecha en formato dd/mm/aaaa y valida si es correcta o no con el método del ejercicio 1:");
+        System.out.println("\nIngresa la fecha (dd/mm/aaaa):");
+        String fecha = entrada.next();
+        int dia = Integer.parseInt(fecha.substring(0, 2));
+        int mes = Integer.parseInt(fecha.substring(3, 5));
+        int anho = Integer.parseInt(fecha.substring(6, 10));
+
         if (dia <= 0 || mes <= 0 || mes > 12 || anho <= 0) {
             System.out.println("Fecha no válida");
         } else {
@@ -248,7 +238,13 @@ public class Boletin3 {
         return triangulo;
     }
 
-    private static void ejercicio3(int lado1, int lado2, int lado3) {
+    private static void ejercicio3(Scanner entrada) {
+        System.out.println("\n\tBoletin 3 | Ejercicio 3\n" + "Ingresa la medida de los 3 lados de un triángulo para ver si es equilátero, isósceles o escaleno:");
+        System.out.println("\nIngresa los lados del triángulo");
+        int lado1 = entrada.nextInt();
+        int lado2 = entrada.nextInt();
+        int lado3 = entrada.nextInt();
+
         if (esTriangulo(lado1, lado2, lado3)) {
             if (lado1 == lado2) {
                 if (lado2 == lado3) {
@@ -270,7 +266,7 @@ public class Boletin3 {
 
     private static boolean esVocal(String letra) {
         boolean vocal;
-        if (letra == "a" || letra == "A" || letra == "e" || letra == "E" || letra == "i" || letra == "I" || letra == "o" || letra == "O" || letra == "u" || letra == "U") {
+        if (Objects.equals(letra, "a") || Objects.equals(letra, "A") || Objects.equals(letra, "e") || Objects.equals(letra, "E") || Objects.equals(letra, "i") || Objects.equals(letra, "I") || Objects.equals(letra, "o") || Objects.equals(letra, "O") || Objects.equals(letra, "u") || Objects.equals(letra, "U")) {
             vocal = true;
         } else {
             vocal = false;
@@ -294,14 +290,67 @@ public class Boletin3 {
         }
     }
 
-    private static void ejercicio4(String letra) {
+    private static void ejercicio4(Scanner entrada) {
+
+        System.out.println("\n\tBoletin 3 | Ejercicio 4\n" + "Comprueba si el caracter ingresado es una vocal o una consonante");
         System.out.println("¿Qué quieres comprobar?\n1 · Vocales\n2 · Consonantes");
-        while (letra != "0") {
-            if (letra == "1") {
-                ejercicio4a(letra);
-            } else if (letra == "2") {
-                ejercicio4b(letra);
+        int opcion = entrada.nextInt();
+
+        while (opcion != 0) {
+            String letra;
+            switch (opcion) {
+                case 1:
+                    System.out.println("Comprueba si es vocal:");
+                    letra = entrada.next();
+                    ejercicio4a(letra);
+                    break;
+                case 2:
+                    System.out.println("Comprueba si es consonante:");
+                    letra = entrada.next();
+                    ejercicio4b(letra);
+                    break;
+                default:
+                    System.out.println("Elige otro");
+                    opcion = entrada.nextInt();
+                    break;
             }
         }
     }
+
+    private static void ejercicio5(Scanner entrada) {
+        String texto = entrada.next();
+        String textoMinus = texto.toLowerCase();
+        int longitudTexto = texto.length();
+        int contadorA = 0;
+        int contadorE = 0;
+        int contadorI = 0;
+        int contadorO = 0;
+        int contadorU = 0;
+        for (int i = 0; i <= longitudTexto; i++) {
+            if (esVocal(String.valueOf(textoMinus.charAt(i)))) {
+                switch (textoMinus.charAt(i)) {
+                    case 'a':
+                        contadorA++;
+                        break;
+                    case 'e':
+                        contadorE++;
+                        break;
+                    case 'i':
+                        contadorI++;
+                        break;
+                    case 'o':
+                        contadorO++;
+                        break;
+                    case 'u':
+                }
+            }
+        }
+        float porcentajeA = (float) contadorA / longitudTexto * 100;
+        float porcentajeE = (float) contadorE / longitudTexto * 100;
+        float porcentajeI = (float) contadorI / longitudTexto * 100;
+        float porcentajeO = (float) contadorO / longitudTexto * 100;
+        float porcentajeU = (float) contadorU / longitudTexto * 100;
+        System.out.println("\nCantidad A:\t"+contadorA+"\t|\tPorcentaje A:\t"+porcentajeA);
+    }
 }
+
