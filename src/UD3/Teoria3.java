@@ -43,7 +43,7 @@ public class Teoria3 {
         hacerPresentacion();
         imprimirPresentacion("Pablo", "Vegadeo", 27);
 
-
+        System.out.println(factorial(5));
     }
 
     //25 de Noviembre de 2024
@@ -61,6 +61,18 @@ public class Teoria3 {
         for (int i = 0; i <= b; i++) {
             System.out.println(i * b);
         }
+    }
+
+    //28 de noviembre de 2024
+
+    public static int factorial(int n){
+        if(n <= 1){
+            return 1;
+        } else {
+            return n * factorial(n-1);
+        }
+
+        //return factorial(n);   //Si solo hubiera esta llamada habría un error llamado StackOveflowError
     }
 }
 

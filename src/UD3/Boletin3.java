@@ -18,13 +18,13 @@ public class Boletin3 {
                         "        ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n" +
                         "        ┃                      Ejercicios de " + destacado + "métodos" + reset + "                      ┃\n" +
                         "        ┠──────────┬──────────┬──────────┬──────────┬──────────┬──────────┨\n" +
-                        "        ┃    " + terminado + " 1" + reset + "    │    " + terminado + " 2" + reset + "    │    " + terminado + " 3" + reset + "    │    " + terminado + " 4" + reset + "    │    " + enProceso + " 5" + reset + "    │    " + incubadora + " 6" + reset + "    ┃\n" +
+                        "        ┃    " + terminado + " 1" + reset + "    │    " + terminado + " 2" + reset + "    │    " + terminado + " 3" + reset + "    │    " + terminado + " 4" + reset + "    │    " + saltado + " 5" + reset + "    │    " + incubadora + " 6" + reset + "    ┃\n" +
                         "        ┠──────────┼──────────┼──────────┼──────────┼──────────┼──────────┨\n" +
                         "        ┃    " + incubadora + " 7" + reset + "    │    " + incubadora + " 8" + reset + "    │    " + incubadora + " 9" + reset + "    │    " + incubadora + "10" + reset + "    │    " + incubadora + "11" + reset + "    │          ┃\n" +
                         "        ┣━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┫\n" +
                         "        ┃                 Ejercicios de " + destacado + "métodos recursivos" + reset + "                ┃\n" +
                         "        ┠──────────┬──────────┬──────────┬──────────┬──────────┬──────────┨\n" +
-                        "        ┃    " + snooze + "12" + reset + "    │    " + snooze + "13" + reset + "    │    " + snooze + "14" + reset + "    │    " + snooze + "15" + reset + "    │    " + snooze + "16" + reset + "    │    " + snooze + "17" + reset + "    ┃\n" +
+                        "        ┃    " + enProceso + "12" + reset + "    │    " + snooze + "13" + reset + "    │    " + snooze + "14" + reset + "    │    " + snooze + "15" + reset + "    │    " + snooze + "16" + reset + "    │    " + snooze + "17" + reset + "    ┃\n" +
                         "        ┠──────────┼──────────┼──────────┼──────────┼──────────┼──────────┨\n" +
                         "        ┃    " + snooze + "18" + reset + "    │    " + snooze + "19" + reset + "    │    " + snooze + "20" + reset + "    │    " + snooze + "21" + reset + "    │    " + snooze + "22" + reset + "    │          ┃\n" +
                         "        ┣━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┫\n" +
@@ -96,6 +96,8 @@ public class Boletin3 {
                 case 10:
                 case 11:
                 case 12:
+                    ejercicio12(entrada);
+                    break;
                 case 13:
                 case 14:
                 case 15:
@@ -350,7 +352,48 @@ public class Boletin3 {
         float porcentajeI = (float) contadorI / longitudTexto * 100;
         float porcentajeO = (float) contadorO / longitudTexto * 100;
         float porcentajeU = (float) contadorU / longitudTexto * 100;
-        System.out.println("\nCantidad A:\t"+contadorA+"\t|\tPorcentaje A:\t"+porcentajeA);
+        System.out.println("\nCantidad A:\t" + contadorA + "\t|\tPorcentaje A:\t" + porcentajeA);
     }
+
+    private static void ejercicio12(Scanner entrada) {
+
+        System.out.println("\n\tBoletin 3 | Ejercicio 12\n" + "Escribe un método recursivo que reciba un número y devuelva el número de dígitos que tiene");
+        System.out.println("Ingresa el número a evaluar");
+        int numeroEntrada = entrada.nextInt();
+        int numero = Math.abs(numeroEntrada);
+        System.out.println(numeroEntrada + " tiene " + longitudNumero(numero) + " dígitos");
+
+    }
+
+    private static int longitudNumero(int n) {
+        if (n < 10) {
+            return 1;
+        } else {
+            return 1 + longitudNumero(n / 10);
+        }
+    }
+
+    private static void ejercicio13(Scanner entrada){
+        System.out.println("Ingresa la Base real y la potencia entera:");
+        double numeroReal = entrada.nextDouble();
+        int numeroEntero = entrada.nextInt();
+        //potencia(numeroReal, numeroEntero);
+    }
+    /*
+    private static double potencia(double x, int n){
+        if(n < 0) {
+            if(n < -1){
+
+            }
+        } else if (n > 0) {
+            if (n <= 1) {
+                return 1;
+            } else {
+                return x * potencia(x, n - 1);
+            }
+        } else {
+            return 1;
+        }
+    }*/
 }
 
