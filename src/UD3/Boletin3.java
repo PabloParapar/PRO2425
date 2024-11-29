@@ -24,9 +24,9 @@ public class Boletin3 {
                         "        ┣━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┫\n" +
                         "        ┃                 Ejercicios de " + destacado + "métodos recursivos" + reset + "                ┃\n" +
                         "        ┠──────────┬──────────┬──────────┬──────────┬──────────┬──────────┨\n" +
-                        "        ┃    " + enProceso + "12" + reset + "    │    " + snooze + "13" + reset + "    │    " + snooze + "14" + reset + "    │    " + snooze + "15" + reset + "    │    " + snooze + "16" + reset + "    │    " + snooze + "17" + reset + "    ┃\n" +
+                        "        ┃    " + terminado + "12" + reset + "    │    " + terminado + "13" + reset + "    │    " + terminado + "14" + reset + "    │    " + terminado + "15" + reset + "    │    " + terminado + "16" + reset + "    │    " + terminado + "17" + reset + "    ┃\n" +
                         "        ┠──────────┼──────────┼──────────┼──────────┼──────────┼──────────┨\n" +
-                        "        ┃    " + snooze + "18" + reset + "    │    " + snooze + "19" + reset + "    │    " + snooze + "20" + reset + "    │    " + snooze + "21" + reset + "    │    " + snooze + "22" + reset + "    │          ┃\n" +
+                        "        ┃    " + incubadora + "18" + reset + "    │    " + incubadora + "19" + reset + "    │    " + incubadora + "20" + reset + "    │    " + incubadora + "21" + reset + "    │    " + incubadora + "22" + reset + "    │          ┃\n" +
                         "        ┣━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┫\n" +
                         "        ┃                      Uso básico de " + destacado + "objetos" + reset + "                      ┃\n" +
                         "        ┠────────────────────────────────┬────────────────────────────────┨\n" +
@@ -99,10 +99,20 @@ public class Boletin3 {
                     ejercicio12(entrada);
                     break;
                 case 13:
+                    ejercicio13(entrada);
+                    break;
                 case 14:
+                    ejercicio14(entrada);
+                    break;
                 case 15:
+                    ejercicio15(entrada);
+                    break;
                 case 16:
+                    ejercicio16(entrada);
+                    break;
                 case 17:
+                    ejercicio17(entrada);
+                    break;
                 case 18:
                 case 19:
                 case 20:
@@ -373,27 +383,94 @@ public class Boletin3 {
         }
     }
 
-    private static void ejercicio13(Scanner entrada){
+    private static void ejercicio13(Scanner entrada) {
+        System.out.println("\n\tBoletin 3 | Ejercicio 13\n" + "Escribe un método recursivo para calcular la potencia de dos numeros con base real y potencia entera:");
         System.out.println("Ingresa la Base real y la potencia entera:");
         double numeroReal = entrada.nextDouble();
         int numeroEntero = entrada.nextInt();
-        //potencia(numeroReal, numeroEntero);
+        System.out.println(numeroReal + " ^ " + numeroEntero + " = " + potencia(numeroReal, numeroEntero));
     }
-    /*
-    private static double potencia(double x, int n){
-        if(n < 0) {
-            if(n < -1){
 
+    private static double potencia(double x, int n) {
+        if (n < 0) {
+            if (n == -1) {
+                return (1 / x);
+            } else {
+                return (1 / x) * potencia(x, n + 1);
             }
         } else if (n > 0) {
-            if (n <= 1) {
-                return 1;
+            if (n == 1) {
+                return x;
             } else {
                 return x * potencia(x, n - 1);
             }
         } else {
             return 1;
         }
-    }*/
+    }
+
+    private static void ejercicio14(Scanner entrada) {
+        System.out.println("\n\tBoletin 3 | Ejercicio 14\n" + "Escribe un método recursivo para calcular, dado un término entero positivo, su correspondiente valor de la sucesión de Fibonacci:");
+        System.out.println("Ingresa el término de la sucesión de Fibonacci a calcular:");
+        int sucesion = entrada.nextInt();
+        System.out.println(fibonacci(sucesion));
+    }
+
+    private static int fibonacci(int n) {
+        if (n == 0 || n == 1 || n < 0) {
+            return 1;
+        } else {
+            return fibonacci(n - 1) + fibonacci(n - 2);
+        }
+    }
+
+    private static void ejercicio15(Scanner entrada) {
+        System.out.println("\n\tBoletin 3 | Ejercicio 15\n" + "Escribe un método recursivo para invertir un número entero:");
+        System.out.println("Ingresa el número entero a invertir:");
+        int numeroInvertir = entrada.nextInt();
+        System.out.println(invertirNumero(numeroInvertir));
+    }
+
+    private static int invertirNumero(int n) {
+        int l = longitudNumero(n);
+        if (l == 1) {
+            return n;
+        } else {
+            return n % 10 * (int) Math.pow(10, l - 1) + invertirNumero(n / 10);
+        }
+    }
+
+    private static void ejercicio16(Scanner entrada) {
+        System.out.println("\n\tBoletin 3 | Ejercicio 16\n" + "Escribe un método recursivo para calcular, dado un término entero positivo, la suma de sus dígitos:");
+        System.out.println("Ingresa el término a calcular:");
+        int numeroSumar = entrada.nextInt();
+        System.out.println(sumaDigitos(numeroSumar));
+    }
+
+    private static int sumaDigitos(int n) {
+        if (n < 10) {
+            return n;
+        } else {
+            return (n % 10) + sumaDigitos(n / 10);
+        }
+    }
+
+    private static void ejercicio17(Scanner entrada){
+        System.out.println("\n\tBoletin 3 | Ejercicio 17\n" + "Escribe un método recursivo para calcular, siguiendo el algoritmo de euclides, el máximo común divisor de dos números:");
+        System.out.println("Ingresa los 2 números a calcular:");
+        int numero1 = entrada.nextInt();
+        int numero2 = entrada.nextInt();
+        System.out.println(maximoComunDivisor(numero1, numero2));
+    }
+
+    private static int maximoComunDivisor(int a, int b){
+        if (b <= a && a % b == 0){
+            return b;
+        } else if( a < b){
+            return maximoComunDivisor(b, a);
+        } else {
+            return maximoComunDivisor(b, a % b);
+        }
+    }
 }
 
