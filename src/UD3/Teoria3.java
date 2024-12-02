@@ -1,5 +1,7 @@
 package src.UD3;
 
+import java.awt.*;
+
 public class Teoria3 {
     //Viernes 15/11/2024
     private static void imprimeTablaMultiplicar(int valor) {
@@ -44,6 +46,7 @@ public class Teoria3 {
         imprimirPresentacion("Pablo", "Vegadeo", 27);
 
         System.out.println(factorial(5));
+        objetos();
     }
 
     //25 de Noviembre de 2024
@@ -73,6 +76,16 @@ public class Teoria3 {
         }
 
         //return factorial(n);   //Si solo hubiera esta llamada habría un error llamado StackOveflowError
+    }
+
+    //2 de Diciembre de 2024
+    public static void objetos(){
+        int valor = Math.abs(10);
+        System.out.println(valor);
+
+        Point puntoOrigen = new Point(5, 10);
+        System.out.println(puntoOrigen.x);
+        int ejeX = puntoOrigen.x;
     }
 }
 

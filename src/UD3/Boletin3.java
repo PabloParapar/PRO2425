@@ -26,7 +26,7 @@ public class Boletin3 {
                         "        ┠──────────┬──────────┬──────────┬──────────┬──────────┬──────────┨\n" +
                         "        ┃    " + terminado + "12" + reset + "    │    " + terminado + "13" + reset + "    │    " + terminado + "14" + reset + "    │    " + terminado + "15" + reset + "    │    " + terminado + "16" + reset + "    │    " + terminado + "17" + reset + "    ┃\n" +
                         "        ┠──────────┼──────────┼──────────┼──────────┼──────────┼──────────┨\n" +
-                        "        ┃    " + incubadora + "18" + reset + "    │    " + incubadora + "19" + reset + "    │    " + incubadora + "20" + reset + "    │    " + incubadora + "21" + reset + "    │    " + incubadora + "22" + reset + "    │          ┃\n" +
+                        "        ┃    " + terminado + "18" + reset + "    │    " + terminado + "19" + reset + "    │    " + terminado + "20" + reset + "    │    " + incubadora + "21" + reset + "    │    " + incubadora + "22" + reset + "    │          ┃\n" +
                         "        ┣━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┫\n" +
                         "        ┃                      Uso básico de " + destacado + "objetos" + reset + "                      ┃\n" +
                         "        ┠────────────────────────────────┬────────────────────────────────┨\n" +
@@ -114,38 +114,74 @@ public class Boletin3 {
                     ejercicio17(entrada);
                     break;
                 case 18:
+                    ejercicio18(entrada);
+                    break;
                 case 19:
+                    ejercicio19(entrada);
+                    break;
                 case 20:
+                    ejercicio20(entrada);
+                    break;
                 case 21:
+                    //ejercicio21(entrada);
                 case 22:
+                    //ejercicio22(entrada);
                 case 23:
+                    //ejercicio23(entrada);
                 case 24:
+                    //ejercicio24(entrada);
                 case 25:
+                    //ejercicio25(entrada);
                 case 26:
+                    //ejercicio26(entrada);
                 case 27:
+                    //ejercicio27(entrada);
                 case 28:
+                    //ejercicio28(entrada);
                 case 29:
+                    //ejercicio29(entrada);
                 case 30:
+                    //ejercicio30(entrada);
                 case 31:
+                    //ejercicio31(entrada);
                 case 32:
+                    //ejercicio32(entrada);
                 case 33:
+                    //ejercicio33(entrada);
                 case 34:
+                    //ejercicio34(entrada);
                 case 35:
+                    //ejercicio35(entrada);
                 case 36:
+                    //ejercicio36(entrada);
                 case 37:
+                    //ejercicio37(entrada);
                 case 38:
+                    //ejercicio38(entrada);
                 case 39:
+                    //ejercicio39(entrada);
                 case 40:
+                    //ejercicio40(entrada);
                 case 41:
+                    //ejercicio41(entrada);
                 case 42:
+                    //ejercicio42(entrada);
                 case 43:
+                    //ejercicio43(entrada);
                 case 44:
+                    //ejercicio44(entrada);
                 case 45:
+                    //ejercicio45(entrada);
                 case 46:
+                    //ejercicio46(entrada);
                 case 47:
+                    //ejercicio47(entrada);
                 case 48:
+                    //ejercicio48(entrada);
                 case 49:
+                    //ejercicio49(entrada);
                 case 50:
+                    //ejercicio50(entrada);
                     System.out.println("Estoy en ello, paciencia\n");
                     break;
                 default:
@@ -455,7 +491,7 @@ public class Boletin3 {
         }
     }
 
-    private static void ejercicio17(Scanner entrada){
+    private static void ejercicio17(Scanner entrada) {
         System.out.println("\n\tBoletin 3 | Ejercicio 17\n" + "Escribe un método recursivo para calcular, siguiendo el algoritmo de euclides, el máximo común divisor de dos números:");
         System.out.println("Ingresa los 2 números a calcular:");
         int numero1 = entrada.nextInt();
@@ -463,14 +499,250 @@ public class Boletin3 {
         System.out.println(maximoComunDivisor(numero1, numero2));
     }
 
-    private static int maximoComunDivisor(int a, int b){
-        if (b <= a && a % b == 0){
+    private static int maximoComunDivisor(int a, int b) {
+        if (b <= a && a % b == 0) {
             return b;
-        } else if( a < b){
+        } else if (a < b) {
             return maximoComunDivisor(b, a);
         } else {
             return maximoComunDivisor(b, a % b);
         }
+    }
+
+    private static void ejercicio18(Scanner entrada) {
+        System.out.println("\n\tBoletin 3 | Ejercicio 18\n" + "Escribe un método recursivo para calcular si un número es par o no:");
+        System.out.println("Ingresa el número a comprobar:");
+        int seraPar = entrada.nextInt();
+        if (esPar(seraPar)) {
+            System.out.println("El número " + seraPar + " es Par");
+        } else {
+            System.out.println("El número " + seraPar + " es Impar");
+        }
+    }
+
+    private static boolean esPar(int numero) {
+        if (numero > 1) {
+            return esPar(numero - 2);
+        } else if (numero == 1) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    private static void ejercicio19(Scanner entrada) {
+        System.out.println("\n\tBoletin 3 | Ejercicio 19\n" + "Escribir un método recursivo que calcule la serie 1 + 2 + 3 + ... + n-1 + n:");
+        System.out.println("Ingresa el valor n de la serie:");
+        int numeroSerie = entrada.nextInt();
+        System.out.println("El "+numeroSerie+"º término de la serie es "+serieEnteros(numeroSerie));
+    }
+
+    private static int serieEnteros(int n){
+        if(n==1){
+            return 1;
+        } else{
+            return n + serieEnteros(n-1);
+        }
+    }
+
+    private static void ejercicio20(Scanner entrada) {
+
+        System.out.println("\n\tBoletin 3 | Ejercicio 20\n" + "Escribe un método lógico recursivo que determine si una cadena recibida por parámetro es un palíndromo:");
+        System.out.println("Ingresa la cadena a comprobar:");
+        String palindromo = entrada.next();
+        if(esPalindromo(palindromo)){
+            System.out.println(palindromo+" es palíndromo");
+        } else{
+            System.out.println(palindromo+" no es palíndromo");
+        }
+    }
+
+    private static boolean esPalindromo(String texto){
+        int longitud = texto.length();
+        /*
+        * charat(1).equals(charat(longitud-1) && ...
+        * */
+        return true;
+    }
+
+    private static void ejercicio21(Scanner entrada) {
+
+        System.out.println("\n\tBoletin 3 | Ejercicio 21\n" + ":");
+        System.out.println(":");
+    }
+
+    private static void ejercicio22(Scanner entrada) {
+
+        System.out.println("\n\tBoletin 3 | Ejercicio 22\n" + ":");
+        System.out.println(":");
+    }
+
+    private static void ejercicio23(Scanner entrada) {
+
+        System.out.println("\n\tBoletin 3 | Ejercicio 23\n" + ":");
+        System.out.println(":");
+    }
+
+    private static void ejercicio24(Scanner entrada) {
+
+        System.out.println("\n\tBoletin 3 | Ejercicio 24\n" + ":");
+        System.out.println(":");
+    }
+
+    private static void ejercicio25(Scanner entrada) {
+
+        System.out.println("\n\tBoletin 3 | Ejercicio 25\n" + ":");
+        System.out.println(":");
+    }
+
+    private static void ejercicio26(Scanner entrada) {
+
+        System.out.println("\n\tBoletin 3 | Ejercicio 26\n" + ":");
+        System.out.println(":");
+    }
+
+    private static void ejercicio27(Scanner entrada) {
+
+        System.out.println("\n\tBoletin 3 | Ejercicio 27\n" + ":");
+        System.out.println(":");
+    }
+
+    private static void ejercicio28(Scanner entrada) {
+
+        System.out.println("\n\tBoletin 3 | Ejercicio 28\n" + ":");
+        System.out.println(":");
+    }
+
+    private static void ejercicio29(Scanner entrada) {
+
+        System.out.println("\n\tBoletin 3 | Ejercicio 29\n" + ":");
+        System.out.println(":");
+    }
+
+    private static void ejercicio30(Scanner entrada) {
+
+        System.out.println("\n\tBoletin 3 | Ejercicio 30\n" + ":");
+        System.out.println(":");
+    }
+
+    private static void ejercicio31(Scanner entrada) {
+
+        System.out.println("\n\tBoletin 3 | Ejercicio 31\n" + ":");
+        System.out.println(":");
+    }
+
+    private static void ejercicio32(Scanner entrada) {
+
+        System.out.println("\n\tBoletin 3 | Ejercicio 32\n" + ":");
+        System.out.println(":");
+    }
+
+    private static void ejercicio33(Scanner entrada) {
+
+        System.out.println("\n\tBoletin 3 | Ejercicio 33\n" + ":");
+        System.out.println(":");
+    }
+
+    private static void ejercicio34(Scanner entrada) {
+
+        System.out.println("\n\tBoletin 3 | Ejercicio 34\n" + ":");
+        System.out.println(":");
+    }
+
+    private static void ejercicio35(Scanner entrada) {
+
+        System.out.println("\n\tBoletin 3 | Ejercicio 35\n" + ":");
+        System.out.println(":");
+    }
+
+    private static void ejercicio36(Scanner entrada) {
+
+        System.out.println("\n\tBoletin 3 | Ejercicio 36\n" + ":");
+        System.out.println(":");
+    }
+
+    private static void ejercicio37(Scanner entrada) {
+
+        System.out.println("\n\tBoletin 3 | Ejercicio 37\n" + ":");
+        System.out.println(":");
+    }
+
+    private static void ejercicio38(Scanner entrada) {
+
+        System.out.println("\n\tBoletin 3 | Ejercicio 38\n" + ":");
+        System.out.println(":");
+    }
+
+    private static void ejercicio39(Scanner entrada) {
+
+        System.out.println("\n\tBoletin 3 | Ejercicio 39\n" + ":");
+        System.out.println(":");
+    }
+
+    private static void ejercicio40(Scanner entrada) {
+
+        System.out.println("\n\tBoletin 3 | Ejercicio 40\n" + ":");
+        System.out.println(":");
+    }
+
+    private static void ejercicio41(Scanner entrada) {
+
+        System.out.println("\n\tBoletin 3 | Ejercicio 41\n" + ":");
+        System.out.println(":");
+    }
+
+    private static void ejercicio42(Scanner entrada) {
+
+        System.out.println("\n\tBoletin 3 | Ejercicio 42\n" + ":");
+        System.out.println(":");
+    }
+
+    private static void ejercicio43(Scanner entrada) {
+
+        System.out.println("\n\tBoletin 3 | Ejercicio 43\n" + ":");
+        System.out.println(":");
+    }
+
+    private static void ejercicio44(Scanner entrada) {
+
+        System.out.println("\n\tBoletin 3 | Ejercicio 44\n" + ":");
+        System.out.println(":");
+    }
+
+    private static void ejercicio45(Scanner entrada) {
+
+        System.out.println("\n\tBoletin 3 | Ejercicio 45\n" + ":");
+        System.out.println(":");
+    }
+
+    private static void ejercicio46(Scanner entrada) {
+
+        System.out.println("\n\tBoletin 3 | Ejercicio 46\n" + ":");
+        System.out.println(":");
+    }
+
+    private static void ejercicio47(Scanner entrada) {
+
+        System.out.println("\n\tBoletin 3 | Ejercicio 47\n" + ":");
+        System.out.println(":");
+    }
+
+    private static void ejercicio48(Scanner entrada) {
+
+        System.out.println("\n\tBoletin 3 | Ejercicio 48\n" + ":");
+        System.out.println(":");
+    }
+
+    private static void ejercicio49(Scanner entrada) {
+
+        System.out.println("\n\tBoletin 3 | Ejercicio 49\n" + ":");
+        System.out.println(":");
+    }
+
+    private static void ejercicio50(Scanner entrada) {
+
+        System.out.println("\n\tBoletin 3 | Ejercicio 50\n" + ":");
+        System.out.println(":");
     }
 }
 
