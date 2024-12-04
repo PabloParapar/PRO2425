@@ -550,19 +550,33 @@ public class Boletin3 {
         System.out.println("\n\tBoletin 3 | Ejercicio 20\n" + "Escribe un método lógico recursivo que determine si una cadena recibida por parámetro es un palíndromo:");
         System.out.println("Ingresa la cadena a comprobar:");
         String palindromo = entrada.next();
+        /*
         if(esPalindromo(palindromo)){
             System.out.println(palindromo+" es palíndromo");
         } else{
             System.out.println(palindromo+" no es palíndromo");
-        }
+        }*/
+        invertirCadena(palindromo);
     }
 
     private static boolean esPalindromo(String texto){
         int longitud = texto.length();
+        if (longitud <= 2){
+            return true;
+        } else{
+            return texto.charAt(1) == texto.charAt(longitud-1) && esPalindromo(texto);
+        }
         /*
         * charat(1).equals(charat(longitud-1) && ...
         * */
-        return true;
+    }
+    private static void invertirCadena(String texto){
+        int longitud = texto.length();
+        String textoInvertido = "";
+        for (int i = longitud-1; i >= 0; i--){
+            textoInvertido.concat(String.valueOf(texto.charAt(i)));
+        }
+        System.out.println(textoInvertido);
     }
 
     private static void ejercicio21(Scanner entrada) {

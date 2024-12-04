@@ -1,6 +1,10 @@
 package src.UD3;
 
 import java.awt.*;
+import java.math.*;
+import java.util.Random;
+
+import static java.lang.Math.PI;
 
 public class Teoria3 {
     //Viernes 15/11/2024
@@ -47,6 +51,9 @@ public class Teoria3 {
 
         System.out.println(factorial(5));
         objetos();
+        System.out.println("\n\n4 de Diciembre de 2024");
+        claseMath();
+        claseRandom();
     }
 
     //25 de Noviembre de 2024
@@ -86,6 +93,34 @@ public class Teoria3 {
         Point puntoOrigen = new Point(5, 10);
         System.out.println(puntoOrigen.x);
         int ejeX = puntoOrigen.x;
+    }
+
+    //4 de Diciembre de 2024
+    //La Clase Math
+
+    public static void claseMath(){
+        double r= 2;
+        double longitudCircunferencia = 2*PI*r;
+        System.out.println("\nClase Math\n"+longitudCircunferencia);
+    }
+
+    //La Clase Random
+    public static void claseRandom(){
+        System.out.println("\nClase Random");
+        Random aleatorio = new Random();
+        for (int i = 0; i < 5; i++) {
+            System.out.println(aleatorio.nextInt());
+        }
+        System.out.println("\nDos constructores Random distintos generan el mismo número si tienen la misma semilla");
+        Random aleatorio1 = new Random(123);
+        Random aleatorio2 = new Random(123);
+
+        for (int i = 0; i < 5; i++){
+            System.out.println(aleatorio1.nextInt() +"\t"+aleatorio2.nextInt());
+        }
+
+        String texto = "data";
+        System.out.println(texto.charAt(texto.length()-1));
     }
 }
 
