@@ -54,6 +54,8 @@ public class Teoria3 {
         System.out.println("\n\n4 de Diciembre de 2024");
         claseMath();
         claseRandom();
+        claseString();
+        claseEnvoltorio();
     }
 
     //25 de Noviembre de 2024
@@ -121,6 +123,66 @@ public class Teoria3 {
 
         String texto = "data";
         System.out.println(texto.charAt(texto.length()-1));
+    }
+
+    //05 de Diciembre de 2024
+    //La Clase String
+    public static void claseString(){
+        System.out.println();
+        String cadena = "String de Ejemplo";
+        System.out.println(cadena);
+
+        String cadena1 = "programación";
+        String cadena2 = "programación";
+
+        if (cadena1 == cadena2){
+            System.out.println("Son iguales");
+        } else {
+            System.out.println("Son distintas");
+        }
+
+
+        String cadena3 = new String("programación");
+        String cadena4 = new String("ProgramacióN");
+        System.out.println("Al comparar dos Strings creados mediante 'new' aun teniendo el mismo contenido serán distintos a nivel de espacio de memoria");
+        if (cadena3 == cadena4){
+            System.out.println("Son iguales");
+        } else {
+            System.out.println("Son distintas");
+        }
+
+        System.out.println("\nPara comparar dos Strings utilizaríamos el método .equals()");
+        if(cadena3.equals(cadena4)){
+            System.out.println("Son iguales");
+        } else {
+            System.out.println("Son distintas");
+        }
+        System.out.println("\n Para compararlos ignorando la altura de caja de la letra utilizaremos el método .equalsIgnoreCase()");
+
+        if(cadena3.equalsIgnoreCase(cadena4)){
+            System.out.println("Son iguales");
+        } else {
+            System.out.println("Son distintos");
+        }
+
+        String cadena5 = "        hola " + "profe       ";
+        String cadena6 = "        hola ";
+        String cadena7 = "profe       ";
+
+        System.out.println("\nCon el método .trim() eliminaremos los espacios en blanco al inicio y al final de la cadena");
+        System.out.println(cadena5);
+        System.out.println(cadena5.trim());
+        System.out.println(cadena6.trim()+cadena7.trim());
+        System.out.println((cadena6+cadena7).trim());
+
+        //Concatenar Strings
+
+        //String Buffer
+    }
+
+    private static void claseEnvoltorio(){
+        //Clases envoltorio
+        
     }
 }
 
