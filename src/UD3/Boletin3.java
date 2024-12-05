@@ -26,7 +26,7 @@ public class Boletin3 {
                         "        ┠──────────┬──────────┬──────────┬──────────┬──────────┬──────────┨\n" +
                         "        ┃    " + terminado + "12" + reset + "    │    " + terminado + "13" + reset + "    │    " + terminado + "14" + reset + "    │    " + terminado + "15" + reset + "    │    " + terminado + "16" + reset + "    │    " + terminado + "17" + reset + "    ┃\n" +
                         "        ┠──────────┼──────────┼──────────┼──────────┼──────────┼──────────┨\n" +
-                        "        ┃    " + terminado + "18" + reset + "    │    " + terminado + "19" + reset + "    │    " + terminado + "20" + reset + "    │    " + incubadora + "21" + reset + "    │    " + incubadora + "22" + reset + "    │          ┃\n" +
+                        "        ┃    " + terminado + "18" + reset + "    │    " + terminado + "19" + reset + "    │    " + saltado + "20" + reset + "    │    " + enProceso + "21" + reset + "    │    " + incubadora + "22" + reset + "    │          ┃\n" +
                         "        ┣━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┫\n" +
                         "        ┃                      Uso básico de " + destacado + "objetos" + reset + "                      ┃\n" +
                         "        ┠────────────────────────────────┬────────────────────────────────┨\n" +
@@ -34,19 +34,19 @@ public class Boletin3 {
                         "        ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫\n" +
                         "        ┃                   Ejercicios de la clase " + destacado + "Math" + reset + "                   ┃\n" +
                         "        ┠──────────┬──────────┬──────────┬──────────┬──────────┬──────────┨\n" +
-                        "        ┃    " + snooze + "25" + reset + "    │    " + snooze + "26" + reset + "    │    " + snooze + "27" + reset + "    │    " + snooze + "28" + reset + "    │    " + snooze + "29" + reset + "    │    " + snooze + "30" + reset + "    ┃\n" +
+                        "        ┃    " + incubadora + "25" + reset + "    │    " + incubadora + "26" + reset + "    │    " + incubadora + "27" + reset + "    │    " + incubadora + "28" + reset + "    │    " + incubadora + "29" + reset + "    │    " + incubadora + "30" + reset + "    ┃\n" +
                         "        ┠──────────┴──────────┼──────────┴──────────┼──────────┴──────────┨\n" +
-                        "        ┃          " + snooze + "31" + reset + "         │          " + snooze + "32" + reset + "         │          " + snooze + "33" + reset + "         ┃\n" +
+                        "        ┃          " + incubadora + "31" + reset + "         │          " + incubadora + "32" + reset + "         │          " + incubadora + "33" + reset + "         ┃\n" +
                         "        ┣━━━━━━━━━━━━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━┫\n" +
                         "        ┃                  Ejercicios de la clase " + destacado + "String" + reset + "                  ┃\n" +
                         "        ┠──────────┬──────────┬──────────┬──────────┬──────────┬──────────┨\n" +
-                        "        ┃    " + snooze + "34" + reset + "    │    " + snooze + "35" + reset + "    │    " + snooze + "36" + reset + "    │    " + snooze + "37" + reset + "    │    " + snooze + "38" + reset + "    │    " + snooze + "39" + reset + "    ┃\n" +
+                        "        ┃    " + incubadora + "34" + reset + "    │    " + incubadora + "35" + reset + "    │    " + incubadora + "36" + reset + "    │    " + incubadora + "37" + reset + "    │    " + incubadora + "38" + reset + "    │    " + incubadora + "39" + reset + "    ┃\n" +
                         "        ┠──────────┼──────────┼──────────┼──────────┼──────────┼──────────┨\n" +
-                        "        ┃    " + snooze + "40" + reset + "    │    " + snooze + "41" + reset + "    │    " + snooze + "42" + reset + "    │    " + snooze + "43" + reset + "    │    " + snooze + "44" + reset + "    │          ┃\n" +
+                        "        ┃    " + incubadora + "40" + reset + "    │    " + incubadora + "41" + reset + "    │    " + incubadora + "42" + reset + "    │    " + incubadora + "43" + reset + "    │    " + incubadora + "44" + reset + "    │          ┃\n" +
                         "        ┣━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┫\n" +
                         "        ┃        Ejercicios de la clase " + destacado + "String" + reset + " y " + destacado + "clases envoltorio" + reset + "        ┃\n" +
                         "        ┠────────────────────────────────┬────────────────────────────────┨\n" +
-                        "        ┃               " + snooze + "45" + reset + "               │               " + snooze + "46" + reset + "               ┃\n" +
+                        "        ┃               " + incubadora + "45" + reset + "               │               " + incubadora + "46" + reset + "               ┃\n" +
                         "        ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫\n" +
                         "        ┃                  Ejercicios de " + destacado + "manejo de fechas" + reset + "                 ┃\n" +
                         "        ┠────────────────┬───────────────┬───────────────┬────────────────┨\n" +
@@ -123,7 +123,7 @@ public class Boletin3 {
                     ejercicio20(entrada);
                     break;
                 case 21:
-                    //ejercicio21(entrada);
+                    ejercicio21(entrada);
                 case 22:
                     //ejercicio22(entrada);
                 case 23:
@@ -582,7 +582,21 @@ public class Boletin3 {
     private static void ejercicio21(Scanner entrada) {
 
         System.out.println("\n\tBoletin 3 | Ejercicio 21\n" + ":");
-        System.out.println(":");
+        System.out.println("Escribe un método lógico recursivo que determine si un número entero recibido por parámetro es capicúa:");
+        int numeroCapicua = entrada.nextInt();
+        if(esCapicua(numeroCapicua)){
+            System.out.println("El número "+numeroCapicua+" es capicúa");
+        } else {
+            System.out.println("El número "+numeroCapicua+" no es capicúa");
+        }
+    }
+
+    private static boolean esCapicua(int numero){
+        int longitud = longitudNumero(numero);
+        /*for (int i = longitud; i>0; i--){
+            return true;
+        }*/
+        return true;
     }
 
     private static void ejercicio22(Scanner entrada) {

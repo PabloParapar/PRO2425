@@ -182,7 +182,50 @@ public class Teoria3 {
 
     private static void claseEnvoltorio(){
         //Clases envoltorio
-        
+
+        //deprecated quiere decir que está obsoleto y puede que en nuevas versiones se eliminen
+        //Integer i = new Integer(5); Esta forma está deprecada
+
+        Integer i = 5;
+        int x = 5;
+
+        int aa = Integer.parseInt("5");
+        String.valueOf(i);
+        //ignoraremos de momento la diapositiva 159
+
+        Boolean b = new Boolean(false);
+        System.out.println("b = "+b);
+        Boolean b2 = false;
+        System.out.println("b2 = "+b2);
+        Boolean c = new Boolean("TrUe");
+        System.out.println("c = "+c);
+        //Boolean c2 = "TrUe";
+
+        Boolean d = new Boolean("No");
+        System.out.println("d = "+d);
+
+        String s = "5";
+        System.out.println("s = "+s);
+        int i2 = Integer.parseInt(s);
+        System.out.println("i2 = "+i);
+
+        Integer j = new Integer(5);
+        System.out.println("j = "+j);
+        s = j.toString();
+        System.out.println("s = "+s);
+
+        float f = j.floatValue();
+        System.out.println("f = "+f);
+
+        //Procuraremos utilizar la versión no deprecada
+
+        //valueOf es un modo de construir una clase envoltorio.
+        //El segundo parámetro es opcional e indica la base.
+        Integer binario = Integer.valueOf("1010", 2);
+
+        //Las clases envoltorio nos permiten coger tipos primitivos, tratarlos como objetos y añadirles nuevas funcionalidades
+        //En las clases envoltorio tendremos la opción NULL
+        //En la clase Boolean tenemos 3 posibilidades: True, False o NULL
     }
 }
 
