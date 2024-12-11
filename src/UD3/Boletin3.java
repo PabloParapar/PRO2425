@@ -18,7 +18,7 @@ public class Boletin3 {
                         "        ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n" +
                         "        ┃                      Ejercicios de " + destacado + "métodos" + reset + "                      ┃\n" +
                         "        ┠──────────┬──────────┬──────────┬──────────┬──────────┬──────────┨\n" +
-                        "        ┃    " + terminado + " 1" + reset + "    │    " + terminado + " 2" + reset + "    │    " + terminado + " 3" + reset + "    │    " + terminado + " 4" + reset + "    │    " + saltado + " 5" + reset + "    │    " + incubadora + " 6" + reset + "    ┃\n" +
+                        "        ┃    " + terminado + " 1" + reset + "    │    " + terminado + " 2" + reset + "    │    " + terminado + " 3" + reset + "    │    " + terminado + " 4" + reset + "    │    " + terminado + " 5" + reset + "    │    " + enProceso + " 6" + reset + "    ┃\n" +
                         "        ┠──────────┼──────────┼──────────┼──────────┼──────────┼──────────┨\n" +
                         "        ┃    " + incubadora + " 7" + reset + "    │    " + incubadora + " 8" + reset + "    │    " + incubadora + " 9" + reset + "    │    " + incubadora + "10" + reset + "    │    " + incubadora + "11" + reset + "    │          ┃\n" +
                         "        ┣━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┫\n" +
@@ -30,7 +30,7 @@ public class Boletin3 {
                         "        ┣━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┫\n" +
                         "        ┃                      Uso básico de " + destacado + "objetos" + reset + "                      ┃\n" +
                         "        ┠────────────────────────────────┬────────────────────────────────┨\n" +
-                        "        ┃               " + snooze + "23" + reset + "               │               " + snooze + "24" + reset + "               ┃\n" +
+                        "        ┃               " + incubadora + "23" + reset + "               │               " + incubadora + "24" + reset + "               ┃\n" +
                         "        ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫\n" +
                         "        ┃                   Ejercicios de la clase " + destacado + "Math" + reset + "                   ┃\n" +
                         "        ┠──────────┬──────────┬──────────┬──────────┬──────────┬──────────┨\n" +
@@ -90,11 +90,29 @@ public class Boletin3 {
 
                     break;
                 case 6:
+                    ejercicio6(entrada);
+
+                    break;
                 case 7:
+                    ejercicio7(entrada);
+
+                    break;
                 case 8:
+                    ejercicio8(entrada);
+
+                    break;
                 case 9:
+                    ejercicio9(entrada);
+
+                    break;
                 case 10:
+                    ejercicio10(entrada);
+
+                    break;
                 case 11:
+                    ejercicio11(entrada);
+
+                    break;
                 case 12:
                     ejercicio12(entrada);
                     break;
@@ -374,7 +392,7 @@ public class Boletin3 {
         int contadorI = 0;
         int contadorO = 0;
         int contadorU = 0;
-        for (int i = 0; i <= longitudTexto; i++) {
+        for (int i = 0; i <= longitudTexto-1 ; i++) {
             if (esVocal(String.valueOf(textoMinus.charAt(i)))) {
                 switch (textoMinus.charAt(i)) {
                     case 'a':
@@ -390,6 +408,9 @@ public class Boletin3 {
                         contadorO++;
                         break;
                     case 'u':
+                        contadorU++;
+                        break;
+                    default:
                 }
             }
         }
@@ -398,7 +419,47 @@ public class Boletin3 {
         float porcentajeI = (float) contadorI / longitudTexto * 100;
         float porcentajeO = (float) contadorO / longitudTexto * 100;
         float porcentajeU = (float) contadorU / longitudTexto * 100;
-        System.out.println("\nCantidad A:\t" + contadorA + "\t|\tPorcentaje A:\t" + porcentajeA);
+        System.out.println( "\nCantidad A:\t" + contadorA + "\t|\tPorcentaje A:\t" + porcentajeA +
+                            "\nCantidad E:\t" + contadorE + "\t|\tPorcentaje E:\t" + porcentajeE +
+                            "\nCantidad I:\t" + contadorI + "\t|\tPorcentaje I:\t" + porcentajeI +
+                            "\nCantidad O:\t" + contadorO + "\t|\tPorcentaje O:\t" + porcentajeO +
+                            "\nCantidad U:\t" + contadorU + "\t|\tPorcentaje U:\t" + porcentajeU);
+    }
+
+    private static void ejercicio6(Scanner entrada) {
+
+        System.out.println("\n\tBoletin 3 | Ejercicio 6\n" + ":");
+        System.out.println(":");
+    }
+
+    private static void ejercicio7(Scanner entrada) {
+
+        System.out.println("\n\tBoletin 3 | Ejercicio 7\n" + ":");
+        System.out.println(":");
+    }
+
+    private static void ejercicio8(Scanner entrada) {
+
+        System.out.println("\n\tBoletin 3 | Ejercicio 8\n" + ":");
+        System.out.println(":");
+    }
+
+    private static void ejercicio9(Scanner entrada) {
+
+        System.out.println("\n\tBoletin 3 | Ejercicio 9\n" + ":");
+        System.out.println(":");
+    }
+
+    private static void ejercicio10(Scanner entrada) {
+
+        System.out.println("\n\tBoletin 3 | Ejercicio 10\n" + ":");
+        System.out.println(":");
+    }
+
+    private static void ejercicio11(Scanner entrada) {
+
+        System.out.println("\n\tBoletin 3 | Ejercicio 11\n" + ":");
+        System.out.println(":");
     }
 
     private static void ejercicio12(Scanner entrada) {

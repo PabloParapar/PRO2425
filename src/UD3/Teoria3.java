@@ -2,6 +2,9 @@ package src.UD3;
 
 import java.awt.*;
 import java.math.*;
+import java.time.*;
+import java.time.format.TextStyle;
+import java.util.Locale;
 import java.util.Random;
 
 import static java.lang.Math.PI;
@@ -56,6 +59,9 @@ public class Teoria3 {
         claseRandom();
         claseString();
         claseEnvoltorio();
+
+        System.out.println("\n11 de Diciembre de 2024\n");
+        clasesManejoDeFechas();
     }
 
     //25 de Noviembre de 2024
@@ -226,6 +232,33 @@ public class Teoria3 {
         //Las clases envoltorio nos permiten coger tipos primitivos, tratarlos como objetos y añadirles nuevas funcionalidades
         //En las clases envoltorio tendremos la opción NULL
         //En la clase Boolean tenemos 3 posibilidades: True, False o NULL
+
+
+    }
+    // 11 de Diciembre de 2024
+    private static void clasesManejoDeFechas(){
+
+        //Método now()
+        System.out.println("Fecha actual " + LocalDate.now());
+        System.out.println("Hora actual " + LocalTime.now());
+        System.out.println("Fecha y Hora actual " + LocalDateTime.now());   //Utiliza la hora y fecha del dispositivo
+        System.out.println("El instante actual es: " + Instant.now());      //Almacenado en formato de UNIX
+        System.out.println("En zona horaria son: " + ZonedDateTime.now());  //Fecha + Hora + Meridiano
+
+        //Método of()
+        System.out.println("Fecha Cumple " + LocalDate.of(1970, 1, 1));
+        System.out.println("Fecha Cumple " + LocalDate.of(1970, Month.JANUARY, 1));
+
+        LocalDate fecha = LocalDate.now();
+        Month mes = fecha.getMonth();
+        System.out.println(fecha.getMonth());
+        System.out.println(fecha.getDayOfMonth());
+        String nombreMes = mes.getDisplayName(TextStyle.NARROW,
+                            Locale.forLanguageTag("es-ES"));
+        String nombreMes2 = mes.getDisplayName(TextStyle.FULL,
+                            Locale.forLanguageTag("es-ES"));
+        System.out.println(nombreMes);
+        System.out.println(nombreMes2);
     }
 }
 
