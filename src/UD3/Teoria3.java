@@ -4,6 +4,9 @@ import java.awt.*;
 import java.math.*;
 import java.time.*;
 import java.time.format.TextStyle;
+import java.time.temporal.ChronoUnit;
+import java.time.temporal.TemporalAdjuster;
+import java.time.temporal.TemporalAdjusters;
 import java.util.Locale;
 import java.util.Random;
 
@@ -259,6 +262,43 @@ public class Teoria3 {
                             Locale.forLanguageTag("es-ES"));
         System.out.println(nombreMes);
         System.out.println(nombreMes2);
+
+        //12 de Diciembre de 2024
+
+        System.out.println("\n12 de Diciembre de 2024\n");
+
+        LocalDate hoy = LocalDate.now();
+        System.out.println(hoy);
+        System.out.println(hoy.plusDays(10) + "\tSumamos un positivo con plusDays");
+        System.out.println(hoy.minusDays(10) + "\tRestamos un positivo con minusDays");
+        System.out.println(hoy.plusDays(-10) + "\t\"Sumamos\" un negativo con plusDays");
+
+        LocalDate futuro = hoy.plusDays(10);
+
+        System.out.println("\nClase TemporalAdjusters\n");
+
+        System.out.println(hoy.with(TemporalAdjusters.firstDayOfMonth())+ "\tVer el primer día del mes en el que estamos hoy");
+        System.out.println(hoy.with(TemporalAdjusters.lastDayOfMonth())+ "\tVer el último día del mes en el que estamos hoy");
+        System.out.println(hoy.with(TemporalAdjusters.firstDayOfMonth()).getDayOfWeek()+ "\t\tVer el día de la semana del primer día del mes en el que estamos hoy");
+        System.out.println(hoy.with(TemporalAdjusters.lastDayOfMonth()).getDayOfWeek()+ "\t\tVer el día de la semana del último día del mes en el que estamos hoy");
+
+        System.out.println(ChronoUnit.DAYS.between(hoy, futuro) + "\t\t\tVemos la cantidad de días entre el día de hoy y dentro de 10 días");
+
+        LocalDate fechaNac = LocalDate.of(1997, 6, 14);
+        System.out.println(ChronoUnit.YEARS.between(fechaNac, hoy)+"\t\t\tVemos los años que hay entre la fecha de nacimiento y la fecha de hoy");
+        System.out.println("\nClase Period\n");
+        LocalDate finAno = hoy.with(TemporalAdjusters.lastDayOfYear());
+        Period hastaFinAno = hoy.until(finAno);
+        System.out.println(hastaFinAno+"\t\t\tPeriod muestra el Periodo entre dos fechas");
+
+        System.out.println("Meses : " + hastaFinAno.getMonths() + "\t\tCon .getMonths() muestra los meses en el periodo");
+        System.out.println("Dias : " + hastaFinAno.getDays() + "\t\tCon .getDays() muestra los días en el periodo");
+
+        LocalDateTime hoyConHora = LocalDateTime.now();
+        LocalDateTime finAnoConHora = LocalDateTime.of(2024, 12, 31, 23, 59);
+        Duration diferencia = Duration.between(hoyConHora, finAnoConHora);
+        System.out.println(diferencia);
+        System.out.println(diferencia.toDays());
     }
 }
 
