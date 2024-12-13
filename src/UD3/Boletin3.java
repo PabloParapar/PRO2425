@@ -142,6 +142,7 @@ public class Boletin3 {
                     break;
                 case 21:
                     ejercicio21(entrada);
+                    break;
                 case 22:
                     //ejercicio22(entrada);
                 case 23:
@@ -627,38 +628,26 @@ public class Boletin3 {
         System.out.println("\n\tBoletin 3 | Ejercicio 20\n" + "Escribe un método lógico recursivo que determine si una cadena recibida por parámetro es un palíndromo:");
         System.out.println("Ingresa la cadena a comprobar:");
         String palindromo = entrada.next();
-        /*
+
         if(esPalindromo(palindromo)){
             System.out.println(palindromo+" es palíndromo");
         } else{
             System.out.println(palindromo+" no es palíndromo");
-        }*/
-        invertirCadena(palindromo);
+        }
     }
 
     private static boolean esPalindromo(String texto){
         int longitud = texto.length();
-        if (longitud <= 2){
+        if (longitud < 2){
             return true;
         } else{
-            return texto.charAt(1) == texto.charAt(longitud-1) && esPalindromo(texto);
+            return texto.charAt(0) == (texto.charAt(longitud-1)) && esPalindromo(texto.substring(1, longitud-1));
         }
-        /*
-        * charat(1).equals(charat(longitud-1) && ...
-        * */
-    }
-    private static void invertirCadena(String texto){
-        int longitud = texto.length();
-        String textoInvertido = "";
-        for (int i = longitud-1; i >= 0; i--){
-            textoInvertido.concat(String.valueOf(texto.charAt(i)));
-        }
-        System.out.println(textoInvertido);
     }
 
     private static void ejercicio21(Scanner entrada) {
 
-        System.out.println("\n\tBoletin 3 | Ejercicio 21\n" + ":");
+        System.out.println("\n\tBoletin 3 | Ejercicio 21");
         System.out.println("Escribe un método lógico recursivo que determine si un número entero recibido por parámetro es capicúa:");
         int numeroCapicua = entrada.nextInt();
         if(esCapicua(numeroCapicua)){
@@ -669,11 +658,13 @@ public class Boletin3 {
     }
 
     private static boolean esCapicua(int numero){
-        int longitud = longitudNumero(numero);
-        /*for (int i = longitud; i>0; i--){
+        String numeroTexto = String.valueOf(numero);
+        int longitud = numeroTexto.length();
+        if (longitud < 2){
             return true;
-        }*/
-        return true;
+        } else{
+            return numeroTexto.charAt(0) == (numeroTexto.charAt(longitud-1)) && esPalindromo(numeroTexto.substring(1, longitud-1));
+        }
     }
 
     private static void ejercicio22(Scanner entrada) {
