@@ -3,6 +3,8 @@ package src.UD3;
 import java.awt.*;
 import java.math.*;
 import java.time.*;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
 import java.time.format.TextStyle;
 import java.time.temporal.ChronoUnit;
 import java.time.temporal.TemporalAdjuster;
@@ -299,6 +301,39 @@ public class Teoria3 {
         Duration diferencia = Duration.between(hoyConHora, finAnoConHora);
         System.out.println(diferencia);
         System.out.println(diferencia.toDays());
+
+        //13 de Diciembre de 2024
+
+        System.out.println("\n13 de Diciembre de 2024\n");
+
+        System.out.println("Parseo de Fechas con .parse()");
+
+        LocalDate fechaParseada = LocalDate.parse("2021-07-06");
+        System.out.println(fechaParseada); //Aplica a una cadena de texto las modificaciones necesarias para poder ser interpretado como una fecha
+        LocalDate seisNov = LocalDate.parse("6/11/2020",
+                DateTimeFormatter.ofPattern("d/M/yyyy"));
+        System.out.println(seisNov);
+
+        System.out.println("\nFormateo de Fechas con DateTimeFormatter\n");
+        LocalDateTime fechaConHora = LocalDateTime.now();
+        System.out.println("Formato por defecto\t\t" + fechaConHora);
+        System.out.println("Formato estandar ISO\t" + fechaConHora.format(DateTimeFormatter.ISO_DATE_TIME));
+        DateTimeFormatter esDateFormat = DateTimeFormatter.ofPattern("dd/MM/yyy hh:mm:ss");
+        //System.out.println("Formato Español\t\t"+ esDateFormat);
+        System.out.println("Formato Español\t\t\t"+ fechaConHora.format(esDateFormat));
+        System.out.println(fechaConHora.format(DateTimeFormatter.ofPattern("'Hoy es' EEEE, d 'de' MMMM 'de 'YYYY ")));
+        /*
+        * El .ofPattern() deberá ir entero entre comillas dobles como una cadena de texto
+        * Esta cadena tendrá cadenas y símbolos, las cadenas irán entre comillas simples*/
+        System.out.println(fechaConHora.format(DateTimeFormatter.ofPattern("'Hoy es' EEEE, d 'de' MMMM 'de 'YYYY ").withLocale(new Locale("en", "US"))));   //Foramteo de fecha con el idioma especificado
+        String idiomaLocal = System.getProperty("user.language");
+        String paisLocal = System.getProperty("user.country");
+        System.out.println(fechaConHora.format(
+                DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT)
+                        .withLocale(new Locale(idiomaLocal, paisLocal))
+        ));
+
+
     }
 }
 
