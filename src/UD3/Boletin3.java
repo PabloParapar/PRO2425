@@ -26,7 +26,7 @@ public class Boletin3 {
                         "        ┠──────────┬──────────┬──────────┬──────────┬──────────┬──────────┨\n" +
                         "        ┃    " + terminado + "12" + reset + "    │    " + terminado + "13" + reset + "    │    " + terminado + "14" + reset + "    │    " + terminado + "15" + reset + "    │    " + terminado + "16" + reset + "    │    " + terminado + "17" + reset + "    ┃\n" +
                         "        ┠──────────┼──────────┼──────────┼──────────┼──────────┼──────────┨\n" +
-                        "        ┃    " + terminado + "18" + reset + "    │    " + terminado + "19" + reset + "    │    " + saltado + "20" + reset + "    │    " + enProceso + "21" + reset + "    │    " + incubadora + "22" + reset + "    │          ┃\n" +
+                        "        ┃    " + terminado + "18" + reset + "    │    " + terminado + "19" + reset + "    │    " + terminado + "20" + reset + "    │    " + terminado + "21" + reset + "    │    " + enProceso + "22" + reset + "    │          ┃\n" +
                         "        ┣━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┫\n" +
                         "        ┃                      Uso básico de " + destacado + "objetos" + reset + "                      ┃\n" +
                         "        ┠────────────────────────────────┬────────────────────────────────┨\n" +
@@ -144,7 +144,8 @@ public class Boletin3 {
                     ejercicio21(entrada);
                     break;
                 case 22:
-                    //ejercicio22(entrada);
+                    ejercicio22(entrada);
+                    break;
                 case 23:
                     //ejercicio23(entrada);
                 case 24:
@@ -649,28 +650,54 @@ public class Boletin3 {
 
         System.out.println("\n\tBoletin 3 | Ejercicio 21");
         System.out.println("Escribe un método lógico recursivo que determine si un número entero recibido por parámetro es capicúa:");
+        //String numeroCapicua = entrada.next();
         int numeroCapicua = entrada.nextInt();
+        /*
         if(esCapicua(numeroCapicua)){
             System.out.println("El número "+numeroCapicua+" es capicúa");
         } else {
             System.out.println("El número "+numeroCapicua+" no es capicúa");
+        }*/
+        if(esCapicua(numeroCapicua)){
+            System.out.println("Es capicúa");
+        } else{
+            System.out.println("no es capicúa");
         }
     }
 
     private static boolean esCapicua(int numero){
-        String numeroTexto = String.valueOf(numero);
-        int longitud = numeroTexto.length();
+        int longitud = longitudNumero(numero);
         if (longitud < 2){
             return true;
-        } else{
-            return numeroTexto.charAt(0) == (numeroTexto.charAt(longitud-1)) && esPalindromo(numeroTexto.substring(1, longitud-1));
+        } else {
+            return numero / (int) Math.pow(10, longitud-1) == numero % 10 && esCapicua((numero % (int) Math.pow(10, longitud-1))/10);
         }
     }
 
     private static void ejercicio22(Scanner entrada) {
 
-        System.out.println("\n\tBoletin 3 | Ejercicio 22\n" + ":");
-        System.out.println(":");
+        System.out.println("\n\tBoletin 3 | Ejercicio 22\n");
+        System.out.println("Escribe un método recursivo que resuelva las Torres de Hanoi dada una cantidad definida de discos:");
+        int numeroDiscos = entrada.nextInt();
+        int posteOrigen = entrada.nextInt();
+        int posteAuxiliar = entrada.nextInt();
+        int posteDestino = entrada.nextInt();
+        System.out.println("Número de discos: 4");
+        torresDeHanoi(numeroDiscos, 1, 2, 3);
+    }
+
+    private static void torresDeHanoi(int numeroDiscos, int posteOrigen, int posteAuxiliar, int posteDestino){
+        if(numeroDiscos < 2){
+            System.out.println( "mover disco de "+posteOrigen+" a "+posteAuxiliar+
+                                "\nmover disco de "+posteAuxiliar+" a "+posteDestino+
+                                "\nmover disco de "+posteAuxiliar+" a "+posteDestino);
+        } else {
+            torresDeHanoi(numeroDiscos-1, 1, 2, 3);
+            System.out.println( "\nmover disco de "+posteOrigen+" a "+posteDestino);
+            torresDeHanoi(numeroDiscos-1, 2, 3, 1);
+            System.out.println("\nmover disco de "+posteAuxiliar+" a "+posteDestino);
+            torresDeHanoi(numeroDiscos-1, 1, 2, 3);
+        }
     }
 
     private static void ejercicio23(Scanner entrada) {
