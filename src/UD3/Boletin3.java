@@ -1,5 +1,6 @@
 package src.UD3;
 
+import java.awt.*;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -26,11 +27,11 @@ public class Boletin3 {
                         "        ┠──────────┬──────────┬──────────┬──────────┬──────────┬──────────┨\n" +
                         "        ┃    " + terminado + "12" + reset + "    │    " + terminado + "13" + reset + "    │    " + terminado + "14" + reset + "    │    " + terminado + "15" + reset + "    │    " + terminado + "16" + reset + "    │    " + terminado + "17" + reset + "    ┃\n" +
                         "        ┠──────────┼──────────┼──────────┼──────────┼──────────┼──────────┨\n" +
-                        "        ┃    " + terminado + "18" + reset + "    │    " + terminado + "19" + reset + "    │    " + terminado + "20" + reset + "    │    " + terminado + "21" + reset + "    │    " + enProceso + "22" + reset + "    │          ┃\n" +
+                        "        ┃    " + terminado + "18" + reset + "    │    " + terminado + "19" + reset + "    │    " + terminado + "20" + reset + "    │    " + terminado + "21" + reset + "    │    " + terminado + "22" + reset + "    │          ┃\n" +
                         "        ┣━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┫\n" +
                         "        ┃                      Uso básico de " + destacado + "objetos" + reset + "                      ┃\n" +
                         "        ┠────────────────────────────────┬────────────────────────────────┨\n" +
-                        "        ┃               " + incubadora + "23" + reset + "               │               " + incubadora + "24" + reset + "               ┃\n" +
+                        "        ┃               " + enProceso + "23" + reset + "               │               " + incubadora + "24" + reset + "               ┃\n" +
                         "        ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫\n" +
                         "        ┃                   Ejercicios de la clase " + destacado + "Math" + reset + "                   ┃\n" +
                         "        ┠──────────┬──────────┬──────────┬──────────┬──────────┬──────────┨\n" +
@@ -147,7 +148,8 @@ public class Boletin3 {
                     ejercicio22(entrada);
                     break;
                 case 23:
-                    //ejercicio23(entrada);
+                    ejercicio23(entrada);
+                    break;
                 case 24:
                     //ejercicio24(entrada);
                 case 25:
@@ -682,28 +684,38 @@ public class Boletin3 {
         int posteOrigen = entrada.nextInt();
         int posteAuxiliar = entrada.nextInt();
         int posteDestino = entrada.nextInt();
-        System.out.println("Número de discos: 4");
+        System.out.println("Número de discos: "+numeroDiscos);
         torresDeHanoi(numeroDiscos, 1, 2, 3);
     }
 
     private static void torresDeHanoi(int numeroDiscos, int posteOrigen, int posteAuxiliar, int posteDestino){
-        if(numeroDiscos < 2){
+        if(numeroDiscos <= 2){
             System.out.println( "mover disco de "+posteOrigen+" a "+posteAuxiliar+
-                                "\nmover disco de "+posteAuxiliar+" a "+posteDestino+
+                                "\nmover disco de "+posteOrigen+" a "+posteDestino+
                                 "\nmover disco de "+posteAuxiliar+" a "+posteDestino);
         } else {
-            torresDeHanoi(numeroDiscos-1, 1, 2, 3);
-            System.out.println( "\nmover disco de "+posteOrigen+" a "+posteDestino);
-            torresDeHanoi(numeroDiscos-1, 2, 3, 1);
-            System.out.println("\nmover disco de "+posteAuxiliar+" a "+posteDestino);
-            torresDeHanoi(numeroDiscos-1, 1, 2, 3);
+            torresDeHanoi(numeroDiscos-1, posteOrigen, posteDestino, posteAuxiliar);
+            System.out.println( "mover disco de "+posteOrigen+" a "+posteDestino);
+            torresDeHanoi(numeroDiscos-1, posteAuxiliar, posteOrigen, posteDestino);
         }
     }
 
     private static void ejercicio23(Scanner entrada) {
 
-        System.out.println("\n\tBoletin 3 | Ejercicio 23\n" + ":");
-        System.out.println(":");
+        System.out.println("\n\tBoletin 3 | Ejercicio 23\n");
+        System.out.println("Completar el Siguiente Código:");
+
+        Point puntoOrigen = new Point(23, 94);
+        //  Completar: mostrar coordenadas x e y utilizando un campo de la clase
+
+        //  Completar: mostrar coordenadas utilizando métodos de dos modos distintos
+
+        //  Traslada el punto incrementando las coordenadas x e y en 50 unidades cada una
+
+        //  ¿Qué hace la siguiente instrucción?
+        int coordenadax = new Point(10, 10).x;
+
+        //  ¿Podría recuperarse la coordenada y del punto anterior?
     }
 
     private static void ejercicio24(Scanner entrada) {
