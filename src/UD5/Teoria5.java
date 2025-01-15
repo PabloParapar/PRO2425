@@ -5,6 +5,9 @@ import java.util.Date;
 
 public class Teoria5 {
     public static void main(String[] args) {
+        /*
+        Este fragmento explica como modificar los atributos de Persona, ahora son privados por lo que no funciona
+
         Persona diego = new Persona();  //Instancia de la clase persona
         diego.edad=22;
         diego.apellido="lalala";
@@ -24,5 +27,82 @@ public class Teoria5 {
         System.out.println(pablo.edad);
         System.out.println(pablo.dni);
         System.out.println(pablo.fechaNacimiento);
+        */
+        //15 de Enero de 2025
+
+        Persona maria;              //Contenido: null
+        maria = new Persona();      //Contenido: intancia de Persona guardada en la variable maria
+
+        Persona manuel;             //Contenido: null
+        manuel = maria;             //Contenido: la misma instancia de Persona guardada en maria
+
+        Persona mario = new Persona();
+        Persona manuela = mario;
+
+        mario.setEdad(30);
+        System.out.println(mario.getEdad());
+        System.out.println(manuela.getEdad()); //Muestran el mismo valor por consultarlo en el mismo espacio de memoria
+
+        //Modificadores de Visibilidad
+
+        Persona gerardo = new Persona();
+        /*
+        Este fragmento de código sirve para explicar la accesibilidad de los atributos
+        gerardo.nombre = "Gerardo";
+        gerardo.apellido = "Peña";
+        gerardo.edad = 54;
+        gerardo.dni = "12345678V";
+        gerardo.fechaNacimiento = new Date(1, 12, 25);
+        gerardo.direccionPostal = "C/ Calle Falsa 123 27002";
+        gerardo.email = "gerardopeña@gmail.com";
+        gerardo.telefono = 982232323;
+        //gerardo.grupoSanguineo = "AB";    Al ser private solo se puede acceder desde el interior de la clase
+        //gerardo.sexo = Sexo.HOMBRE;       Al ser private solo se puede acceder desde el interior de la clase
+        */
+
+        //GETTERS y SETTERS
+        /*
+        * Ahora que los atributos de Persona son private hemos implementado getters y setters
+        * para trabajar con ellos desde fuera de la clase
+        *
+        * Los Getters son métodos de lectura, nos devuelven el valor del atributo del Objeto
+        * gerardo.nombre == gerardo.getNombre()
+        *
+        * Los Setters son métodos de escritura, nos ayudan a aplicar un valor a los atributos del objeto
+        * gerardo.nombre = "gerardo" == gerardo.setNombre("gerardo")
+        * */
+        gerardo.setNombre("Gerardo");
+        gerardo.setApellido("Peña");
+        gerardo.setEdad(54);
+        gerardo.setDni(12345678);
+        gerardo.setFechaNacimiento(new Date(1, 12, 25));
+        gerardo.setDireccionPostal("C/ Calle Falsa 123 27002");
+        gerardo.setEmail("gerardopeña@gmail.com");
+        gerardo.setTelefono(982232323);
+        gerardo.setGrupoSanguineo("AB");
+        gerardo.setSexo(Sexo.HOMBRE);
+
+        //Constructores
+
+        Persona aurelia = new Persona("Aurelia", "Ramírez");
+
+        Persona aurelia2 = new Persona();
+        aurelia2.setNombre("Aurelia");
+        aurelia2.setApellido("Ramírez");
+        //Ambas Aurelias son equivalentes, pero la primera es más óptima
+
+        Persona marisa = new Persona("Marisa", "Señora", 65, 12345678, new Date(1900, 12, 25), "27002", "marisasenhora@hotmail.com", 928982982, "0", Sexo.MUJER);
+        Persona marisa2 = new Persona();
+        marisa2.setNombre("Marisa");
+        marisa2.setApellido("Señora");
+        marisa2.setEdad(65);
+        marisa2.setDni(12345678);
+        marisa2.setFechaNacimiento(new Date(1900, 12, 25));
+        marisa2.setDireccionPostal("27002");
+        marisa2.setEmail("marisasenhora@hotmail.com");
+        marisa2.setTelefono(982982982);
+        marisa2.setGrupoSanguineo("0");
+        marisa2.setSexo(Sexo.MUJER);
+
     }
 }
