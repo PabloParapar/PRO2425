@@ -1,0 +1,28 @@
+package src.UD5.capaNegocio;
+
+public class Cliente {
+    private String nombre;
+    private Integer dni;
+    private String nif;
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public Integer getDni() {
+        return dni;
+    }
+
+    public void setDni(Integer dni) {
+        this.dni = dni;
+    }
+
+    public String getNif() {
+        String letras ="TRWAGMYFPDXBNJZSQVHLCKE";
+        return String.valueOf(dni)+ letras.charAt(dni%23);
+    }
+}
