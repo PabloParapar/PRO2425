@@ -104,5 +104,19 @@ public class Teoria5 {
         marisa2.setGrupoSanguineo("0");
         marisa2.setSexo(Sexo.MUJER);
 
+        //17 de Enero de 2025
+
+        //HERENCIA
+
+        Persona hector = new Persona();
+        hector.setNombre("Héctor");
+
+        Profesor victor = new Profesor();
+        victor.setNombre("Víctor");
+        //Todos los atributos y métodos de Persona están en Profesor por el extends
+
+        Alumno pablo = new Alumno();
+        pablo.setNombre("Pablo");
+
     }
 }

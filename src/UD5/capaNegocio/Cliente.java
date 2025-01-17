@@ -25,4 +25,9 @@ public class Cliente {
         String letras ="TRWAGMYFPDXBNJZSQVHLCKE";
         return String.valueOf(dni)+ letras.charAt(dni%23);
     }
+
+    public Cliente(String nombre, Integer dni) {
+        this.nombre = nombre;
+        this.dni = dni;
+    }
 }
