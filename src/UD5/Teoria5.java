@@ -118,5 +118,37 @@ public class Teoria5 {
         Alumno pablo = new Alumno();
         pablo.setNombre("Pablo");
 
+        //20 de Enero de 2025
+
+        //Sobreescritura de métodos
+
+        Persona paco = new Persona();
+        paco.trabajar();
+
+        Alumno aitor = new Alumno();
+        aitor.trabajar();
+
+        Profesor elProfesor = new Profesor();
+        elProfesor.trabajar();
+
+        //Jerarquía de Clases
+
+        elProfesor.setNombre("Aniceto");
+        elProfesor.setApellido("Ramírez");
+        System.out.println(elProfesor.toString());
+        System.out.println(aitor.toString());
+        System.out.println(paco.toString());
+
+        //Casting de objetos con relación de herencia
+
+        Animal a = new Animal();
+        Animal b = new Perro();
+        //Perro c = (Perro) new Animal();
+
+        a.mueve();
+        b.mueve();
+        ((Perro)b).salta();
+
+
     }
 }

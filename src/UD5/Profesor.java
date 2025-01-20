@@ -18,4 +18,17 @@ public class Profesor extends Persona{
         super(nombre, apellido);
         this.antiguedad = antiguedad;
     }
+
+    @Override
+    public void trabajar(){
+        System.out.println("Soy Profesor, mi trabajo es enseñar");
+    }
+
+    @Override
+    public String toString() {
+        return "Profesor{" +
+                "antiguedad=" + antiguedad +
+                '}';
+    }
 }
+

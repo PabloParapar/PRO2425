@@ -13,4 +13,10 @@ public class Factura {
         numeracion++;
     }
 
+    @Override
+    public String toString() {
+        return "Factura{" +
+                "idFactura=" + idFactura +
+                '}';
+    }
 }

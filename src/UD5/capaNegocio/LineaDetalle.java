@@ -27,4 +27,14 @@ public class LineaDetalle {
     public Double getPrecioTotal() {
         return precioTotal;
     }
+
+    @Override
+    public String toString() {
+        return "LineaDetalle{" +
+                "articuloVendido=" + articuloVendido +
+                ", cantidad=" + cantidad +
+                ", precioUnitario=" + precioUnitario +
+                ", precioTotal=" + precioTotal +
+                '}';
+    }
 }

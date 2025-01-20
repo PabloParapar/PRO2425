@@ -37,4 +37,13 @@ public class Articulo {
     public Double getPrecioIva() {
         return precio * iva / 100;
     }
+
+    @Override
+    public String toString() {
+        return "Articulo{" +
+                "descripcion='" + descripcion + '\'' +
+                ", precio=" + precio +
+                ", iva=" + iva +
+                '}';
+    }
 }
