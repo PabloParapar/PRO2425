@@ -3,18 +3,18 @@ package src.UD5;
 import java.security.InvalidParameterException;
 import java.util.Date;
 
-public class Persona {
-    private String nombre;
-    private String apellido;
-    private Integer edad;
-    private Integer dni;
-    private String nif;
-    private Date fechaNacimiento;
-    private String direccionPostal;
-    private String email;
-    private Integer telefono;
-    private String grupoSanguineo;
-    private Sexo sexo;
+public abstract class Persona {
+    protected String nombre;
+    protected String apellido;
+    protected Integer edad;
+    protected Integer dni;
+    protected String nif;
+    protected Date fechaNacimiento;
+    protected String direccionPostal;
+    protected String email;
+    protected Integer telefono;
+    protected String grupoSanguineo;
+    protected Sexo sexo;
 
     public String getNombre() {
         return nombre;
@@ -107,9 +107,10 @@ public class Persona {
         this.sexo = sexo;
     }
 
+    /*
     public Persona() {
         //Método Constructor Vacío
-    }
+    } Ahora al ser una Clase Abstracta no tendrá constructor
 
     public Persona(String nombre, String apellido) {
         this.nombre = nombre;
@@ -128,7 +129,7 @@ public class Persona {
         this.grupoSanguineo = grupoSanguineo;
         this.sexo = sexo;
 
-    }
+    }*/
 
     public void trabajar() {
         System.out.println("Estoy trabajando");

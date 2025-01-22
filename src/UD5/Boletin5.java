@@ -14,6 +14,7 @@ public class Boletin5 {
 
         Articulo botella = new Articulo("Botella de Agua 1 Litro", 120.0, 21);
         LineaDetalle linea1 = new LineaDetalle(botella, 50);
+        System.out.println(linea1.getCantidad());
         System.out.println(linea1.getPrecioTotal());
     }
 }

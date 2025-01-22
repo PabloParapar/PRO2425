@@ -1,12 +1,16 @@
 package src.UD4;
 
 import src.UD5.Persona;
+import src.UD5.Profesor;
 
 import java.util.Date;
 
 public class Visibilidad {
     public static void main(String[] args) {
-        Persona gerardo = new Persona();
+        Profesor gerardo = new Profesor();
+
+        //Antes era persona, pero ahora la clase persona es abstracta, por lo que no se crean instancias de Persona
+
         //gerardo.nombre = "Gerardo";
         //gerardo.apellido = "Peña";                                //Como son public se puede acceder desde cualquier paquete
         //gerardo.edad = 54;                                        //Como son public se puede acceder desde cualquier paquete

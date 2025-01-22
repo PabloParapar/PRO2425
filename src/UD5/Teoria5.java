@@ -30,13 +30,13 @@ public class Teoria5 {
         */
         //15 de Enero de 2025
 
-        Persona maria;              //Contenido: null
-        maria = new Persona();      //Contenido: intancia de Persona guardada en la variable maria
+        Alumno maria;              //Contenido: null
+        maria = new Alumno();      //Contenido: intancia de Persona guardada en la variable maria
 
-        Persona manuel;             //Contenido: null
+        Alumno manuel;             //Contenido: null
         manuel = maria;             //Contenido: la misma instancia de Persona guardada en maria
 
-        Persona mario = new Persona();
+        Persona mario = new Alumno();
         Persona manuela = mario;
 
         mario.setEdad(30);
@@ -45,7 +45,7 @@ public class Teoria5 {
 
         //Modificadores de Visibilidad
 
-        Persona gerardo = new Persona();
+        Profesor gerardo = new Profesor();
         /*
         Este fragmento de código sirve para explicar la accesibilidad de los atributos
         gerardo.nombre = "Gerardo";
@@ -84,15 +84,15 @@ public class Teoria5 {
 
         //Constructores
 
-        Persona aurelia = new Persona("Aurelia", "Ramírez");
+        Profesor aurelia = new Profesor("Aurelia", "Ramírez");
 
-        Persona aurelia2 = new Persona();
+        Profesor aurelia2 = new Profesor();
         aurelia2.setNombre("Aurelia");
         aurelia2.setApellido("Ramírez");
         //Ambas Aurelias son equivalentes, pero la primera es más óptima
 
-        Persona marisa = new Persona("Marisa", "Señora", 65, 12345678, new Date(1900, 12, 25), "27002", "marisasenhora@hotmail.com", 928982982, "0", Sexo.MUJER);
-        Persona marisa2 = new Persona();
+        Alumno marisa = new Alumno();
+        Alumno marisa2 = new Alumno();
         marisa2.setNombre("Marisa");
         marisa2.setApellido("Señora");
         marisa2.setEdad(65);
@@ -108,7 +108,7 @@ public class Teoria5 {
 
         //HERENCIA
 
-        Persona hector = new Persona();
+        Alumno hector = new Alumno();
         hector.setNombre("Héctor");
 
         Profesor victor = new Profesor();
@@ -122,7 +122,7 @@ public class Teoria5 {
 
         //Sobreescritura de métodos
 
-        Persona paco = new Persona();
+        Profesor paco = new Profesor();
         paco.trabajar();
 
         Alumno aitor = new Alumno();
@@ -148,6 +148,10 @@ public class Teoria5 {
         a.mueve();
         b.mueve();
         ((Perro)b).salta();
+
+        //22 de Enero de 2025
+
+        //Clases y Métodos Abstractos
 
 
     }

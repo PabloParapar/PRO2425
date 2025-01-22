@@ -2,10 +2,10 @@ package src.UD5.capaNegocio;
 
 public class Articulo {
     private String descripcion;
-    private Double precio;
+    private double precio;
     private Integer iva;
 
-    public Articulo(String descripcion, Double precio, Integer iva) {
+    public Articulo(String descripcion, double precio, Integer iva) {
         this.descripcion = descripcion;
         this.precio = precio;
         this.iva = iva;
@@ -19,11 +19,11 @@ public class Articulo {
         this.descripcion = descripcion;
     }
 
-    public Double getPrecio() {
+    public double getPrecio() {
         return precio;
     }
 
-    public void setPrecio(Double precio) {
+    public void setPrecio(double precio) {
         this.precio = precio;
     }
 
@@ -34,7 +34,7 @@ public class Articulo {
     public void setIva(Integer iva) {
         this.iva = iva;
     }
-    public Double getPrecioIva() {
+    public double getPrecioIva() {
         return precio * iva / 100;
     }
 

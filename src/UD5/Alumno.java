@@ -15,6 +15,14 @@ public class Alumno extends Persona{
         System.out.println("Soy un estudiante, mi trabajo es estudiar");
     }
 
+    public Alumno() {
+
+    }
+
+    public Alumno(String curso) {
+        this.curso = curso;
+    }
+
     @Override
     public String toString() {
         return "Alumno{" +
