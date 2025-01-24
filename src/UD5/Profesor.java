@@ -30,5 +30,16 @@ public class Profesor extends Persona{
                 "antiguedad=" + antiguedad +
                 '}';
     }
+
+    // Interfaz
+    @Override
+    public void respirar() {
+
+    }
+
+    @Override
+    public void comer() {
+
+    }
 }
 

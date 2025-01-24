@@ -3,7 +3,7 @@ package src.UD5;
 import java.security.InvalidParameterException;
 import java.util.Date;
 
-public abstract class Persona {
+public abstract class Persona implements SerHumano {
     protected String nombre;
     protected String apellido;
     protected Integer edad;
@@ -136,6 +136,17 @@ public abstract class Persona {
     }
 
     @Override
+    public void respirar() {
+
+    }
+
+    @Override
+    public void comer() {
+
+    }
+
+
+    @Override
     public String toString() {
         return "Persona{" +
                 "nombre='" + nombre + '\'' +
@@ -150,5 +161,6 @@ public abstract class Persona {
                 ", grupoSanguineo='" + grupoSanguineo + '\'' +
                 ", sexo=" + sexo +
                 '}';
+
     }
 }

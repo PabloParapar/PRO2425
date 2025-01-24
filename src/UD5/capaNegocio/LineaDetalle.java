@@ -27,7 +27,7 @@ public class LineaDetalle {
     }
 
     public double getPrecioTotal() {
-        return precioUnitario*cantidad;
+        return getPrecioUnitario()*cantidad;
     }
 
     @Override

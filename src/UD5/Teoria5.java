@@ -170,5 +170,9 @@ public class Teoria5 {
         for (int i = 0; i < figuras.length; i++){
             System.out.println(figuras[i].getArea());
         }
+
+        //24 de Enero de 2025
+
+        //Interfaces
     }
 }
