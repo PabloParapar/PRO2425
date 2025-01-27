@@ -1,6 +1,7 @@
 package src.UD3;
 
 import java.awt.*;
+import java.util.Date;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -707,15 +708,26 @@ public class Boletin3 {
 
         Point puntoOrigen = new Point(23, 94);
         //  Completar: mostrar coordenadas x e y utilizando un campo de la clase
+        System.out.println("coordenada X: "+ puntoOrigen.x);
+        System.out.println("coordenada Y: "+ puntoOrigen.y);
 
         //  Completar: mostrar coordenadas utilizando métodos de dos modos distintos
+        System.out.println("coordenada X: "+puntoOrigen.getX());
+        System.out.println("coordenada Y: "+puntoOrigen.getY());
+        System.out.println("coordenada Y: "+puntoOrigen.getLocation());
 
         //  Traslada el punto incrementando las coordenadas x e y en 50 unidades cada una
+        puntoOrigen.translate(50, 50);
+        System.out.println("coordenada X: "+ puntoOrigen.x);
+        System.out.println("coordenada Y: "+ puntoOrigen.y);
 
         //  ¿Qué hace la siguiente instrucción?
         int coordenadax = new Point(10, 10).x;
 
+        //  Almacena en la variable coordenadax el valor x de la instancia recién creada
+
         //  ¿Podría recuperarse la coordenada y del punto anterior?
+        //  No se puede recuperar porque almacena la variable almacena solo el valor x de la instancia creada.
     }
 
     private static void ejercicio24(Scanner entrada) {
@@ -870,8 +882,18 @@ public class Boletin3 {
 
     private static void ejercicio49(Scanner entrada) {
 
-        System.out.println("\n\tBoletin 3 | Ejercicio 49\n" + ":");
+        System.out.println("\n\tBoletin 3 | Ejercicio 49\n" + "Escribir un programa que solicite una fecha y muestre el calendario del mes indicado:");
         System.out.println(":");
+        
+        //Calendario();
+    }
+
+    private static void Calendario(Date Date){
+        for (int i = 0; i < 5; i++){
+            for (int j = 0; j < 7 ; j++){
+                System.out.printf("%5d", i);
+            }
+        }
     }
 
     private static void ejercicio50(Scanner entrada) {
