@@ -1,9 +1,16 @@
 package src.UD3;
 
 import java.awt.*;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
 import java.util.Date;
 import java.util.Objects;
 import java.util.Scanner;
+
+import static java.lang.Character.*;
+import static java.lang.Integer.toBinaryString;
 
 public class Boletin3 {
     private static void menuSeleccion() {
@@ -203,19 +210,27 @@ public class Boletin3 {
                     ejercicio40(entrada);
                     break;
                 case 41:
-                    //ejercicio41(entrada);
+                    entrada.nextLine();
+                    ejercicio41(entrada);
+                    break;
                 case 42:
-                    //ejercicio42(entrada);
+                    ejercicio42(entrada);
+                    break;
                 case 43:
-                    //ejercicio43(entrada);
+                    ejercicio43(entrada);
+                    break;
                 case 44:
-                    //ejercicio44(entrada);
+                    ejercicio44(entrada);
+                    break;
                 case 45:
-                    //ejercicio45(entrada);
+                    ejercicio45(entrada);
+                    break;
                 case 46:
-                    //ejercicio46(entrada);
+                    ejercicio46(entrada);
+                    break;
                 case 47:
-                    //ejercicio47(entrada);
+                    ejercicio47(entrada);
+                    break;
                 case 48:
                     //ejercicio48(entrada);
                 case 49:
@@ -1112,22 +1127,24 @@ public class Boletin3 {
         }
         return esPalindromo;
     }
-    private static boolean esPalindromoB(String texto){
+
+    private static boolean esPalindromoB(String texto) {
         boolean esPalindromo = true;
         String cadenaInversa = "";
         for (int i = texto.length() - 1; i >= 0; i--) {
             cadenaInversa = cadenaInversa.concat(texto.substring(i, i + 1));
         }
-        for (int i = 0; i < texto.length(); i++){
-            esPalindromo &= (texto.charAt(i)==cadenaInversa.charAt(i));
+        for (int i = 0; i < texto.length(); i++) {
+            esPalindromo &= (texto.charAt(i) == cadenaInversa.charAt(i));
         }
         return esPalindromo;
     }
-    private static boolean esPalindromoC(String texto){
+
+    private static boolean esPalindromoC(String texto) {
         boolean esPalindromo = true;
         StringBuilder cadenaOriginal = new StringBuilder(texto);
         String cadenaInversa = cadenaOriginal.reverse().toString();
-        for (int i = 0; i < cadenaOriginal.length(); i++){
+        for (int i = 0; i < cadenaOriginal.length(); i++) {
             esPalindromo &= texto.charAt(i) == cadenaInversa.charAt(i);
         }
         return esPalindromo;
@@ -1138,7 +1155,6 @@ public class Boletin3 {
     private static boolean esPalindromoA(String texto, boolean soloLetras){
 
     }*/
-
     private static void ejercicio40(Scanner entrada) {
 
         System.out.println("\n\tBoletin 3 | Ejercicio 40\n" + "Escribir un método que reciba dos cadenas e indique si la segunda es una subsecuencia de la primera:");
@@ -1148,15 +1164,15 @@ public class Boletin3 {
         comprobarSubcadena(cadena1, cadena2);
     }
 
-    private static void comprobarSubcadena(String cadena1, String cadena2){
+    private static void comprobarSubcadena(String cadena1, String cadena2) {
         int longitud1 = cadena1.length();
         int longitud2 = cadena2.length();
         boolean esSubcadena = false;
-        for (int i = 0; i < longitud1-longitud2 ; i++){
-            esSubcadena |= cadena1.substring(i,longitud2+i).equals(cadena2);
+        for (int i = 0; i < longitud1 - longitud2; i++) {
+            esSubcadena |= cadena1.substring(i, longitud2 + i).equals(cadena2);
         }
-        if(esSubcadena){
-            System.out.println(cadena2 + " es subcadena de "+cadena1);
+        if (esSubcadena) {
+            System.out.println(cadena2 + " es subcadena de " + cadena1);
         } else {
             System.out.println(cadena2 + " no es subcadena de " + cadena1);
         }
@@ -1164,44 +1180,171 @@ public class Boletin3 {
 
     private static void ejercicio41(Scanner entrada) {
 
-        System.out.println("\n\tBoletin 3 | Ejercicio 41\n" + ":");
-        System.out.println(":");
+        System.out.println("\n\tBoletin 3 | Ejercicio 41\n" + "Crea una aplicación que cuente las letras y las palabras de una cadena de texto:");
+        String cadena;
+        cadena = entrada.nextLine();
+        contarPalabrasYLetras(cadena);
+    }
+
+    private static void contarPalabrasYLetras(String texto) {
+        int contadorPalabras = 1;
+        int contadorLetras = 0;
+        texto = texto.trim();
+        for (int i = 0; i < texto.length(); i++) {
+            if (texto.isEmpty()) {
+                System.out.println("El texto está vacío");
+                contadorPalabras = 0;
+                break;
+            } else if (isLetter(texto.charAt(i))) {
+                contadorLetras++;
+            } else if (isWhitespace(texto.charAt(i))) {
+                contadorPalabras++;
+            }
+        }
+        System.out.println(texto +
+                "\nNº Palabras = " + contadorPalabras +
+                "\nNº Letras = " + contadorLetras);
     }
 
     private static void ejercicio42(Scanner entrada) {
 
-        System.out.println("\n\tBoletin 3 | Ejercicio 42\n" + ":");
-        System.out.println(":");
+        System.out.println("\n\tBoletin 3 | Ejercicio 42\n" + "Escribe una aplicación que reciba una cadena de texto y devuelva su acrónimo:");
+        entrada.nextLine();
+        String cadena = entrada.nextLine();
+        crearAcronimo(cadena);
+    }
+
+    private static void crearAcronimo(String texto) {
+        String acronimo = "";
+        texto = texto.trim();
+        acronimo += texto.charAt(0);
+        for (int i = 0; i < texto.length(); i++) {
+            if (isWhitespace(texto.charAt(i)) && isLetter(texto.charAt(i + 1))) {
+                acronimo += texto.charAt(i + 1);
+            }
+        }
+        acronimo = acronimo.toUpperCase();
+        System.out.println(texto + "\nSu acrónimo es = " + acronimo);
     }
 
     private static void ejercicio43(Scanner entrada) {
 
-        System.out.println("\n\tBoletin 3 | Ejercicio 43\n" + ":");
-        System.out.println(":");
+        System.out.println("\n\tBoletin 3 | Ejercicio 43\n" + "Muestra la distancia de Hamming entre dos números enteros:");
+        int entero1 = entrada.nextInt();
+        int entero2 = entrada.nextInt();
+        calcularDistanciaHamming(entero1, entero2);
+    }
+
+    private static void calcularDistanciaHamming(int entero1, int entero2) {
+        String cadena1 = toBinaryString(entero1);
+        String cadena2 = toBinaryString(entero2);
+        int contadorHamming = 0;
+        if (cadena1.length() != cadena2.length()) {
+            int distancia = Math.abs(cadena1.length() - cadena2.length());
+            for (int i = 0; i < distancia; i++) {
+                if (cadena1.length() < cadena2.length()) {
+                    cadena1 = "0" + cadena1;
+                } else {
+                    cadena2 = "0" + cadena2;
+                }
+            }
+        }
+        for (int i = 0; i < cadena1.length(); i++) {
+            if (cadena1.charAt(i) != cadena2.charAt(i)) {
+                contadorHamming++;
+            }
+        }
+        System.out.println(entero1 + " = " + cadena1);
+        System.out.println(entero2 + " = " + cadena2);
+        System.out.println("La distancia de Hamming entre " + entero1 + " y " + entero2 + " es " + contadorHamming);
     }
 
     private static void ejercicio44(Scanner entrada) {
 
-        System.out.println("\n\tBoletin 3 | Ejercicio 44\n" + ":");
-        System.out.println(":");
+        System.out.println("\n\tBoletin 3 | Ejercicio 44\n" + "Escribe una aplicación donde ingreses un nombre y apellidos con varios espacios entre ellos y te devuelva el nombre con solo un espacio entre cada palabra:");
+        entrada.nextLine();
+        String cadena = entrada.nextLine();
+        System.out.println(cadena+"\nbien formateado es = '"+formatearNombre(cadena)+"'");
+    }
+    private static String formatearNombre(String texto){
+        String textoOriginal = texto;
+        texto = texto.trim();
+        String nombreFormateado = "";
+        for (int i = 0; i < texto.length(); i++){
+            if(isWhitespace(texto.charAt(i))){
+                nombreFormateado = nombreFormateado + " " + texto.substring(0, i);
+                texto = texto.substring(i).trim();
+            }
+        }
+        nombreFormateado = nombreFormateado.trim() + " " + texto.trim();
+        return nombreFormateado;
     }
 
     private static void ejercicio45(Scanner entrada) {
 
-        System.out.println("\n\tBoletin 3 | Ejercicio 45\n" + ":");
-        System.out.println(":");
+        System.out.println("\n\tBoletin 3 | Ejercicio 45\n" + "Excribe una aplicación que compruebe si un NIF es correcto:");
+        String cadena = entrada.next();
+        comprobarNIF(cadena);
+    }
+    private static void comprobarNIF(String texto){
+        String comprobante = "TRWAGMYFPDXBNJZSQVHLCKE";
+        if(texto.length()==9 && isLetter(texto.charAt(8)) && isDigit(texto.charAt(0))&& isDigit(texto.charAt(1))&& isDigit(texto.charAt(2))&& isDigit(texto.charAt(3))&& isDigit(texto.charAt(4))&& isDigit(texto.charAt(5))&& isDigit(texto.charAt(6))&& isDigit(texto.charAt(7))) {
+            Integer dni = Integer.valueOf(texto.substring(0, 8));
+            Character letraDNI = toUpperCase(texto.charAt(8));
+            if (comprobante.charAt(dni % 23) == letraDNI) {
+                System.out.println("El NIF " + texto.toUpperCase() + " es correcto");
+            } else {
+                System.out.println("El NIF " + texto.toUpperCase() + " no es correcto");
+            }
+        } else {
+            System.out.println("Este no es un NIF correcto");
+        }
     }
 
     private static void ejercicio46(Scanner entrada) {
 
         System.out.println("\n\tBoletin 3 | Ejercicio 46\n" + ":");
-        System.out.println(":");
-    }
+        entrada.nextLine();
+        String cadena = entrada.nextLine();
+        //verificarCuentaBancaria(formatearNombre(cadena));
+    }/*
+    private static void verificarCuentaBancaria(String texto){
+        String codigoBanco = (texto.substring(0, 4));
+        String codigoEntidad = (texto.substring(5, 9));
+        String digitosControl = (texto.substring(10, 12));
+        String numeroCuenta = texto.substring(13);
+        System.out.println(texto+"\n"+codigoBanco+codigoEntidad+digitosControl+numeroCuenta);
+        int aa = Integer.valueOf(codigoBanco.charAt(0))*4;
+        int ab = Integer.valueOf(codigoBanco.charAt(1))*8;
+        int ac = Integer.valueOf(codigoBanco.charAt(2))*5;
+        int ad = Integer.valueOf(codigoBanco.charAt(3))*10;
+        int ae = Integer.valueOf(codigoEntidad.charAt(0))*9;
+        int af = Integer.valueOf(codigoEntidad.charAt(1))*7;
+        int ag = Integer.valueOf(codigoEntidad.charAt(2))*3;
+        int ah = Integer.valueOf(codigoEntidad.charAt(3))*6;
+        Integer primerDigitoControl = 11-((aa+ab+ac+ad+ae+af+ag+ah)%11);
+        if(primerDigitoControl == 11){
+            primerDigitoControl = 0;
+        } else if (primerDigitoControl == 10) {
+            primerDigitoControl = 1;
+        }
+        System.out.println("primerDigitoControl = " + primerDigitoControl);
+        System.out.println("digitosControl = " + digitosControl);
+    }*/
 
     private static void ejercicio47(Scanner entrada) {
 
         System.out.println("\n\tBoletin 3 | Ejercicio 47\n" + ":");
         System.out.println(":");
+        entrada.nextLine();
+        String fecha = entrada.nextLine();
+        comprobarFecha(fecha);
+    }
+    private static void comprobarFecha(String texto){
+        LocalDate fechaNacimiento = LocalDate.parse(texto);
+        LocalDate fechaJubilacion = fechaNacimiento.plusYears(67);
+        System.out.println("Día de la semana en que nació = "+fechaNacimiento.getDayOfWeek());
+        System.out.println("Fecha de Jubilación = "+fechaJubilacion);
     }
 
     private static void ejercicio48(Scanner entrada) {
