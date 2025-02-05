@@ -174,5 +174,23 @@ public class Teoria5 {
         //24 de Enero de 2025
 
         //Interfaces
+
+
+        //05 de Febrero de 2025
+        int reparto = 0;
+        try {
+            reparto = repartir(100, 2);
+        } catch(Exception e){
+            System.out.println(e.getMessage());
+        } finally {
+            System.out.println(reparto); //El bloque de código dentro del finally se ejecutará siempre
+        }
+    }
+    public static int repartir(int dinero, int personas) throws Exception { //El métod0 podrá lanzar el Exception siempre que tenga el "throw Exception"
+        if (personas < 1){
+            throw(new Exception("No se puede dividir entre 0")); //Esta línea lanza la Excepción en caso de que se de
+        } else {
+        return dinero/personas;
+        }
     }
 }
