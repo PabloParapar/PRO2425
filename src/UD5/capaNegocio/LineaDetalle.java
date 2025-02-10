@@ -10,9 +10,9 @@ public class LineaDetalle {
     public LineaDetalle(Articulo articuloVendido, Integer cantidad) {
         this.articuloVendido = articuloVendido;
         this.cantidad = cantidad;
+        precioUnitario = getPrecioUnitario();
+        precioTotal = getPrecioTotal();
     }
-
-
 
     public Articulo getArticuloVendido() {
         return articuloVendido;

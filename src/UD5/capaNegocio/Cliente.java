@@ -4,6 +4,7 @@ public class Cliente {
     private String nombre;
     private Integer dni;
     private String nif;
+    private Factura factura;
 
     public String getNombre() {
         return nombre;
@@ -29,6 +30,7 @@ public class Cliente {
     public Cliente(String nombre, Integer dni) {
         this.nombre = nombre;
         this.dni = dni;
+        nif = getNif();
     }
 
     @Override
