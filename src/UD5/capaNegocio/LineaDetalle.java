@@ -1,6 +1,6 @@
 package src.UD5.capaNegocio;
 
-public class LineaDetalle {
+public class LineaDetalle implements Impresion{
     private Articulo articuloVendido;
     private Integer cantidad;
     private double precioUnitario;
@@ -32,7 +32,7 @@ public class LineaDetalle {
 
     @Override
     public String toString() {
-        return "LineaDetalle{" +
+        return "\nLineaDetalle{" +
                 "articuloVendido=" + articuloVendido +
                 ", cantidad=" + cantidad +
                 ", precioUnitario=" + precioUnitario +

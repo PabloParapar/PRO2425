@@ -1,9 +1,10 @@
 package src.UD5.capaNegocio;
 
-public class Articulo {
+public abstract class Articulo {
     private String descripcion;
     private double precio;
     private Integer iva;
+    Proveedor proveedor;
 
     public Articulo(String descripcion, double precio, Integer iva) {
         this.descripcion = descripcion;
@@ -44,6 +45,22 @@ public class Articulo {
                 "descripcion='" + descripcion + '\'' +
                 ", precio=" + precio +
                 ", iva=" + iva +
+                //", proveedor=" + proveedor +
                 '}';
+    }
+
+    public void imprimir(){
+
+    }
+
+    public void setProveedor(Proveedor proveedor) {
+        this.proveedor = proveedor;
+        if(proveedor.getArticulo() != this) {
+            proveedor.setArticulo(this);
+        }
+    }
+
+    public Proveedor getProveedor() {
+        return proveedor;
     }
 }

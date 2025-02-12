@@ -1,16 +1,16 @@
 package src.UD5.capaNegocio;
 
 public class NoPerecedero extends Articulo{
-    private int id;
+    private static int id;
     private double precioSinIVA;
     private double precioConIVA;
     private int stock;
 
-    public NoPerecedero(int id,String descripcion, double precio, Integer iva) {
+    public NoPerecedero(String descripcion, double precio, Integer iva) {
         super(descripcion, precio, iva);
         precioSinIVA = precio;
         precioConIVA = precioSinIVA+(precioSinIVA*iva/100);
-        this.id=id;
+        id++;
     }
 
     public double getPrecioSinIVA() {

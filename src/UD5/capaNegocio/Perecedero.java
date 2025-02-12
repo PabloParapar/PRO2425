@@ -1,15 +1,15 @@
 package src.UD5.capaNegocio;
 
 public class Perecedero extends Articulo{
-    private int id;
+    private static int id = 0;
     private double precioSinIVA;
     private double precioConIVA;
 
-    public Perecedero(int id,String descripcion, double precio, Integer iva) {
+    public Perecedero(String descripcion, double precio, Integer iva) {
         super(descripcion, precio, iva);
         precioSinIVA = precio;
         precioConIVA = precioSinIVA+(precioSinIVA*iva/100);
-        this.id=id;
+        id++;
     }
 
     public double getPrecioSinIVA() {

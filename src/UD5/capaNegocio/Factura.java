@@ -7,6 +7,7 @@ public class Factura {
     private Integer idFactura;
     private Cliente cliente;
     private LocalDate fechaActual;
+    private LineaDetalle lineaDetalle;
 
     public Integer getIdFactura() {
         return idFactura;
@@ -27,11 +28,25 @@ public class Factura {
         return cliente;
     }
 
+    public LineaDetalle getLineaDetalle() {
+        return lineaDetalle;
+    }
+
+    public void setLineaDetalle(LineaDetalle lineaDetalle) {
+        this.lineaDetalle = lineaDetalle;
+    }
+
     @Override
     public String toString() {
         return "Factura{" +
                 "idFactura=" + idFactura +
-                "Cliente=" + cliente +
+                //", cliente=" + cliente +
+                ", fechaActual=" + fechaActual +
+                ", lineaDetalle=" + lineaDetalle +
                 '}';
+    }
+
+    public void imprimir(){
+
     }
 }
