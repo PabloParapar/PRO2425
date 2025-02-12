@@ -7,6 +7,9 @@ public class Proveedor {
     private int telefono;
     Articulo articulo; //sería una lista
 
+    public Proveedor() {
+    }
+
     public Proveedor(String nombre, String nif, String direccion, int telefono) {
         this.nombre = nombre;
         this.nif = nif;
