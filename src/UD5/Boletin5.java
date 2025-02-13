@@ -52,6 +52,13 @@ public class Boletin5 {
         System.out.println(carmen);
 
         // b)
+        System.out.println("\nb)\n");
+        System.out.println(lineaPerecedera.imprimir());
+
+        // c)
+        System.out.println("\nc)\n");
+        System.out.println(perecedera.imprimir());
+        System.out.println(noPerecedera.imprimir());
 
     }
 }

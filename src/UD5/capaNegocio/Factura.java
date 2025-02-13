@@ -2,7 +2,7 @@ package src.UD5.capaNegocio;
 
 import java.time.LocalDate;
 
-public class Factura {
+public class Factura implements Impresion{
     private static Integer numeracion = 0;
     private Integer idFactura;
     private Cliente cliente;
@@ -45,8 +45,12 @@ public class Factura {
                 ", lineaDetalle=" + lineaDetalle +
                 '}';
     }
-
-    public void imprimir(){
-
+    @Override
+    public String imprimir(){
+        return "Factura{" +
+                ", cliente=" + cliente +
+                ", lineaDetalle=" + lineaDetalle +
+                ", precio Total=" + lineaDetalle.getPrecioTotal() +
+                '}';
     }
 }

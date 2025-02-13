@@ -1,6 +1,6 @@
 package src.UD5.capaNegocio;
 
-public class LineaDetalle implements Impresion{
+public class LineaDetalle implements Impresion {
     private Articulo articuloVendido;
     private Integer cantidad;
     private double precioUnitario;
@@ -27,16 +27,26 @@ public class LineaDetalle implements Impresion{
     }
 
     public double getPrecioTotal() {
-        return getPrecioUnitario()*cantidad;
+        return getPrecioUnitario() * cantidad;
     }
 
     @Override
     public String toString() {
-        return "\nLineaDetalle{" +
+        return "LineaDetalle{" +
                 "articuloVendido=" + articuloVendido +
                 ", cantidad=" + cantidad +
                 ", precioUnitario=" + precioUnitario +
                 ", precioTotal=" + precioTotal +
+                '}';
+    }
+
+    @Override
+    public String imprimir() {
+        return "LineaDetalle{" +
+                "articuloVendido=" + articuloVendido +
+                ", cantidad=" + cantidad +
+                ", precio con IVA=" + articuloVendido.getPrecioIva() +
+                ", precio sin IVA=" + articuloVendido.getPrecio() +
                 '}';
     }
 }

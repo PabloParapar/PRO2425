@@ -17,6 +17,10 @@ public class Proveedor {
         this.telefono = telefono;
     }
 
+    public String getNombre() {
+        return nombre;
+    }
+
     public void setArticulo(Articulo articulo) {
         this.articulo = articulo;
         if (articulo.getProveedor() != this) {

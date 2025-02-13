@@ -1,6 +1,6 @@
 package src.UD5.capaNegocio;
 
-public abstract class Articulo {
+public abstract class Articulo implements Impresion{
     private String descripcion;
     private double precio;
     private Integer iva;
@@ -36,7 +36,7 @@ public abstract class Articulo {
         this.iva = iva;
     }
     public double getPrecioIva() {
-        return precio * iva / 100;
+        return precio + precio * iva / 100;
     }
 
     @Override
@@ -49,10 +49,6 @@ public abstract class Articulo {
                 '}';
     }
 
-    public void imprimir(){
-
-    }
-
     public void setProveedor(Proveedor proveedor) {
         this.proveedor = proveedor;
         if(proveedor.getArticulo() != this) {
@@ -62,5 +58,13 @@ public abstract class Articulo {
 
     public Proveedor getProveedor() {
         return proveedor;
+    }
+
+    @Override
+    public String imprimir(){
+        return "Articulo{" +
+                "descripcion='" + descripcion + '\'' +
+                ", proveedor=" + proveedor.getNombre() +
+                '}';
     }
 }
