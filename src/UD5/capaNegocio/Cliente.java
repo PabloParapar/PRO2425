@@ -50,4 +50,6 @@ public class Cliente {
                 ", factura=" + factura +
                 '}';
     }
+
+
 }

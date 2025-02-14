@@ -27,4 +27,9 @@ public class Perecedero extends Articulo{
     public void setPrecioConIVA(double precioConIVA) {
         this.precioConIVA = precioConIVA;
     }
+
+    @Override
+    public String imprimir() {
+        return super.imprimir()+", Artículo Perecedero";
+    }
 }

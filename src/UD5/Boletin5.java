@@ -1,5 +1,6 @@
 package src.UD5;
 
+import com.sun.security.jgss.GSSUtil;
 import src.UD5.capaNegocio.*;
 
 public class Boletin5 {
@@ -59,6 +60,17 @@ public class Boletin5 {
         System.out.println("\nc)\n");
         System.out.println(perecedera.imprimir());
         System.out.println(noPerecedera.imprimir());
+        // d)
+        System.out.println("\nd)\n");
+        System.out.println(albahaca.imprimir());
+        System.out.println(sojaTexturizada.imprimir());
+        // e)
+        System.out.println("\ne)\n");
+        System.out.println(carmen.getFactura());
+        // f)
+        System.out.println("\nf)\n");
+
+
 
     }
 }

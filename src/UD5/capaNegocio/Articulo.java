@@ -62,9 +62,16 @@ public abstract class Articulo implements Impresion{
 
     @Override
     public String imprimir(){
-        return "Articulo{" +
-                "descripcion='" + descripcion + '\'' +
-                ", proveedor=" + proveedor.getNombre() +
-                '}';
+        if (proveedor != null) {
+            return "Articulo{" +
+                    "descripcion='" + descripcion + '\'' +
+                    ", proveedor=" + proveedor.getNombre() +
+                    '}';
+        } else {
+            return "Articulo{" +
+                    "descripcion='" + descripcion + '\'' +
+                    ", proveedor=" + "No hay proveedor" +
+                    '}';
+        }
     }
 }

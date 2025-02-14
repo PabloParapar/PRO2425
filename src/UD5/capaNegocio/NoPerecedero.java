@@ -36,4 +36,11 @@ public class NoPerecedero extends Articulo{
     public void setStock(int stock) {
         this.stock = stock;
     }
+
+    @Override
+    public String imprimir() {
+        return super.imprimir()+", Artículo No Perecedero";
+    }
+
+
 }

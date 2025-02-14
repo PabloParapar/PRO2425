@@ -40,7 +40,7 @@ public class Factura implements Impresion{
     public String toString() {
         return "Factura{" +
                 "idFactura=" + idFactura +
-                //", cliente=" + cliente +
+                ", cliente=" + cliente.getNombre() +
                 ", fechaActual=" + fechaActual +
                 ", lineaDetalle=" + lineaDetalle +
                 '}';
@@ -48,7 +48,7 @@ public class Factura implements Impresion{
     @Override
     public String imprimir(){
         return "Factura{" +
-                ", cliente=" + cliente +
+                "cliente=" + cliente +
                 ", lineaDetalle=" + lineaDetalle +
                 ", precio Total=" + lineaDetalle.getPrecioTotal() +
                 '}';
