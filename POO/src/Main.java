@@ -8,6 +8,9 @@ public class Main {
         gerente = new Empleado("Marcos", "12345678C", "123123123", "Gerente");
         concesionario = new Concesionario("Nombre S.L.", "Calle Falsa", gerente);
         Motor motorCoche = new Motor(120, "Diesel");
+        /*
+        * Podemos crear el motor sin asignarlo a una variable, directamente dentro de un setter o dentro del constructor
+        * */
         Motor motorMoto = new Motor(140, "Gasolina");
         coche = new Coche("Toyota", "Original", "4332LU", 15000.0, motorCoche , 5);
         moto = new Moto("Honda", "Original", "5468LU", 10000.00, motorMoto, 180);

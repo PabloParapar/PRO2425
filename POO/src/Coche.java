@@ -8,15 +8,24 @@ public class Coche extends Vehiculo{
         this.numeroPuertas = numeroPuertas;
     }
 
+    public int getNumeroPuertas() {
+        return numeroPuertas;
+    }
+
+    public void setNumeroPuertas(int numeroPuertas) {
+        this.numeroPuertas = numeroPuertas;
+    }
+
     @Override
     public String mostrarInformacion() {
         return "Coche{" +
-                "marca='" + super.getMarca() + '\'' +
-                ", modelo='" + super.getModelo() + '\'' +
-                ", matricula='" + super.getMatricula() + '\'' +
-                ", precio=" + super.getPrecio() +
-                ", motor=" + super.getMotor() + '\'' +
+                "marca='" + marca + '\'' +
+                ", modelo='" + modelo + '\'' +
+                ", matricula='" + matricula + '\'' +
+                ", precio=" + precio +
+                ", motor=" + motor + '\'' +
                 ", numero puertas=" + numeroPuertas +
+                ", propietario=" + propietario +
                 '}';
     }
 

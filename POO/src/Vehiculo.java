@@ -1,10 +1,14 @@
-public class Vehiculo {
-    private String marca;
-    private String modelo;
-    private String matricula;
-    private Double precio;
-    private Motor motor;
-    private Propietario propietario;
+public abstract class Vehiculo {
+    protected String marca;
+    protected String modelo;
+    protected String matricula;
+    protected Double precio;
+    protected Motor motor;
+    protected Propietario propietario;
+
+    //Lo tenía en private, pero debe ser protected para que tengan acceso las clases hijas.
+
+    //Las relaciones de agregación y composición serán definidas como atributo protected de esa clase.
 
     public Vehiculo(){
 
@@ -72,7 +76,8 @@ public class Vehiculo {
                 ", modelo='" + modelo + '\'' +
                 ", matricula='" + matricula + '\'' +
                 ", precio=" + precio +
-                ", motor=" + motor.toString() +
+                ", motor=" + motor +
+                ", propietario=" + propietario +
                 '}';
     }
 }

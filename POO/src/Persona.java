@@ -1,7 +1,7 @@
-public class Persona {
-    private String nombre;
-    private String dni;
-    private String telefono;
+public abstract class Persona {
+    protected String nombre;
+    protected String dni;
+    protected String telefono;
 
     public Persona(){
 

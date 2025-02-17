@@ -1,6 +1,7 @@
-public class Moto extends Vehiculo{
+public class Moto extends Vehiculo {
     private int cilindrada;
-    public Moto(){
+
+    public Moto() {
 
     }
 
@@ -9,7 +10,7 @@ public class Moto extends Vehiculo{
         this.cilindrada = cilindrada;
     }
 
-    @Override
+/*    @Override
     public String mostrarInformacion() {
         return "Moto{" +
                 "marca='" + super.getMarca() + '\'' +
@@ -18,6 +19,24 @@ public class Moto extends Vehiculo{
                 ", precio=" + super.getPrecio() +
                 ", motor=" + super.getMotor() + '\'' +
                 ", cilindrada="+ cilindrada+
+                ", propietario="+ getPropietario()+
                 '}';
+    }*/
+
+
+    @Override
+    public String mostrarInformacion() {
+        return "Moto{" +
+                "cilindrada=" + cilindrada +
+                "} " + super.mostrarInformacion();
+    }
+
+
+    public int getCilindrada() {
+        return cilindrada;
+    }
+
+    public void setCilindrada(int cilindrada) {
+        this.cilindrada = cilindrada;
     }
 }
