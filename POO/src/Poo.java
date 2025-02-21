@@ -1,4 +1,4 @@
-public class Main {
+public class Poo {
     public static void main(String[] args) {
         Concesionario concesionario;
         Empleado gerente;
