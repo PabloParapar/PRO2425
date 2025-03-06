@@ -23,6 +23,8 @@ public class Alumno extends Persona{
         this.curso = curso;
     }
 
+
+
     @Override
     public String toString() {
         return "Alumno{" +
