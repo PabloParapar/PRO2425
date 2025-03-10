@@ -22,6 +22,10 @@ public class Alumno extends Persona{
     public Alumno(String curso) {
         this.curso = curso;
     }
+    public Alumno(String nombre, String apellido) {
+        super(nombre, apellido);
+        //this.curso = curso;
+    }
 
 
 

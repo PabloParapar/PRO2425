@@ -107,16 +107,16 @@ public abstract class Persona implements SerHumano {
         this.sexo = sexo;
     }
 
-    /*
+
     public Persona() {
         //Método Constructor Vacío
-    } Ahora al ser una Clase Abstracta no tendrá constructor
+    } //Ahora al ser una Clase Abstracta no tendrá constructor
 
     public Persona(String nombre, String apellido) {
         this.nombre = nombre;
         this.apellido = apellido;
     }
-
+/*
     public Persona(String nombre, String apellido, Integer edad, Integer dni, Date fechaNacimiento, String direccionPostal, String email, Integer telefono, String grupoSanguineo, Sexo sexo) {
         this.nombre = nombre;
         this.apellido = apellido;

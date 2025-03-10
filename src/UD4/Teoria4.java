@@ -1,5 +1,6 @@
 package src.UD4;
 
+import com.sun.security.jgss.GSSUtil;
 import src.UD5.Alumno;
 import src.UD5.Persona;
 import src.UD5.Profesor;
@@ -53,28 +54,28 @@ public class Teoria4 {
 
         //Declarar e inicializar
 
-        Persona [] personas1 = new Persona [5];
+        Persona[] personas1 = new Persona[5];
 
         //Añadir valores al array
 
-        int [] dobles = {1,2,4,5};      //Declaramos un array con unos valores determinados, aporta ya su medida de manera implícita
+        int[] dobles = {1, 2, 4, 5};      //Declaramos un array con unos valores determinados, aporta ya su medida de manera implícita
         enteros[1] = 100;               ///El índice 1, el segundo del array, almacena el valor entero 100
 
-        String [] alumnos = {"Nabil", "Hector", "Pablo"};
-        alumnos [0] = "Jacinto";
+        String[] alumnos = {"Nabil", "Hector", "Pablo"};
+        alumnos[0] = "Jacinto";
 
-        Persona [] aula = {
-                new Profesor("Victor","Blanco"),
+        Persona[] aula = {
+                new Profesor("Victor", "Blanco"),
                 new Alumno("1º DAM"),
                 new Alumno("2º DAM"),
                 new Alumno("1º DAW"),
                 new Alumno("2º DAW")};
         //Es recomendable crear primero los objetos y luego asignarlo
 
-        String [] posicion= new String [10];
+        String[] posicion = new String[10];
 
-        for (int i = 0; i< posicion.length; i++){
-            posicion[i] = "Esta es la posición "+i;
+        for (int i = 0; i < posicion.length; i++) {
+            posicion[i] = "Esta es la posición " + i;
             //System.out.println(posicion[i]);
         }
 
@@ -85,6 +86,151 @@ public class Teoria4 {
         }
         //System.out.println(Arrays.toString(posicion));
 
+        // 10 de Marzo de 2025
 
+        /// Arrays Multidimensionales
+
+        double tabla1[][] = new double[3][2];
+
+        int tabla2[][] = new int[2][];
+
+        tabla2[0] = new int[2];
+        tabla2[1] = new int[3];
+
+        System.out.println("Tabla1:");
+        System.out.println("Número de Filas : " + tabla1.length);
+        System.out.println("Número de Columnas : " + tabla1[0].length);
+
+        System.out.println("Tabla2:");
+        System.out.println("Número de Filas : " + tabla2.length);
+        System.out.println("Número de Columnas de tabla2[0] : " + tabla2[0].length);
+        System.out.println("Número de Columnas de tabla2[1] : " + tabla2[1].length);
+
+        //Matriz de 2 Dimensiones
+
+        int matriz1[][] = new int[4][];
+
+        matriz1[0] = new int[]{1, 1, 1, 1};
+        matriz1[1] = new int[]{0, 1, 0, 0};
+        matriz1[2] = new int[]{0, 1, 1, 0};
+        matriz1[3] = new int[]{0, 0, 0, 1};
+
+        int matriz2[][] = {{1, 1, 1, 1}, {0, 1, 0, 0}, {0, 1, 1, 0}, {0, 0, 0, 1}};
+
+        int matriz3[][] = new int[4][4];
+
+        matriz3[0][0] = 1;
+        matriz3[0][1] = 1;
+        matriz3[0][2] = 1;
+        matriz3[0][3] = 1;
+        matriz3[1][0] = 0;
+        matriz3[1][1] = 1;
+        matriz3[1][2] = 0;
+        matriz3[1][3] = 0;
+        matriz3[2][0] = 0;
+        matriz3[2][1] = 1;
+        matriz3[2][2] = 1;
+        matriz3[2][3] = 0;
+        matriz3[3][0] = 0;
+        matriz3[3][1] = 0;
+        matriz3[3][2] = 0;
+        matriz3[3][3] = 1;
+
+        System.out.println("\nmatriz1:");
+        for (int i = 0; i < matriz1.length; i++) {
+            System.out.println();
+            for (int j = 0; j < matriz1[i].length; j++) {
+                System.out.print(matriz1[i][j] + " ");
+            }
+        }
+
+        System.out.println("\n\nmatriz2:");
+        for (int i = 0; i < matriz2.length; i++) {
+            System.out.println();
+            for (int j = 0; j < matriz2[i].length; j++) {
+                System.out.print(matriz2[i][j] + " ");
+            }
+        }
+
+        System.out.println("\n\nmatriz3:");
+        for (int i = 0; i < matriz3.length; i++) {
+            System.out.println();
+            for (int j = 0; j < matriz3[i].length; j++) {
+                System.out.print(matriz3[i][j] + " ");
+            }
+        }
+
+        //Defina una estructura que almacene e imprima alumnado de este aula:
+
+        String aula103[][] = {
+                {"PabloL.", "Nabil", "Héctor", "Carla", "Diego", "África"},
+                {"PabloP.", null, "Liuber", "Fabián", null, null},
+                {null, null, "Andrés", null, null, null},
+                {"Manuel", null, "Hernán", "Iván", null, "Cristian"}
+        };
+
+        System.out.println("\n\nDistribución Aula 103:");
+
+        for (String[] strings : aula103) {
+            System.out.println();
+            for (String string : strings) {
+                System.out.print(string + "\t\t");
+            }
+        }
+
+        String aula103dos[][] = new String[4][6];
+        aula103dos[0][0] = "PabloL.";
+        aula103dos[0][1] = "Nabil";
+        aula103dos[0][2] = "Héctor";
+        aula103dos[0][3] = "Carla";
+        aula103dos[0][4] = "Diego";
+        aula103dos[0][5] = "África";
+        aula103dos[1][0] = "PabloP.";
+        aula103dos[1][1] = null;
+        aula103dos[1][2] = "Liuber";
+        aula103dos[1][3] = "Fabián";
+        aula103dos[1][4] = null;
+        aula103dos[1][5] = null;
+        aula103dos[2][0] = null;
+        aula103dos[2][1] = null;
+        aula103dos[2][2] = "Andrés";
+        aula103dos[2][3] = null;
+        aula103dos[2][4] = null;
+        aula103dos[2][5] = null;
+        aula103dos[3][0] = "Manuel";
+        aula103dos[3][1] = null;
+        aula103dos[3][2] = "Hernán";
+        aula103dos[3][3] = "Iván";
+        aula103dos[3][4] = null;
+        aula103dos[3][5] = "Cristian";
+
+
+        System.out.println("\n\nDistribución Aula 103 dos");
+        for (String[] strings : aula103dos) {
+            System.out.println();
+            for (String string : strings) {
+                System.out.print(string + "\t\t");
+            }
+        }
+
+        Persona aula103tres[][] = {
+                {new Profesor("Victor", "Blanco")},
+                {new Alumno("Pablo", "Parapar"), new Alumno("Nabil", "aa"), new Alumno("Héctor", "aa"), new Alumno("Carla", "aa"), new Alumno("Diego", "aa"), new Alumno("África", "aa")},
+                {new Alumno("Pablo", "aa"), new Alumno(), new Alumno("Liuber", "aa"), new Alumno("Fabián", "aa"), new Alumno(), new Alumno()},
+                {new Alumno(), new Alumno(), new Alumno("Andrés", "aa"), new Alumno(), new Alumno(), new Alumno()},
+                {new Alumno("Manuel", "aa"), new Alumno(), new Alumno("Héctor", "aa"), new Alumno("Iván", "aa"), new Alumno(), new Alumno("Cristian", "aa")},
+        };
+
+        System.out.println("\n\nDistribución Aula 103 con Clases");
+        for (int i = 0; i < aula103tres.length; i++) {
+            System.out.println();
+            for (int j = 0; j < aula103tres[i].length; j++) {
+                if (aula103tres[i][j].getNombre() != null) {
+                    System.out.print(aula103tres[i][j].getNombre() + "\t\t");
+                } else {
+                    System.out.print("Vacío"+ "\t\t");
+                }
+            }
+        }
     }
 }
