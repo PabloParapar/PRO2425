@@ -1,9 +1,10 @@
 package src.UD5;
 
 import java.security.InvalidParameterException;
+import java.util.Comparator;
 import java.util.Date;
 
-public abstract class Persona implements SerHumano {
+public abstract class Persona implements SerHumano, Comparable<Persona> {
     protected String nombre;
     protected String apellido;
     protected Integer edad;

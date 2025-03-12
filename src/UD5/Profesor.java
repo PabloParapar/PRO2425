@@ -41,5 +41,10 @@ public class Profesor extends Persona{
     public void comer() {
 
     }
+
+    @Override
+    public int compareTo(Persona o) {
+        return 0;
+    }
 }
 

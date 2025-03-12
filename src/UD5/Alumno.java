@@ -28,11 +28,12 @@ public class Alumno extends Persona{
     }
 
 
-
     @Override
     public String toString() {
         return "Alumno{" +
-                "curso='" + curso + '\'' +
+                "nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", curso='" + curso + '\'' +
                 '}';
     }
 
@@ -44,5 +45,10 @@ public class Alumno extends Persona{
     @Override
     public void comer() {
         super.comer();
+    }
+
+    @Override
+    public int compareTo(Persona o) {
+        return this.nombre.compareTo(o.nombre);
     }
 }

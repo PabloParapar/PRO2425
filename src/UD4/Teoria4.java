@@ -6,6 +6,9 @@ import src.UD5.Persona;
 import src.UD5.Profesor;
 
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.function.IntUnaryOperator;
 
 public class Teoria4 {
     public static void main(String[] args) {
@@ -65,11 +68,10 @@ public class Teoria4 {
         alumnos[0] = "Jacinto";
 
         Persona[] aula = {
-                new Profesor("Victor", "Blanco"),
-                new Alumno("1º DAM"),
-                new Alumno("2º DAM"),
-                new Alumno("1º DAW"),
-                new Alumno("2º DAW")};
+                //new Profesor("Victor", "Blanco"),
+                new Alumno("Fabián", "aa"),
+                new Alumno("Adrián", "bb"),
+                new Alumno("Andrés", "cc")};
         //Es recomendable crear primero los objetos y luego asignarlo
 
         String[] posicion = new String[10];
@@ -232,5 +234,121 @@ public class Teoria4 {
                 }
             }
         }
+
+        //12 de Marzo de 2025
+
+        System.out.println("\n12 de Marzo de 2025\n");
+
+        ///Envío de Arrays a Métodos
+
+        //1º Declaramos las variables de tipo Alumno, int e int []
+
+        Alumno pablo = new Alumno("Pablo", "López Parapar");
+        int entero = 2;
+        int variosEnteros [] = {0, 1, 2, 3, 4, 5, 6};
+
+        //2º Imprimimos sus respectivos valores por pantalla
+
+        System.out.println(pablo);
+        System.out.println(entero);
+        for (int variosEntero : variosEnteros) {
+            System.out.print(variosEntero+" ");
+        }
+        System.out.println();
+        //System.out.println(Arrays.toString(variosEnteros));
+
+        //3º Los modificamos mediante un mét0do
+
+        miMetodo(pablo, entero, variosEnteros);
+
+        //4º Imprimimos sus respectivos valores por pantalla
+
+        System.out.println(pablo);
+        System.out.println(entero);
+        for (int variosEntero : variosEnteros) {
+            System.out.print(variosEntero+" ");
+        }
+        System.out.println();
+
+        //Vemos que el valor del entero se mantiene, pero los valores del Objeto y del Array han sido modificados
+
+        //Modifica los datos que tabajan con Referencia
+
+        ///Clase arrays. Utilidades
+        System.out.println("\n\033[36mClase Arrays. Utilidades\n\u001b[0m");
+
+        //Mét0do Sort
+        System.out.println("\033[36mMétodo Sort\n\u001b[0m");
+
+        System.out.println("String de Alumnos sin ordenar");
+        for (String alumno : alumnos) {
+            System.out.println(alumno);
+        }
+        Arrays.sort(alumnos);
+        System.out.println("\nString de Alumnos en orden Ascendente");
+        for (String alumno : alumnos) {
+            System.out.println(alumno);
+        }
+        Arrays.sort(alumnos, Collections.reverseOrder());
+        System.out.println("\nString de Alumnos en orden Descendente");
+        for (String alumno : alumnos) {
+            System.out.println(alumno);
+        }
+
+        ///Comparadores
+
+        /*
+        * Para comparar objetos deberemos implementar una interfaz Comparable<[Clase]>
+        * Nos hará implementar el métod0 compareTo() en la clase, donde definiremos en el
+        * return en base a qué queremos comparar las dos instancias de la clase
+        *
+        * */
+
+        //Comparar Instancias de un Objeto
+        System.out.println("\n\033[36mComparar Instancias de un Objeto\n\u001b[0m");
+
+        System.out.println("Instancias de Alumnos sin ordenar");
+        for (Persona persona : aula) {
+            System.out.println(persona);
+        }
+        Arrays.sort(aula);
+        System.out.println("\nInstancias de Alumnos en orden Ascendente");
+        for (Persona persona : aula) {
+            System.out.println(persona);
+        }
+        Arrays.sort(aula, Collections.reverseOrder());
+        System.out.println("\nInstancias de Alumnos en orden Descendente");
+        for (Persona persona : aula) {
+            System.out.println(persona);
+        }
+
+        //Glosario del Aula Virtual
+
+        int enterosSeteados [] = new int[10];
+
+        Arrays.setAll(enterosSeteados, IntUnaryOperator.identity());
+
+        System.out.println(Arrays.toString(enterosSeteados));
+
+        IntUnaryOperator generadorCuadrados = new IntUnaryOperator() {
+            @Override
+            public int applyAsInt(int operand) {
+                return operand*operand;
+            }
+        };
+
+        Arrays.setAll(enterosSeteados, generadorCuadrados);
+        System.out.println(Arrays.toString(enterosSeteados));
+
     }
+    public static void miMetodo (Alumno alumno, int entero, int [] vector) {
+        alumno.setNombre("Don "+alumno.getNombre());
+        entero *= 3;
+        for (int i = 0; i < vector.length; i++){
+            vector[i] *= i;
+        }
+    }
+
+
+
 }
