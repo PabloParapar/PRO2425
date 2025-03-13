@@ -5,9 +5,7 @@ import src.UD5.Alumno;
 import src.UD5.Persona;
 import src.UD5.Profesor;
 
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
+import java.util.*;
 import java.util.function.IntUnaryOperator;
 
 public class Teoria4 {
@@ -339,6 +337,50 @@ public class Teoria4 {
 
         Arrays.setAll(enterosSeteados, generadorCuadrados);
         System.out.println(Arrays.toString(enterosSeteados));
+
+        // 13 de Marzo de 2025
+
+        /// Colecciones
+        System.out.println("\n\033[36mColecciones\n\u001b[0m");
+
+        /// ArrayList
+        System.out.println("\t\033[36mArrayList\n\u001b[0m");
+
+        ArrayList<String> coches = new ArrayList<>();
+
+        coches.add("Volvo"); //con el métod0 add() añadimos elementos a la colección
+        coches.add("BMW");
+        coches.add("Ford");
+        coches.add("Audi");
+        coches.add("Seat");
+
+        Iterator<String> it = coches.iterator();    //Definición de un Iterador para la Colección coches
+
+        System.out.println("ArrayList de Coches\n");
+        while (it.hasNext()){                       //Mientras exista un elemento siguiente en el iterador
+            System.out.println(it.next());          //Imprimirá el siguiente elemento
+        }
+
+        ///Define un ArrayList de Personas y añade 5 Personas e imprimir el nombre de esas Personas
+
+        ArrayList<Persona> listaAlumnos = new ArrayList<>();
+        listaAlumnos.add(new Alumno("Pablo", 23));
+        listaAlumnos.add(new Alumno("Paula", 34));
+        listaAlumnos.add(new Alumno("Jairo", 54));
+        listaAlumnos.add(new Alumno("Jaime", 12));
+        listaAlumnos.add(new Alumno("Xavier", 3));
+        Iterator<Persona> alumnoIterator = listaAlumnos.iterator();
+
+        System.out.println("\nArrayList de Personas\n\tMenores de edad\n");
+
+        while(alumnoIterator.hasNext()){
+            Persona temporal = alumnoIterator.next();
+            if (temporal.getEdad()< 17){
+            System.out.println(temporal.getNombre());
+            }
+        }
+        System.out.println();
+
 
     }
     public static void miMetodo (Alumno alumno, int entero, int [] vector) {

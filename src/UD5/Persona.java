@@ -117,6 +117,11 @@ public abstract class Persona implements SerHumano, Comparable<Persona> {
         this.nombre = nombre;
         this.apellido = apellido;
     }
+
+    public Persona(String nombre, int edad){
+        this.nombre = nombre;
+        this.edad = edad;
+    }
 /*
     public Persona(String nombre, String apellido, Integer edad, Integer dni, Date fechaNacimiento, String direccionPostal, String email, Integer telefono, String grupoSanguineo, Sexo sexo) {
         this.nombre = nombre;

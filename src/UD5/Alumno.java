@@ -27,6 +27,9 @@ public class Alumno extends Persona{
         //this.curso = curso;
     }
 
+    public Alumno(String nombre, int edad) {
+        super(nombre, edad);
+    }
 
     @Override
     public String toString() {
