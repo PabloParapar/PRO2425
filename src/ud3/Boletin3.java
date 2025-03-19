@@ -2,20 +2,20 @@ package src.ud3;
 
 import java.util.Scanner;
 
-import src.ud3.Ejercicios.ClaseMath.*;
-import src.ud3.Ejercicios.ClaseString.*;
-import src.ud3.Ejercicios.ClasesEnvoltorio.Ejercicio45;
-import src.ud3.Ejercicios.ClasesEnvoltorio.Ejercicio46;
-import src.ud3.Ejercicios.ManejoDeFechas.Ejercicio47;
-import src.ud3.Ejercicios.ManejoDeFechas.Ejercicio48;
-import src.ud3.Ejercicios.ManejoDeFechas.Ejercicio49;
-import src.ud3.Ejercicios.ManejoDeFechas.Ejercicio50;
-import src.ud3.Ejercicios.Metodos.*;
-import src.ud3.Ejercicios.MetodosRecursivos.*;
-import src.ud3.Ejercicios.Objetos.Ejercicio23;
-import src.ud3.Ejercicios.Objetos.Ejercicio24;
+import src.ud3.ejercicios.clasemath.*;
+import src.ud3.ejercicios.clasestring.*;
+import src.ud3.ejercicios.clasesenvoltorio.Ejercicio45;
+import src.ud3.ejercicios.clasesenvoltorio.Ejercicio46;
+import src.ud3.ejercicios.manejodefechas.Ejercicio47;
+import src.ud3.ejercicios.manejodefechas.Ejercicio48;
+import src.ud3.ejercicios.manejodefechas.Ejercicio49;
+import src.ud3.ejercicios.manejodefechas.Ejercicio50;
+import src.ud3.ejercicios.metodos.*;
+import src.ud3.ejercicios.metodosrecursivos.*;
+import src.ud3.ejercicios.objetos.Ejercicio23;
+import src.ud3.ejercicios.objetos.Ejercicio24;
 
-import static src.ud3.Metodos.Utilidades.*;
+import static src.ud3.metodos.Utilidades.*;
 
 public class Boletin3 {
 
@@ -134,7 +134,7 @@ public class Boletin3 {
                     break;
 
                 case 27:
-                    Ejercicio27.ejercicio27(entrada);
+                    Ejercicio27.ejercicio27();
                     break;
 
                 case 28:
@@ -234,6 +234,7 @@ public class Boletin3 {
                     menuSeleccion();
                     System.out.println("Eso ni siquiera era un ejercicio");
             }
+            menuSeleccion();
             System.out.println("Ingresa el número del siguiente ejercicio que quieres ver (0 para salir):\n");
             ejercicio = entrada.nextInt();
         }
