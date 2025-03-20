@@ -393,21 +393,21 @@ public class Teoria4 {
         ArrayList<String> listaArray = new ArrayList<>(Arrays.asList("Aa", "Bb", "Cc"));
 
         listaArray.add("Dd");
-        for(String e: listaArray) {
+        for (String e : listaArray) {
             System.out.println(e);
         }
 
-        ArrayList<String> sublista = new ArrayList<>(listaArray.subList(1,3));
-        for (String e: sublista){
+        ArrayList<String> sublista = new ArrayList<>(listaArray.subList(1, 3));
+        for (String e : sublista) {
             System.out.println(e);
         }
 
         //BinarySearch
 
-        ArrayList<Integer> listaEnteros = new ArrayList<>(Arrays.asList(1,2,3,4,5,6,7,8,9));
-        System.out.println("Índice de 3: "+Collections.binarySearch(listaEnteros, 3));
+        ArrayList<Integer> listaEnteros = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9));
+        System.out.println("Índice de 3: " + Collections.binarySearch(listaEnteros, 3));
 
-        System.out.println(listaEnteros.contains(0)+"\ncontains(#) devuelve un booleano conforme si existe o no el elemento en la lista");
+        System.out.println(listaEnteros.contains(0) + "\ncontains(#) devuelve un booleano conforme si existe o no el elemento en la lista");
 
         /// LinkedList
 
@@ -419,8 +419,8 @@ public class Teoria4 {
         listaAnidada.push("Cuarto");
         listaAnidada.push("Quinto");
 
-        while (!listaAnidada.isEmpty()){
-            System.out.println(listaAnidada.size()+" : "+listaAnidada.poll());
+        while (!listaAnidada.isEmpty()) {
+            System.out.println(listaAnidada.size() + " : " + listaAnidada.poll());
         }
 
         /*Decalara e inicializa una lista de persona que contengan ordenados alfabéticamente a todos los alumnos de la clase
@@ -449,22 +449,25 @@ public class Teoria4 {
                 new Alumno("Cristian", "Rodríguez")));
 
         System.out.println("\t\033[36mImprimir Lista de Alumnos por orden de entrada\n\u001b[0m");
-        for (Persona a: listaAlumnado){
-            System.out.println(a.getNombre()+" "+a.getApellido());
+        for (Persona a : listaAlumnado) {
+            System.out.println(a.getNombre() + " " + a.getApellido());
         }
 
         System.out.println("\t\033[36mOrdenar Lista de Alumnos por Apellido\n\u001b[0m");
         Collections.sort(listaAlumnado);
 
         System.out.println("\t\033[36mImprime Lista de Alumnos ordendo por Apellido\n\u001b[0m");
-        for (Persona a: listaAlumnado){
-            System.out.println(a.getNombre()+" "+a.getApellido());
+        for (Persona a : listaAlumnado) {
+            System.out.println(a.getNombre() + " " + a.getApellido());
         }
 
-        System.out.println("""
-                ===== Sistema de Turnos de Carnicería =====
-                
-                """);
+        int turno = 0;
+        System.out.println(
+                "\n===== Sistema de Turnos de Carnicería =====\n" +
+                "Turno Actual: " + turno +
+                "\n1. Agregar un nuevo cliente (turno #1)"+
+                "\n2. Atender siguiente cliente"+
+                "\n3. Salir");
     }
 
     public static void miMetodo(Alumno alumno, int entero, int[] vector) {
