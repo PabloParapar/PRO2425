@@ -36,7 +36,7 @@ public class Alumno extends Persona{
         return "Alumno{" +
                 "nombre='" + nombre + '\'' +
                 ", apellido='" + apellido + '\'' +
-                ", curso='" + curso + '\'' +
+                //", curso='" + curso + '\'' +
                 '}';
     }
 
@@ -56,6 +56,6 @@ public class Alumno extends Persona{
 
     @Override
     public int compareTo(Persona o) {
-        return this.nombre.compareTo(o.nombre);
+        return this.apellido.compareTo(o.apellido);
     }
 }
