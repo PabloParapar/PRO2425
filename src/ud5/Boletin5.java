@@ -2,6 +2,9 @@ package src.ud5;
 
 import src.ud5.capaNegocio.*;
 
+/**
+ * @author lopparpab
+ */
 public class Boletin5 {
     public static void main(String[] args) {
         Cliente cliente1 = new Cliente("Samuel", 23456789);
@@ -68,8 +71,5 @@ public class Boletin5 {
         System.out.println(carmen.getFactura());
         // f)
         System.out.println("\nf)\n");
-
-
-
     }
 }

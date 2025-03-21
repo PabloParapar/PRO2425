@@ -1,5 +1,8 @@
 package src.ud5;
 
+/**
+ * @author lopparpab
+ */
 public class Profesor extends Persona{
 
     Integer antiguedad;

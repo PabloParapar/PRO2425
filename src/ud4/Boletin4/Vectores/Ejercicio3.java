@@ -2,11 +2,15 @@ package src.ud4.Boletin4.Vectores;
 
 import java.util.Arrays;
 
+/**
+ * @author lopparpab
+ */
 public class Ejercicio3 {
     public static void main(String[] args) {
-        System.out.println("Escribir una aplicación que almacene 30 notas de clase aleatorias\n" +
-                "comprendidas entre 1 y 10 ambas inclusive. Con estas notas, realizar las\n" +
-                "siguientes tareas:");
+        System.out.println("""
+                Escribir una aplicación que almacene 30 notas de clase aleatorias
+                comprendidas entre 1 y 10 ambas inclusive. Con estas notas, realizar las
+                siguientes tareas:""");
 
         int notasAlumnos [] = new int [30];
 
@@ -39,6 +43,7 @@ public class Ejercicio3 {
 
 
     }
+
 
     public static void contadorNotas(int [] notas){
         int [] cantidadNotas = new int[10];

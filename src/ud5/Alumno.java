@@ -1,5 +1,8 @@
 package src.ud5;
 
+/**
+ * @author lopparpab
+ */
 public class Alumno extends Persona{
     private String curso;
 
@@ -53,7 +56,11 @@ public class Alumno extends Persona{
     }
 
 
-
+    /**
+     *
+     * @param o el objeto a comparar.
+     * @return  el primer objeto ordenado según el atributo apellido
+     */
     @Override
     public int compareTo(Persona o) {
         return this.apellido.compareTo(o.apellido);

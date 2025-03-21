@@ -1,5 +1,8 @@
 package src.ud5;
 
+/**
+ * @author lopparpab
+ */
 public class Circulo extends FiguraGeometrica{
     private final double radio;
 
@@ -8,6 +11,10 @@ public class Circulo extends FiguraGeometrica{
         this.radio = radio;
     }
 
+    /**
+     *
+     * @return Calcula el área de una instancia Círculo según su atributo radio
+     */
     @Override
     public double getArea() {
         return Math.PI * radio * radio;

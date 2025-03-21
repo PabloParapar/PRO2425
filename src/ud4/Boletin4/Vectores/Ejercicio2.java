@@ -3,10 +3,12 @@ package src.ud4.Boletin4.Vectores;
 import java.util.Scanner;
 
 public class Ejercicio2 {
+
     public static void main(String[] args) {
-        System.out.println("Escribir una aplicación que rellene un vector de enteros y visualice los valores\n" +
-                "superiores a la media.\n");
-        System.out.println("Ingresa el tamaño del vector:");
+        System.out.println("""
+                Escribir una aplicación que rellene un vector de enteros y visualice los valores
+                superiores a la media.
+                Ingresa el tamaño del vector""");
         Scanner entrada = new Scanner(System.in);
         int tamannoVector = entrada.nextInt();
 

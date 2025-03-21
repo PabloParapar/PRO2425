@@ -1,5 +1,8 @@
 package src.ud5;
 
+/**
+ * @author lopparpab
+ */
 public abstract class FiguraGeometrica {
     private final String nombre;
     abstract public double getArea();

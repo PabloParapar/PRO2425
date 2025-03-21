@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"src.ud4"},{"l":"src.ud4.Boletin4"},{"l":"src.ud4.Boletin4.Vectores"}];updateSearchResults();
