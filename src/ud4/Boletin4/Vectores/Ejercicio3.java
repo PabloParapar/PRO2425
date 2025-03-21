@@ -34,15 +34,16 @@ public class Ejercicio3 {
 
         System.out.println("\nc)\tUtilizando métodos con una alta cohesión, indicar cuál es la nota más frecuente.");
 
+        contadorNotas(notasAlumnos);
+        //System.out.println(cantidadNotas);
 
 
     }
 
     public static void contadorNotas(int [] notas){
+        int [] cantidadNotas = new int[10];
         for (int i = 0; i < notas.length; i++) {
-            switch (notas[i]){
-                    
-            }
+            cantidadNotas[i] += 1;
         }
     }
 }

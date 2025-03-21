@@ -461,13 +461,69 @@ public class Teoria4 {
             System.out.println(a.getNombre() + " " + a.getApellido());
         }
 
-        int turno = 0;
-        System.out.println(
-                "\n===== Sistema de Turnos de Carnicería =====\n" +
-                "Turno Actual: " + turno +
-                "\n1. Agregar un nuevo cliente (turno #1)"+
-                "\n2. Atender siguiente cliente"+
-                "\n3. Salir");
+        Scanner entrada = new Scanner(System.in);
+        LinkedList<String> charcuteria = new LinkedList<>();
+        int cola=1;
+        while (cola !=3){
+            System.out.println(
+                    "\n===== Sistema de Turnos de Carnicería =====\n" +
+                            "Turno Actual: " + turnoCharcuteria(charcuteria) +
+                            "\n1. Agregar un nuevo cliente (turno #1)" +     //  Añade una persona al final
+                            "\n2. Atender siguiente cliente" +               //  Elimina la persona del principio
+                            "\n3. Salir");
+            cola = entrada.nextInt();
+            switch (cola){
+                case 1:
+                    System.out.println("¿Quién está a la cola?");
+                    charcuteria.addLast(entrada.next());
+                    break;
+                case 2:
+                    charcuteria.pop();
+                    break;
+                case 3:
+                    System.out.println("Turning off the system...");
+                    break;
+                default:
+                    System.out.println("Caso no contemplado, Repita:");
+                    break;
+            }
+        }
+
+        /// Colas
+        System.out.println("\t\033[36mColas\n\u001b[0m");
+        ///PriorityQueue
+        System.out.println("\t\033[36mPriorityQueue\n\u001b[0m");
+
+        /*Crear tres colas. En las dos primeras alamacenamos medio millar de números generados
+        * aleatoriamente entre el 0 y el 50. Luego recorremos simultáneamente ambas colas y
+        * almacenamos en la tercera aquellos números que coinciden en valor y posición.*/
+
+        ArrayDeque<Integer> cola1 = new ArrayDeque<>();
+        ArrayDeque<Integer> cola2 = new ArrayDeque<>();
+        ArrayDeque<Integer> colaFinal = new ArrayDeque<>();
+        for (int i = 0; i < 500; i++) {
+            cola1.add((int) (Math.random()*50));
+            cola2.add((int) (Math.random()*50));
+        }
+        for (int i = 0; i < cola1.size(); i++){
+            if (cola1.peek() == cola2.peek()){
+            System.out.println("\033[36m"+cola1.peek() + "\t"+cola2.peek()+"\u001b[0m");
+                colaFinal.add(cola1.peek());
+            } else {
+                System.out.println(cola1.peek() + "\t" + cola2.peek());
+            }
+            cola1.poll();
+            cola2.poll();
+        }
+        System.out.println(colaFinal);
+    }
+
+    public static String turnoCharcuteria(LinkedList charcuteria){
+        if (charcuteria.peek() == null){
+            return "No hay nadie a la cola";
+        } else{
+            return (String) charcuteria.peek();
+        }
     }
 
     public static void miMetodo(Alumno alumno, int entero, int[] vector) {
