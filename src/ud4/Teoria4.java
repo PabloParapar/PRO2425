@@ -516,6 +516,10 @@ public class Teoria4 {
             cola2.poll();
         }
         System.out.println(colaFinal);
+
+        // 24 de Marzo de 2025
+
+
     }
 
     public static String turnoCharcuteria(LinkedList charcuteria) {
