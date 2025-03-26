@@ -12,8 +12,17 @@ import java.util.Random;
 
 import static java.lang.Math.PI;
 
+/**
+ * @author lopparpab
+ */
 public class Teoria3 {
     //Viernes 15/11/2024
+
+    /**
+     *
+     * @param valor
+     * Imprime en pantalla la tabla de multiplicar del valor especificado
+     */
     private static void imprimeTablaMultiplicar(int valor) {
         System.out.println("Tabla de multiplicar del " + valor);
         for (int i = 1; i <= 10; i++) {
@@ -28,20 +37,41 @@ public class Teoria3 {
          */
     }
 
+    /**
+     *
+     * @param numero1
+     * @param numero2
+     * @return Devueve la suma de los dos enteros ingresados
+     */
     private static int sumar(int numero1, int numero2) {
         //int resultado = numero1 + numero2;
         return numero1 + numero2;    //Siempre que el método no sea void debe tener return
     }
 
+    /**
+     *
+     * @param numero1
+     * @param numero2
+     * @return Devuelve la media de los dos valores ingresados
+     */
     private static double hacerMedia(int numero1, int numero2) {
         return (double) (numero1 + numero2) / 2;
     }
 
+    /**
+     * Imprime en pantalla el nombre, edad y lugar de nacimiento del autor
+     */
     private static void hacerPresentacion() {
         System.out.println("Pablo, edad 27, Vegadeo");
-        ;
     }
 
+    /**
+     *
+     * @param nombre
+     * @param lugarNacimiento
+     * @param edad
+     * Imprime en pantalla el valor de los parámetros ingresados
+     */
     private static void imprimirPresentacion(String nombre, String lugarNacimiento, int edad) {
         System.out.println(nombre);
         System.out.println(edad);
@@ -86,6 +116,11 @@ public class Teoria3 {
 
     //28 de noviembre de 2024
 
+    /**
+     *
+     * @param n
+     * @return Devuelve el factorial del número n. factorial(n) = n * (n-1) * (n-2) * ... * 2 * 1
+     */
     public static int factorial(int n){
         if(n <= 1){
             return 1;

@@ -1,6 +1,13 @@
 package src.ud3.metodos;
 
+/**
+ * @author lopparpab
+ */
 public abstract class Utilidades {
+    /**
+     * Imprime en pantalla una tabla que clasifica los ejercicios del boletín 3 por temática.
+     * Asigna un código de color en función del estado del ejercicio (completo, saltado, no empezado...)
+     */
     public static void menuSeleccion() {
         String reset = "\u001b[0m";         // Reset
         String snooze = "\033[30m";         // Black

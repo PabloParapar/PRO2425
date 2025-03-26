@@ -1,5 +1,8 @@
 package src.ud5.capaNegocio;
 
+/**
+ * @author lopparpab
+ */
 public class LineaDetalle implements Impresion {
     private Articulo articuloVendido;
     private Integer cantidad;

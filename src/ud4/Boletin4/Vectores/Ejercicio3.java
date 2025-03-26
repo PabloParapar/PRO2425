@@ -44,7 +44,15 @@ public class Ejercicio3 {
 
     }
 
-
+    /**
+     *
+     * @param notas
+     * @return Recorre un Array de enteros con valores del 1 al 10, incrementa en 1 un Array interno de enteros
+     *          que registra cada vez que se repite un entero en el Array.
+     *          int [] cantidadNotas = {cantidad1, cantidad2, cantidad3, cantidad4,
+     *                  cantidad5, cantidad6, cantidad7, cantidad8, cantidad9, cantidad10}
+*                  Devolverá el valor que más se repita.
+     */
     public static void contadorNotas(int [] notas){
         int [] cantidadNotas = new int[10];
         for (int i = 0; i < notas.length; i++) {

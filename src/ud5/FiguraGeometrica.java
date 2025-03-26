@@ -11,6 +11,11 @@ public abstract class FiguraGeometrica {
         this.nombre = nombre;
     }
 
+    /**
+     *
+     * @param figura
+     * @return Devuelve un booleano conforme si el área de la primera figura es mayor que la segunda figura
+     */
     public boolean mayorQue(FiguraGeometrica figura) {
         return this.getArea() > figura.getArea();
     }

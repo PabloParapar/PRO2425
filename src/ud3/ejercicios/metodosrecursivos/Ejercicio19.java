@@ -15,7 +15,7 @@ public class Ejercicio19 {
         int numeroSerie = entrada.nextInt();
         System.out.println("El " + numeroSerie + "º término de la serie es " + serieEnteros(numeroSerie));
     }
-
+    
     public static int serieEnteros(int n) {
         if (n == 1) {
             return 1;

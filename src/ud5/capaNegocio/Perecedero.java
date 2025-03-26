@@ -1,5 +1,8 @@
 package src.ud5.capaNegocio;
 
+/**
+ * @author lopparpab
+ */
 public class Perecedero extends Articulo{
     private static int id = 0;
     private double precioSinIVA;

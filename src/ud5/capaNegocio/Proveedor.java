@@ -1,5 +1,8 @@
 package src.ud5.capaNegocio;
 
+/**
+ * @author lopparpab
+ */
 public class Proveedor {
     private String nombre;
     private String nif;

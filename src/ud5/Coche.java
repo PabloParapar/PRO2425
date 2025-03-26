@@ -2,6 +2,9 @@ package src.ud5;
 
 import java.util.Date;
 
+/**
+ * @author lopparpab
+ */
 public class Coche {
     //Atributios Básicos
     private String marca;

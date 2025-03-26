@@ -1,5 +1,8 @@
 package src.ud5.capaNegocio;
 
+/**
+ * @author lopparpab
+ */
 public abstract class Articulo implements Impresion{
     private String descripcion;
     private double precio;

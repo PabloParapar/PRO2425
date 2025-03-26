@@ -2,6 +2,9 @@ package src.ud5.capaNegocio;
 
 import java.time.LocalDate;
 
+/**
+ * @author lopparpab
+ */
 public class Factura implements Impresion{
     private static Integer numeracion = 0;
     private Integer idFactura;

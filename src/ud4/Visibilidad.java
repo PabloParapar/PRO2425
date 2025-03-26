@@ -2,6 +2,9 @@ package src.ud4;
 
 import src.ud5.Profesor;
 
+/**
+ * @author lopparpab
+ */
 public class Visibilidad {
     public static void main(String[] args) {
         Profesor gerardo = new Profesor();

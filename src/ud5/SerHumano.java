@@ -1,5 +1,8 @@
 package src.ud5;
 
+/**
+ * @author lopparpab
+ */
 public interface SerHumano {
 
     int MIN =0;

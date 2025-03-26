@@ -2,6 +2,9 @@ package src.ud5;
 
 import java.util.Date;
 
+/**
+ * @author lopparpab
+ */
 public class Teoria5 {
     public static void main(String[] args) {
         /*
@@ -185,6 +188,14 @@ public class Teoria5 {
             System.out.println(reparto); //El bloque de código dentro del finally se ejecutará siempre
         }
     }
+
+    /**
+     *
+     * @param dinero
+     * @param personas
+     * @return puramente didáctico, sirve para comprobar el funcionamiento de la estructura try-catch
+     * @throws Exception
+     */
     public static int repartir(int dinero, int personas) throws Exception { //El métod0 podrá lanzar el Exception siempre que tenga el "throw Exception"
         if (personas < 1){
             throw(new Exception("No se puede dividir entre 0")); //Esta línea lanza la Excepción en caso de que se de

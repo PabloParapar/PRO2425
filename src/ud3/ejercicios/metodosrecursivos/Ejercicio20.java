@@ -2,6 +2,9 @@ package src.ud3.ejercicios.metodosrecursivos;
 
 import java.util.Scanner;
 
+/**
+ * @author lopparpab
+ */
 public class Ejercicio20 {
     private Ejercicio20() {
     }
@@ -22,6 +25,11 @@ public class Ejercicio20 {
         }
     }
 
+    /**
+     *
+     * @param texto
+     * @return Devuelve un valor booleano conforme si el texto ingresado es un palíndromo o no
+     */
     public static boolean esPalindromo(String texto) {
         int longitud = texto.length();
         if (longitud < 2) {

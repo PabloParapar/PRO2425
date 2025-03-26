@@ -2,6 +2,9 @@ package src.ud3.ejercicios.metodosrecursivos;
 
 import java.util.Scanner;
 
+/**
+ * @author lopparpab
+ */
 public class Ejercicio21 {
 
     public static void ejercicio21(Scanner entrada) {
@@ -25,6 +28,12 @@ public class Ejercicio21 {
     }
     private Ejercicio21() {
     }
+
+    /**
+     *
+     * @param numero
+     * @return Devuelve un valor booleano conforme si el número ingresado por parámetros en capicúa
+     */
     public static boolean esCapicua(int numero) {
         int longitud = Ejercicio12.longitudNumero(numero);
         if (longitud < 2) {

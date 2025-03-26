@@ -2,6 +2,9 @@ package src.ud3.ejercicios.objetos;
 
 import java.awt.*;
 
+/**
+ * @author lopparpab
+ */
 public class Ejercicio24 {
     private Ejercicio24() {
     }

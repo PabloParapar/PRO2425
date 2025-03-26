@@ -17,6 +17,9 @@ import src.ud3.ejercicios.objetos.Ejercicio24;
 
 import static src.ud3.metodos.Utilidades.*;
 
+/**
+ * @author lopparpab
+ */
 public class Boletin3 {
 
     public static void main(String[] args) {

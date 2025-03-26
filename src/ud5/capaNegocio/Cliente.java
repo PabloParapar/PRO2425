@@ -1,5 +1,8 @@
 package src.ud5.capaNegocio;
 
+/**
+ * @author lopparpab
+ */
 public class Cliente {
     private String nombre;
     private Integer dni;

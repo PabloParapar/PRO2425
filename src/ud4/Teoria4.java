@@ -7,6 +7,9 @@ import src.ud5.Profesor;
 import java.util.*;
 import java.util.function.IntUnaryOperator;
 
+/**
+ * @author lopparpab
+ */
 public class Teoria4 {
     public static void main(String[] args) {
         System.out.println(Semaforo.AMBAR);
@@ -522,6 +525,12 @@ public class Teoria4 {
 
     }
 
+    /**
+     *
+     * @param charcuteria
+     * @return Devuelve la siguiente Persona de la cola
+     *          si la lista está vacía imprime un mensaje en pantalla conforme no hay nadie en la lista
+     */
     public static String turnoCharcuteria(LinkedList charcuteria) {
         if (charcuteria.peek() == null) {
             return "No hay nadie a la cola";
@@ -530,6 +539,13 @@ public class Teoria4 {
         }
     }
 
+    /**
+     *
+     * @param alumno
+     * @param entero
+     * @param vector
+     * Modifica los valores de un entero, de una instancia y de un array para comprobar si se modifica el original o no
+     */
     public static void miMetodo(Alumno alumno, int entero, int[] vector) {
         alumno.setNombre("Don " + alumno.getNombre());
         entero *= 3;
