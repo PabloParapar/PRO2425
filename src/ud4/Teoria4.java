@@ -1,5 +1,6 @@
 package src.ud4;
 
+import src.ud4.colecciones.Articulito;
 import src.ud5.Alumno;
 import src.ud5.Persona;
 import src.ud5.Profesor;
@@ -510,18 +511,144 @@ public class Teoria4 {
         }
         for (int i = 0; i < cola1.size(); i++) {
             if (cola1.peek() == cola2.peek()) {
-                System.out.println("\033[36m" + cola1.peek() + "\t" + cola2.peek() + "\u001b[0m");
+                System.out.print("\033[36m" + cola1.peek() + "\t" + cola2.peek() + "\u001b[0m\t\t");
                 colaFinal.add(cola1.peek());
             } else {
-                System.out.println(cola1.peek() + "\t" + cola2.peek());
+                System.out.print(cola1.peek() + "\t" + cola2.peek()+"\t\t");
             }
             cola1.poll();
             cola2.poll();
         }
+        System.out.println();
         System.out.println(colaFinal);
 
         // 24 de Marzo de 2025
 
+
+        // 28 de Marzo de 2025
+
+        //Set<String> ingredientes= new HashSet<>();
+
+        /*
+        Crear y visualizar un HashSet de Strings de dos formas:
+            1. Con un Iterator que muestre además una enumeración.
+            2. Visualizarlo entero con cada elemento seguido de comas.
+            Sandía, Pera, Manzana, Plátano, Naranja
+         */
+        System.out.println("\t\033[36mColecciones\n\u001b[0m");
+        System.out.println("\t\033[36mEjercicio Diego 1\n\u001b[0m");
+        System.out.println("\tPrimera Forma\n");
+        Set<String> fruta = new HashSet<>();
+            fruta.add("Sandía");
+            fruta.add("Pera");
+            fruta.add("Manzana");
+            fruta.add("Plátano");
+            fruta.add("Naranja");
+
+            Iterator<String> frutaIterator = fruta.iterator();
+            int contadorFruta = 0;
+            while (frutaIterator.hasNext()){
+                String temporal = frutaIterator.next();
+                System.out.println(++contadorFruta+" · "+temporal);
+            }
+        System.out.println("\tSegunda Forma\n");
+        System.out.println(fruta);
+
+        /*
+        Controlar el inventario de un almacén mediante un HashSet
+        Mostrar un menú con varias opciones qeu permite añadir, eliminar y
+        mostrar un producto en concreto o mostrar tod0 el inventario.
+        Opcionalmente añadir que se pueda modificar la cantidad de objetos una vez creado el artículo.
+
+
+        Creamos una clase llamada Articulito
+        Tendrá los atributos String nombre y int cantidad
+        Crearemos Constructor, Getters y Setters, toString, equals y hashcode
+         */
+
+        System.out.println("\t\033[36mEjercicio Diego 2\n\u001b[0m");
+
+        inventarioHashSet();
+
+
+
+
+    }
+
+    public static void inventarioHashSet(){
+        Set<Articulito> inventario = new HashSet<>();
+        System.out.println("\033[35m"+"Creamos la Colección de Inventario"+"\u001b[0m");
+        System.out.println(inventario);
+        Articulito patata = new Articulito("Patata");
+        Articulito tomate = new Articulito("Tomate");
+        Articulito albahaca = new Articulito("Albahaca");
+        Articulito nuez = new Articulito("Nuez");
+        Articulito berenjena = new Articulito("Berenjena");
+
+        System.out.println("\033[35m"+"Añadimos tomates:"+"\u001b[0m");
+        inventario.add(tomate);
+        System.out.println(inventario);
+        System.out.println("\033[35m"+"Añadimos patatas:"+"\u001b[0m");
+        inventario.add(patata);
+        System.out.println(inventario);
+        System.out.println("\033[35m"+"Añadimos patatas:"+"\u001b[0m");
+        inventario.add(patata);
+        System.out.println(inventario);
+        System.out.println("\33[33m"+"No añade más Patata al ya haber una instancia Patata"+"\u001b[0m");
+
+        System.out.println("\033[35m"+"Añadimos Albahaca:"+"\u001b[0m");
+        inventario.add(albahaca);
+        System.out.println(inventario);
+
+        System.out.println("\033[35m"+"Añadimos Nueces:"+"\u001b[0m");
+        inventario.add(nuez);
+        System.out.println(inventario);
+
+        System.out.println("\033[35m"+"Buscamos Berenjena:"+"\u001b[0m");
+        if (inventario.contains(berenjena)){
+            System.out.println("\33[33m"+"Tenemos "+berenjena.getNombre()+"\u001b[0m");
+        } else {
+            System.out.println("\33[33m"+"No tenemos "+berenjena.getNombre()+"\u001b[0m");
+        }
+        System.out.println(inventario);
+
+        System.out.println("\033[35m"+"Añadimos Berenjena:"+"\u001b[0m");
+        inventario.add(berenjena);
+        System.out.println(inventario);
+
+        System.out.println("\033[35m"+"Buscamos Berenjena:"+"\u001b[0m");
+        if (inventario.contains(berenjena)){
+            System.out.println("\33[33m"+"Tenemos "+berenjena.getNombre()+"\u001b[0m");
+        } else {
+            System.out.println("\33[33m"+"No tenemos "+berenjena.getNombre()+"\u001b[0m");
+        }
+        System.out.println(inventario);
+
+        System.out.println("\033[35m"+"Eliminamos patatas:"+"\u001b[0m");
+        inventario.remove(patata);
+        System.out.println(inventario);
+
+        System.out.println("\033[35m"+"Eliminamos tomate:"+"\u001b[0m");
+        inventario.remove(tomate);
+        System.out.println(inventario);
+
+        System.out.println("\033[35m"+"Eliminamos tomate:"+"\u001b[0m");
+        inventario.remove(tomate);
+        System.out.println(inventario);
+        System.out.println("\33[33m"+"Al no haber una instacia con esa referencia no elimina nada"+"\u001b[0m");
+
+        System.out.println("\033[35m"+"Eliminamos nuez:"+"\u001b[0m");
+        inventario.remove(nuez);
+        System.out.println(inventario);
+
+        System.out.println("\033[35m"+"Eliminamos albahaca:"+"\u001b[0m");
+        inventario.remove(albahaca);
+        System.out.println(inventario);
+
+        System.out.println("\033[35m"+"Eliminamos berenjena:"+"\u001b[0m");
+        inventario.remove(berenjena);
+        System.out.println(inventario);
+        // Por definición los elementos de un HashSet no tienen un orden específico
 
     }
 
