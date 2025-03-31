@@ -22,9 +22,9 @@ public abstract class Utilidades {
                         "        ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n" +
                         "        ┃                      Ejercicios de " + destacado + "métodos" + reset + "                      ┃\n" +
                         "        ┠──────────┬──────────┬──────────┬──────────┬──────────┬──────────┨\n" +
-                        "        ┃    " + terminado + " 1" + reset + "    │    " + terminado + " 2" + reset + "    │    " + terminado + " 3" + reset + "    │    " + terminado + " 4" + reset + "    │    " + terminado + " 5" + reset + "    │    " + enProceso + " 6" + reset + "    ┃\n" +
+                        "        ┃    " + terminado + " 1" + reset + "    │    " + terminado + " 2" + reset + "    │    " + terminado + " 3" + reset + "    │    " + terminado + " 4" + reset + "    │    " + terminado + " 5" + reset + "    │    " + terminado + " 6" + reset + "    ┃\n" +
                         "        ┠──────────┼──────────┼──────────┼──────────┼──────────┼──────────┨\n" +
-                        "        ┃    " + incubadora + " 7" + reset + "    │    " + incubadora + " 8" + reset + "    │    " + incubadora + " 9" + reset + "    │    " + incubadora + "10" + reset + "    │    " + incubadora + "11" + reset + "    │          ┃\n" +
+                        "        ┃    " + terminado + " 7" + reset + "    │    " + terminado + " 8" + reset + "    │    " + terminado + " 9" + reset + "    │    " + terminado + "10" + reset + "    │    " + terminado + "11" + reset + "    │          ┃\n" +
                         "        ┣━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┫\n" +
                         "        ┃                 Ejercicios de " + destacado + "métodos recursivos" + reset + "                ┃\n" +
                         "        ┠──────────┬──────────┬──────────┬──────────┬──────────┬──────────┨\n" +
@@ -34,27 +34,27 @@ public abstract class Utilidades {
                         "        ┣━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┫\n" +
                         "        ┃                      Uso básico de " + destacado + "objetos" + reset + "                      ┃\n" +
                         "        ┠────────────────────────────────┬────────────────────────────────┨\n" +
-                        "        ┃               " + enProceso + "23" + reset + "               │               " + incubadora + "24" + reset + "               ┃\n" +
+                        "        ┃               " + terminado + "23" + reset + "               │               " + terminado + "24" + reset + "               ┃\n" +
                         "        ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫\n" +
                         "        ┃                   Ejercicios de la clase " + destacado + "Math" + reset + "                   ┃\n" +
                         "        ┠──────────┬──────────┬──────────┬──────────┬──────────┬──────────┨\n" +
-                        "        ┃    " + incubadora + "25" + reset + "    │    " + incubadora + "26" + reset + "    │    " + incubadora + "27" + reset + "    │    " + incubadora + "28" + reset + "    │    " + incubadora + "29" + reset + "    │    " + incubadora + "30" + reset + "    ┃\n" +
+                        "        ┃    " + terminado + "25" + reset + "    │    " + terminado + "26" + reset + "    │    " + terminado + "27" + reset + "    │    " + terminado + "28" + reset + "    │    " + terminado + "29" + reset + "    │    " + terminado + "30" + reset + "    ┃\n" +
                         "        ┠──────────┴──────────┼──────────┴──────────┼──────────┴──────────┨\n" +
-                        "        ┃          " + incubadora + "31" + reset + "         │          " + incubadora + "32" + reset + "         │          " + incubadora + "33" + reset + "         ┃\n" +
+                        "        ┃          " + terminado + "31" + reset + "         │          " + terminado + "32" + reset + "         │          " + terminado + "33" + reset + "         ┃\n" +
                         "        ┣━━━━━━━━━━━━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━┫\n" +
                         "        ┃                  Ejercicios de la clase " + destacado + "String" + reset + "                  ┃\n" +
                         "        ┠──────────┬──────────┬──────────┬──────────┬──────────┬──────────┨\n" +
-                        "        ┃    " + incubadora + "34" + reset + "    │    " + incubadora + "35" + reset + "    │    " + incubadora + "36" + reset + "    │    " + incubadora + "37" + reset + "    │    " + incubadora + "38" + reset + "    │    " + incubadora + "39" + reset + "    ┃\n" +
+                        "        ┃    " + terminado + "34" + reset + "    │    " + terminado + "35" + reset + "    │    " + terminado + "36" + reset + "    │    " + terminado + "37" + reset + "    │    " + terminado + "38" + reset + "    │    " + terminado + "39" + reset + "    ┃\n" +
                         "        ┠──────────┼──────────┼──────────┼──────────┼──────────┼──────────┨\n" +
-                        "        ┃    " + incubadora + "40" + reset + "    │    " + incubadora + "41" + reset + "    │    " + incubadora + "42" + reset + "    │    " + incubadora + "43" + reset + "    │    " + incubadora + "44" + reset + "    │          ┃\n" +
+                        "        ┃    " + terminado + "40" + reset + "    │    " + terminado + "41" + reset + "    │    " + terminado + "42" + reset + "    │    " + terminado + "43" + reset + "    │    " + terminado + "44" + reset + "    │          ┃\n" +
                         "        ┣━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┫\n" +
                         "        ┃        Ejercicios de la clase " + destacado + "String" + reset + " y " + destacado + "clases envoltorio" + reset + "        ┃\n" +
                         "        ┠────────────────────────────────┬────────────────────────────────┨\n" +
-                        "        ┃               " + incubadora + "45" + reset + "               │               " + incubadora + "46" + reset + "               ┃\n" +
+                        "        ┃               " + terminado + "45" + reset + "               │               " + enProceso + "46" + reset + "               ┃\n" +
                         "        ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫\n" +
                         "        ┃                  Ejercicios de " + destacado + "manejo de fechas" + reset + "                 ┃\n" +
                         "        ┠────────────────┬───────────────┬───────────────┬────────────────┨\n" +
-                        "        ┃       " + snooze + "47" + reset + "       │       " + snooze + "48" + reset + "      │       " + snooze + "49" + reset + "      │       " + snooze + "50" + reset + "       ┃\n" +
+                        "        ┃       " + incubadora + "47" + reset + "       │       " + incubadora + "48" + reset + "      │       " + incubadora + "49" + reset + "      │       " + incubadora + "50" + reset + "       ┃\n" +
                         "        ┗━━━━━━━━━━━━━━━━┷━━━━━━━━━━━━━━━┷━━━━━━━━━━━━━━━┷━━━━━━━━━━━━━━━━┛\n");
     }
 }

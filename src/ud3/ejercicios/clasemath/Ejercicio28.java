@@ -1,12 +1,14 @@
 package src.ud3.ejercicios.clasemath;
 
+import src.ud3.ejercicios.Ejercicio;
+
 import java.util.Scanner;
 
-public class Ejercicio28 {
+public class Ejercicio28 extends Ejercicio {
     private Ejercicio28() {
     }
 
-    public static void ejercicio28(Scanner entrada) {
+    public static void resolverEjercicio(Scanner entrada) {
 
         System.out.println("""
             Boletin 3 | Ejercicio 28
@@ -16,7 +18,7 @@ public class Ejercicio28 {
         
         Ingresa el número a consultar (entre 1 y 6)""");
         System.out.println("Ingresa el número a consultar (entre 1 y 6):");
-        int valorDados = entrada.nextInt();
+        int valorDados = ingresarEntero(entrada);
         int contadorDados = 0;
         for (int i = 0; i < 1000000; i++) {
             if (lanzarDosDados(valorDados)) {

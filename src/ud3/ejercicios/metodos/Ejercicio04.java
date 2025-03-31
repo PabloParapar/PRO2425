@@ -1,9 +1,11 @@
 package src.ud3.ejercicios.metodos;
 
+import src.ud3.ejercicios.Ejercicio;
+
 import java.util.Objects;
 import java.util.Scanner;
 
-public class Ejercicio04{
+public class Ejercicio04 extends Ejercicio {
     public static boolean esVocal(String letra) {
         boolean vocal;
         if (Objects.equals(letra, "a") || Objects.equals(letra, "A") || Objects.equals(letra, "e") || Objects.equals(letra, "E") || Objects.equals(letra, "i") || Objects.equals(letra, "I") || Objects.equals(letra, "o") || Objects.equals(letra, "O") || Objects.equals(letra, "u") || Objects.equals(letra, "U")) {
@@ -39,24 +41,25 @@ public class Ejercicio04{
         ¿Qué quieres comprobar?
         1 · Vocales
         2 · Consonantes""");
-        int opcion = entrada.nextInt();
+        int opcion = ingresarEntero(entrada);
+        entrada.nextLine();
 
         while (opcion != 0) {
             String letra;
             switch (opcion) {
                 case 1:
                     System.out.println("Comprueba si es vocal:");
-                    letra = entrada.next();
+                    letra = ingresarCadena(entrada);
                     ejercicio4a(letra);
                     break;
                 case 2:
                     System.out.println("Comprueba si es consonante:");
-                    letra = entrada.next();
+                    letra = ingresarCadena(entrada);
                     ejercicio4b(letra);
                     break;
                 default:
                     System.out.println("Elige otro");
-                    opcion = entrada.nextInt();
+                    opcion = ingresarEntero(entrada);
                     break;
             }
         }

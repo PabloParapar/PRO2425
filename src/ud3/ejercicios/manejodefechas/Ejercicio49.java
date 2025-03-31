@@ -1,10 +1,12 @@
 package src.ud3.ejercicios.manejodefechas;
 
+import src.ud3.ejercicios.Ejercicio;
+
 import java.util.Date;
 import java.util.Scanner;
 
-public class Ejercicio49 {
-    public static void ejercicio49(Scanner entrada) {
+public class Ejercicio49 extends Ejercicio {
+    public static void resolverEjercicio(Scanner entrada) {
 
         System.out.println("\n\tBoletin 3 | Ejercicio 49\n" + "Escribir un programa que solicite una fecha y muestre el calendario del mes indicado:");
         System.out.println(":");

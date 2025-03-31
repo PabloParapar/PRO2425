@@ -1,19 +1,21 @@
 package src.ud3.ejercicios.metodosrecursivos;
 
+import src.ud3.ejercicios.Ejercicio;
+
 import java.util.Scanner;
 
-public class Ejercicio13 {
+public class Ejercicio13 extends Ejercicio {
     private Ejercicio13() {
     }
 
-    public static void ejercicio13(Scanner entrada) {
+    public static void resolverEjercicio(Scanner entrada) {
         System.out.println("""
             Boletin 3 | Ejercicio 13
         Escribe un método recursivo para calcular la potencia de dos numeros con base real y potencia entera:
         Ingresa la Base real y la potencia entera:
         """);
-        double numeroReal = entrada.nextDouble();
-        int numeroEntero = entrada.nextInt();
+        double numeroReal = ingresarDecimal(entrada);
+        int numeroEntero = ingresarEntero(entrada);
         System.out.println(numeroReal + " ^ " + numeroEntero + " = " + potencia(numeroReal, numeroEntero));
     }
 

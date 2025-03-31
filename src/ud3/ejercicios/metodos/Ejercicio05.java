@@ -1,13 +1,16 @@
 package src.ud3.ejercicios.metodos;
 
+import src.ud3.ejercicios.Ejercicio;
+
 import java.util.Scanner;
 
-public class Ejercicio05{
+public class Ejercicio05 extends Ejercicio {
     private Ejercicio05() {
     }
 
     public static void resolverEjercicio(Scanner entrada) {
-        String texto = entrada.next();
+        entrada.nextLine();
+        String texto = ingresarCadena(entrada);
         String textoMinus = texto.toLowerCase();
         int longitudTexto = texto.length();
         int contadorA = 0;

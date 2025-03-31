@@ -1,19 +1,21 @@
 package src.ud3.ejercicios.metodosrecursivos;
 
+import src.ud3.ejercicios.Ejercicio;
+
 import java.util.Scanner;
 
 /**
  * @author lopparpab
  */
-public class Ejercicio21 {
+public class Ejercicio21 extends Ejercicio {
 
-    public static void ejercicio21(Scanner entrada) {
+    public static void resolverEjercicio(Scanner entrada) {
 
         System.out.println("""
             Boletin 3 | Ejercicio 21
         Escribe un método lógico recursivo que determine si un número entero recibido por parámetro es capicúa:""");
         //String numeroCapicua = entrada.next();
-        int numeroCapicua = entrada.nextInt();
+        int numeroCapicua = ingresarEntero(entrada);
         /*
         if(esCapicua(numeroCapicua)){
             System.out.println("El número "+numeroCapicua+" es capicúa");

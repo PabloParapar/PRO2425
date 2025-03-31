@@ -1,10 +1,12 @@
 package src.ud3.ejercicios.clasemath;
 
-public class Ejercicio32 {
+import src.ud3.ejercicios.Ejercicio;
+
+public class Ejercicio32 extends Ejercicio {
     private Ejercicio32() {
     }
 
-    public static void ejercicio32() {
+    public static void resolverEjercicio() {
 
         System.out.println("""
             Boletin 3 | Ejercicio 32

@@ -1,20 +1,22 @@
 package src.ud3.ejercicios.metodosrecursivos;
 
+import src.ud3.ejercicios.Ejercicio;
+
 import java.util.Scanner;
 
 /**
  * @author lopparpab
  */
-public class Ejercicio22 {
-    public static void ejercicio22(Scanner entrada) {
+public class Ejercicio22 extends Ejercicio {
+    public static void resolverEjercicio(Scanner entrada) {
 
         System.out.println("""
                     Boletin 3 | Ejercicio 22
                 Escribe un método recursivo que resuelva las Torres de Hanoi dada una cantidad definida de discos:""");
-        int numeroDiscos = entrada.nextInt();
-        int posteOrigen = entrada.nextInt();
-        int posteAuxiliar = entrada.nextInt();
-        int posteDestino = entrada.nextInt();
+        int numeroDiscos = ingresarEntero(entrada);
+        int posteOrigen = ingresarEntero(entrada);
+        int posteAuxiliar = ingresarEntero(entrada);
+        int posteDestino = ingresarEntero(entrada);
         System.out.println("Número de discos: " + numeroDiscos);
         torresDeHanoi(numeroDiscos, 1, 2, 3);
     }

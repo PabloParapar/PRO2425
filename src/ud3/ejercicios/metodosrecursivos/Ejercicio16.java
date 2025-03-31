@@ -1,18 +1,20 @@
 package src.ud3.ejercicios.metodosrecursivos;
 
+import src.ud3.ejercicios.Ejercicio;
+
 import java.util.Scanner;
 
-public class Ejercicio16 {
+public class Ejercicio16 extends Ejercicio {
     private Ejercicio16() {
     }
 
-    public static void ejercicio16(Scanner entrada) {
+    public static void resolverEjercicio(Scanner entrada) {
 
         System.out.println("""
             Boletin 3 | Ejercicio 16
         Escribe un método recursivo para calcular, dado un término entero positivo, la suma de sus dígitos:
         Ingresa el término a calcular:""");
-        int numeroSumar = entrada.nextInt();
+        int numeroSumar = ingresarEntero(entrada);
         System.out.println(sumaDigitos(numeroSumar));
     }
 

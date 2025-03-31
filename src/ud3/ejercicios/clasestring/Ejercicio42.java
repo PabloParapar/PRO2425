@@ -1,13 +1,15 @@
 package src.ud3.ejercicios.clasestring;
 
+import src.ud3.ejercicios.Ejercicio;
+
 import java.util.Scanner;
 
-public class Ejercicio42 {
-    public static void ejercicio42(Scanner entrada) {
+public class Ejercicio42 extends Ejercicio {
+    public static void resolverEjercicio(Scanner entrada) {
 
         System.out.println("\n\tBoletin 3 | Ejercicio 42\n" + "Escribe una aplicación que reciba una cadena de texto y devuelva su acrónimo:");
         entrada.nextLine();
-        String cadena = entrada.nextLine();
+        String cadena = ingresarCadena(entrada);
         crearAcronimo(cadena);
     }
 

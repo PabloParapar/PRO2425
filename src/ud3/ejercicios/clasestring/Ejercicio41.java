@@ -1,13 +1,15 @@
 package src.ud3.ejercicios.clasestring;
 
+import src.ud3.ejercicios.Ejercicio;
+
 import java.util.Scanner;
 
-public class Ejercicio41 {
-    public static void ejercicio41(Scanner entrada) {
+public class Ejercicio41 extends Ejercicio {
+    public static void resolverEjercicio(Scanner entrada) {
 
         System.out.println("\n\tBoletin 3 | Ejercicio 41\n" + "Crea una aplicación que cuente las letras y las palabras de una cadena de texto:");
         String cadena;
-        cadena = entrada.nextLine();
+        cadena = ingresarCadena(entrada);
         contarPalabrasYLetras(cadena);
     }
 

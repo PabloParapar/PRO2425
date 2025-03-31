@@ -1,12 +1,14 @@
 package src.ud3.ejercicios.metodosrecursivos;
 
+import src.ud3.ejercicios.Ejercicio;
+
 import java.util.Scanner;
 
-public class Ejercicio15 {
+public class Ejercicio15 extends Ejercicio {
     private Ejercicio15() {
     }
 
-    public static void ejercicio15(Scanner entrada) {
+    public static void resolverEjercicio(Scanner entrada) {
 
 
         System.out.println("""
@@ -14,7 +16,7 @@ public class Ejercicio15 {
         Escribe un método recursivo para invertir un número entero:
         
         Ingresa el número entero a invertir:""");
-        int numeroInvertir = entrada.nextInt();
+        int numeroInvertir = ingresarEntero(entrada);
         System.out.println(invertirNumero(numeroInvertir));
     }
 

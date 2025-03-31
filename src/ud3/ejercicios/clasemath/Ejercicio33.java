@@ -1,7 +1,9 @@
 package src.ud3.ejercicios.clasemath;
 
-public class Ejercicio33 {
-    public static void ejercicio33() {
+import src.ud3.ejercicios.Ejercicio;
+
+public class Ejercicio33 extends Ejercicio {
+    public static void resolverEjercicio() {
 
         System.out.println("\n\tBoletin 3 | Ejercicio 33\n" + "Escribe una aplicación que simule una partida de cara o cruz con precio por cada tirada y premio cada ronda que el número de caras supere al de cruces:");
         jugarCaraOCruz();

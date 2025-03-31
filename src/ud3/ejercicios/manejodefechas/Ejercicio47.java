@@ -1,15 +1,17 @@
 package src.ud3.ejercicios.manejodefechas;
 
+import src.ud3.ejercicios.Ejercicio;
+
 import java.time.LocalDate;
 import java.util.Scanner;
 
-public class Ejercicio47 {
-    public static void ejercicio47(Scanner entrada) {
+public class Ejercicio47 extends Ejercicio {
+    public static void resolverEjercicio(Scanner entrada) {
 
         System.out.println("\n\tBoletin 3 | Ejercicio 47\n" + ":");
         System.out.println(":");
         entrada.nextLine();
-        String fecha = entrada.nextLine();
+        String fecha = ingresarCadena(entrada);
         comprobarFecha(fecha);
     }
 

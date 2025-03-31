@@ -1,20 +1,22 @@
 package src.ud3.ejercicios.clasemath;
 
+import src.ud3.ejercicios.Ejercicio;
+
 import java.util.Scanner;
 
-public class Ejercicio30 {
+public class Ejercicio30 extends Ejercicio {
     private Ejercicio30() {
     }
 
-    public static void ejercicio30(Scanner entrada) {
+    public static void resolverEjercicio(Scanner entrada) {
 
         System.out.println("""
             Boletin 3 | Ejercicio 30
         Escribir una aplicación en Java que, dadas dos medidas de los catetos de un triángulo rectángulo, devuelva la medida de la hipotenusa:
         
         Ingresa los valores de los catetos:""");
-        double cateto1 = entrada.nextDouble();
-        double cateto2 = entrada.nextDouble();
+        double cateto1 = ingresarDecimal(entrada);
+        double cateto2 = ingresarDecimal(entrada);
         System.out.println(
                 "Cateto 1\t=\t" + cateto1 +
                         "\nCateto 2\t=\t" + cateto2 +

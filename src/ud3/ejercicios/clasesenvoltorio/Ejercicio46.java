@@ -1,9 +1,11 @@
 package src.ud3.ejercicios.clasesenvoltorio;
 
+import src.ud3.ejercicios.Ejercicio;
+
 import java.util.Scanner;
 
-public class Ejercicio46 {
-    public static void ejercicio46(Scanner entrada) {
+public class Ejercicio46 extends Ejercicio {
+    public static void resolverEjercicio(Scanner entrada) {
 
         System.out.println("\n\tBoletin 3 | Ejercicio 46\n" + ":");
         entrada.nextLine();

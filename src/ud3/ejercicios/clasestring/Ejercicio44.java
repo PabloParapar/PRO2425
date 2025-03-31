@@ -1,13 +1,15 @@
 package src.ud3.ejercicios.clasestring;
 
+import src.ud3.ejercicios.Ejercicio;
+
 import java.util.Scanner;
 
-public class Ejercicio44 {
-    public static void ejercicio44(Scanner entrada) {
+public class Ejercicio44 extends Ejercicio {
+    public static void resolverEjercicio(Scanner entrada) {
 
         System.out.println("\n\tBoletin 3 | Ejercicio 44\n" + "Escribe una aplicación donde ingreses un nombre y apellidos con varios espacios entre ellos y te devuelva el nombre con solo un espacio entre cada palabra:");
         entrada.nextLine();
-        String cadena = entrada.nextLine();
+        String cadena = ingresarCadena(entrada);
         System.out.println(cadena + "\nbien formateado es = '" + formatearNombre(cadena) + "'");
     }
 

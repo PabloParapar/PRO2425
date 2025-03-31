@@ -1,10 +1,12 @@
 package src.ud3.ejercicios.clasemath;
 
-public class Ejercicio27 {
+import src.ud3.ejercicios.Ejercicio;
+
+public class Ejercicio27 extends Ejercicio {
     private Ejercicio27() {
     }
 
-    public static void ejercicio27() {
+    public static void resolverEjercicio() {
 
         System.out.println("""
             Boletin 3 | Ejercicio 27

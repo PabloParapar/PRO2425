@@ -1,12 +1,15 @@
 package src.ud3.ejercicios.clasestring;
 
+import src.ud3.ejercicios.Ejercicio;
+
 import java.util.Scanner;
 
-public class Ejercicio35 {
-    public static void ejercicio35(Scanner entrada) {
+public class Ejercicio35 extends Ejercicio {
+    public static void resolverEjercicio(Scanner entrada) {
 
         System.out.println("\n\tBoletin 3 | Ejercicio 35\n" + "Escribir una aplicación que lea del teclado una cadena de caracteres y muestre cuántas veces aparece en ella la letra 'a'. Utiliza un bucle para recorrer caracter a caracter:");
-        String cadena = entrada.next();
+        entrada.nextLine();
+        String cadena = ingresarCadena(entrada);
         int conteoA = 0;
         for (int i = 0; i < cadena.length(); i++) {
             if (cadena.toLowerCase().charAt(i) == 'a') {

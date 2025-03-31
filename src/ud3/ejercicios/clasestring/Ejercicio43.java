@@ -1,13 +1,15 @@
 package src.ud3.ejercicios.clasestring;
 
+import src.ud3.ejercicios.Ejercicio;
+
 import java.util.Scanner;
 
-public class Ejercicio43 {
-    public static void ejercicio43(Scanner entrada) {
+public class Ejercicio43 extends Ejercicio {
+    public static void resolverEjercicio(Scanner entrada) {
 
         System.out.println("\n\tBoletin 3 | Ejercicio 43\n" + "Muestra la distancia de Hamming entre dos números enteros:");
-        int entero1 = entrada.nextInt();
-        int entero2 = entrada.nextInt();
+        int entero1 = ingresarEntero(entrada);
+        int entero2 = ingresarEntero(entrada);
         calcularDistanciaHamming(entero1, entero2);
     }
 

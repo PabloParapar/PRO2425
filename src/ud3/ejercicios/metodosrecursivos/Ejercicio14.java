@@ -1,18 +1,20 @@
 package src.ud3.ejercicios.metodosrecursivos;
 
+import src.ud3.ejercicios.Ejercicio;
+
 import java.util.Scanner;
 
-public class Ejercicio14 {
+public class Ejercicio14 extends Ejercicio {
     private Ejercicio14() {
     }
 
-    public static void ejercicio14(Scanner entrada) {
+    public static void resolverEjercicio(Scanner entrada) {
 
         System.out.println("""
             Boletin 3 | Ejercicio 14
         Escribe un método recursivo para calcular, dado un término entero positivo, su correspondiente valor de la sucesión de Fibonacci:
         Ingresa el término de la sucesión de Fibonacci a calcular:""");
-        int sucesion = entrada.nextInt();
+        int sucesion = ingresarEntero(entrada);
         System.out.println(fibonacci(sucesion));
     }
 

@@ -1,8 +1,10 @@
 package src.ud3.ejercicios.metodos;
 
+import src.ud3.ejercicios.Ejercicio;
+
 import java.util.Scanner;
 
-public class Ejercicio03{
+public class Ejercicio03 extends Ejercicio {
     public static boolean esTriangulo(int lado1, int lado2, int lado3) {
         boolean triangulo;
         if (lado1 < lado2 + lado3) {
@@ -27,9 +29,9 @@ public class Ejercicio03{
         Ingresa la medida de los 3 lados de un triángulo para ver si es equilátero, isósceles o escaleno:
         
         Ingresa las medidas de los lados del triángulo""");
-        int lado1 = entrada.nextInt();
-        int lado2 = entrada.nextInt();
-        int lado3 = entrada.nextInt();
+        int lado1 = ingresarEntero(entrada);
+        int lado2 = ingresarEntero(entrada);
+        int lado3 = ingresarEntero(entrada);
 
         if (esTriangulo(lado1, lado2, lado3)) {
             if (lado1 == lado2) {

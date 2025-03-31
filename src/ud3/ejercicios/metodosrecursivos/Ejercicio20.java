@@ -1,22 +1,25 @@
 package src.ud3.ejercicios.metodosrecursivos;
 
+import src.ud3.ejercicios.Ejercicio;
+
 import java.util.Scanner;
 
 /**
  * @author lopparpab
  */
-public class Ejercicio20 {
+public class Ejercicio20 extends Ejercicio {
     private Ejercicio20() {
     }
 
-    public static void ejercicio20(Scanner entrada) {
+    public static void resolverEjercicio(Scanner entrada) {
 
         System.out.println("""
             Boletin 3 | Ejercicio 20
         Escribe un método lógico recursivo que determine si una cadena recibida por parámetro es un palíndromo:
         
         Ingresa la cadena a comprobar""");
-        String palindromo = entrada.next();
+        entrada.nextLine();
+        String palindromo = ingresarCadena(entrada);
 
         if (esPalindromo(palindromo)) {
             System.out.println(palindromo + " es palíndromo");

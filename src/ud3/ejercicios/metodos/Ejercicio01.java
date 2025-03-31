@@ -1,8 +1,10 @@
 package src.ud3.ejercicios.metodos;
 
+import src.ud3.ejercicios.Ejercicio;
+
 import java.util.Scanner;
 
-public class Ejercicio01 {
+public class Ejercicio01 extends Ejercicio {
 
     public static void resolverEjercicio(Scanner intro) {
         System.out.println("""
@@ -11,14 +13,13 @@ public class Ejercicio01 {
         """);
 
         System.out.println("Ingresa un mes [1-12]:");
-        int mes = intro.nextInt();
+        int mes = ingresarEntero(intro);
         while (mes < 1 || mes > 12) {
             System.out.println("Mes no válido, vuelve a intentarlo:");
-            mes = intro.nextInt();
+            mes = ingresarEntero(intro);
         }
-        System.out.println("Ingresa un año:");
-        int anho = intro.nextInt();
-        System.out.println("\nIngresa el año:");
+        System.out.println("\nIngresa un año:");
+        int anho = ingresarEntero(intro);
         System.out.println("Tiene " + calcularDiasDelMes(mes, anho) + " días");
     }
 
@@ -63,4 +64,5 @@ public class Ejercicio01 {
 
     private Ejercicio01() {
     }
+
 }

@@ -1,15 +1,17 @@
 package src.ud3.ejercicios.objetos;
 
+import src.ud3.ejercicios.Ejercicio;
+
 import java.awt.*;
 
 /**
  * @author lopparpab
  */
-public class Ejercicio23 {
+public class Ejercicio23 extends Ejercicio {
     private Ejercicio23() {
     }
 
-    public static void ejercicio23() {
+    public static void resolverEjercicio() {
 
         System.out.println("""
             Boletin 3 | Ejercicio 23

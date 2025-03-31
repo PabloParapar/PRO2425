@@ -1,12 +1,14 @@
 package src.ud3.ejercicios.clasesenvoltorio;
 
+import src.ud3.ejercicios.Ejercicio;
+
 import java.util.Scanner;
 
-public class Ejercicio45 {
-    public static void ejercicio45(Scanner entrada) {
+public class Ejercicio45 extends Ejercicio {
+    public static void resolverEjercicio(Scanner entrada) {
 
         System.out.println("\n\tBoletin 3 | Ejercicio 45\n" + "Excribe una aplicación que compruebe si un NIF es correcto:");
-        String cadena = entrada.next();
+        String cadena = ingresarCadena(entrada);
         comprobarNIF(cadena);
     }
 

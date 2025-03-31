@@ -1,13 +1,15 @@
 package src.ud3.ejercicios.clasestring;
 
+import src.ud3.ejercicios.Ejercicio;
+
 import java.util.Scanner;
 
-public class Ejercicio34 {
-    public static void ejercicio34(Scanner entrada) {
+public class Ejercicio34 extends Ejercicio {
+    public static void resolverEjercicio(Scanner entrada) {
 
         System.out.println("\n\tBoletin 3 | Ejercicio 34\n" + "Escribe una aplicación que lea del teclado una cadena de caracteres y muestre la siguiente información:");
         System.out.println("\nIngresa una cadena de caracteres:");
-        String cadena = entrada.next();
+        String cadena = ingresarCadena(entrada);
         System.out.println("a. Longitud = " + cadena.length());
         if (cadena.length() >= 7) {
             System.out.println("b. 7º Caracter = " + cadena.charAt(6));

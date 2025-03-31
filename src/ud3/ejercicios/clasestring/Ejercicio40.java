@@ -1,19 +1,22 @@
 package src.ud3.ejercicios.clasestring;
 
+import src.ud3.ejercicios.Ejercicio;
+
 import java.util.Scanner;
 
-public class Ejercicio40 {
+public class Ejercicio40 extends Ejercicio {
     /// Ejercicio 39 sobrecargas
     /*
     private static boolean esPalindromoA(String texto, boolean soloLetras){
 
     }*/
-    public static void ejercicio40(Scanner entrada) {
+    public static void resolverEjercicio(Scanner entrada) {
 
         System.out.println("\n\tBoletin 3 | Ejercicio 40\n" + "Escribir un método que reciba dos cadenas e indique si la segunda es una subsecuencia de la primera:");
         System.out.println("\nIngresa las dos cadenas a comprobar:");
-        String cadena1 = entrada.next();
-        String cadena2 = entrada.next();
+        entrada.nextLine();
+        String cadena1 = ingresarCadena(entrada);
+        String cadena2 = ingresarCadena(entrada);
         comprobarSubcadena(cadena1, cadena2);
     }
 
