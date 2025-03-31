@@ -38,10 +38,16 @@ public class Articulito {
 
     @Override
     public String toString() {
-        return "Articulito{" +
-                "nombre='" + nombre + '\'' +
-                //", cantidad=" + cantidad +
-                '}';
+        if(cantidad != null) {
+            return "Articulito{" +
+                    "nombre='" + nombre + '\'' +
+                    ", cantidad=" + cantidad +
+                    '}';
+        } else {
+            return "Articulito{" +
+                    "nombre='" + nombre + '\'' +
+                    '}';
+        }
     }
 
     @Override

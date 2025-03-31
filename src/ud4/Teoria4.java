@@ -514,7 +514,7 @@ public class Teoria4 {
                 System.out.print("\033[36m" + cola1.peek() + "\t" + cola2.peek() + "\u001b[0m\t\t");
                 colaFinal.add(cola1.peek());
             } else {
-                System.out.print(cola1.peek() + "\t" + cola2.peek()+"\t\t");
+                System.out.print(cola1.peek() + "\t" + cola2.peek() + "\t\t");
             }
             cola1.poll();
             cola2.poll();
@@ -539,18 +539,18 @@ public class Teoria4 {
         System.out.println("\t\033[36mEjercicio Diego 1\n\u001b[0m");
         System.out.println("\tPrimera Forma\n");
         Set<String> fruta = new HashSet<>();
-            fruta.add("Sandía");
-            fruta.add("Pera");
-            fruta.add("Manzana");
-            fruta.add("Plátano");
-            fruta.add("Naranja");
+        fruta.add("Sandía");
+        fruta.add("Pera");
+        fruta.add("Manzana");
+        fruta.add("Plátano");
+        fruta.add("Naranja");
 
-            Iterator<String> frutaIterator = fruta.iterator();
-            int contadorFruta = 0;
-            while (frutaIterator.hasNext()){
-                String temporal = frutaIterator.next();
-                System.out.println(++contadorFruta+" · "+temporal);
-            }
+        Iterator<String> frutaIterator = fruta.iterator();
+        int contadorFruta = 0;
+        while (frutaIterator.hasNext()) {
+            String temporal = frutaIterator.next();
+            System.out.println(++contadorFruta + " · " + temporal);
+        }
         System.out.println("\tSegunda Forma\n");
         System.out.println(fruta);
 
@@ -568,16 +568,78 @@ public class Teoria4 {
 
         System.out.println("\t\033[36mEjercicio Diego 2\n\u001b[0m");
 
-        inventarioHashSet();
+        //inventarioHashSet(entrada);
+
+        //31 de Marzo de 2025
+        System.out.println("\t\033[36mMapas. HashMap, TreeMap, LinkedHashMap\n\u001b[0m");
+
+        inventarioHashMap();
+
+        System.out.println("\t\033[36mEjercicio Héctor\n\u001b[0m");
+
+        resolverEjercicioMapa();
+    }
+
+    public static void resolverEjercicioMapa(){
+        /*Imagina que trabajas en un almacén que gestiona productos electrónicos.
+        Cada producto tiene un ID único, un nombre y su precio*/
+        System.out.println("\t\033[36mGestión de Productos\n\u001b[0m");
 
 
 
+        System.out.println("\t\033[36mOrden de Productos\n\u001b[0m");
+
+
+
+        System.out.println("\t\033[36mGestión de Descuentos\n\u001b[0m");
 
     }
 
-    public static void inventarioHashSet(){
+    public static void inventarioHashMap(){
+        HashMap<String, Integer> inventarioMapa = new HashMap<>();
+        inventarioMapa.put("Pablo",10);
+        inventarioMapa.put("Nabil",5);
+        inventarioMapa.put("Carla",0);
+        inventarioMapa.put("Diego",7);
+        inventarioMapa.put(null,7);
+        System.out.println(inventarioMapa);
+        inventarioMapa.remove(null);
+
+        System.out.println("\033[35m" + "Recorremos el Mapa según la clave" + "\u001b[0m");
+
+        for (String clave : inventarioMapa.keySet()){
+            System.out.println(clave);
+        }
+        System.out.println("\033[35m" + "Recorremos el Mapa según el valor" + "\u001b[0m");
+        for (Integer valor : inventarioMapa.values()){
+            System.out.println(valor);
+        }
+        System.out.println("\033[35m" + "Recorremos el Mapa según la clave y el valor" + "\u001b[0m");
+        for (Map.Entry<String, Integer> entidad : inventarioMapa.entrySet()){
+            System.out.println(entidad);
+            System.out.println(entidad.getKey()+"\t\t"+entidad.getValue());
+        }
+
+        TreeMap<String, Integer> inventarioTreeMap = new TreeMap<>();
+        inventarioTreeMap.put("Pablo", 10);
+        inventarioTreeMap.put("Nabil", 9);
+        inventarioTreeMap.put("Héctor", 8);
+        inventarioTreeMap.put("Carla", 7);
+        inventarioTreeMap.put("Diego", 7);
+        inventarioTreeMap.put("África", 8);
+        inventarioTreeMap.put("Fabián", 9);
+
+        System.out.println("\033[35m" + "Recorremos el TreeMap según la clave y el valor" + "\u001b[0m");
+        for (Map.Entry<String, Integer> entidad: inventarioTreeMap.entrySet()){
+            System.out.println(entidad);
+        }
+        /*Muestra las Claves y Valores ordenados por el String*/
+
+    }
+
+    public static void inventarioHashSet(Scanner entrada) {
         Set<Articulito> inventario = new HashSet<>();
-        System.out.println("\033[35m"+"Creamos la Colección de Inventario"+"\u001b[0m");
+        System.out.println("\033[35m" + "Creamos la Colección de Inventario" + "\u001b[0m");
         System.out.println(inventario);
         Articulito patata = new Articulito("Patata");
         Articulito tomate = new Articulito("Tomate");
@@ -585,78 +647,107 @@ public class Teoria4 {
         Articulito nuez = new Articulito("Nuez");
         Articulito berenjena = new Articulito("Berenjena");
 
-        System.out.println("\033[35m"+"Añadimos tomates:"+"\u001b[0m");
+        System.out.println("\033[35m" + "Añadimos tomates:" + "\u001b[0m");
         inventario.add(tomate);
         System.out.println(inventario);
-        System.out.println("\033[35m"+"Añadimos patatas:"+"\u001b[0m");
+        System.out.println("\033[35m" + "Añadimos patatas:" + "\u001b[0m");
         inventario.add(patata);
         System.out.println(inventario);
-        System.out.println("\033[35m"+"Añadimos patatas:"+"\u001b[0m");
+        System.out.println("\033[35m" + "Añadimos patatas:" + "\u001b[0m");
         inventario.add(patata);
         System.out.println(inventario);
-        System.out.println("\33[33m"+"No añade más Patata al ya haber una instancia Patata"+"\u001b[0m");
+        System.out.println("\33[33m" + "No añade más Patata al ya haber una instancia Patata" + "\u001b[0m");
 
-        System.out.println("\033[35m"+"Añadimos Albahaca:"+"\u001b[0m");
+        System.out.println("\033[35m" + "Añadimos Albahaca:" + "\u001b[0m");
         inventario.add(albahaca);
         System.out.println(inventario);
 
-        System.out.println("\033[35m"+"Añadimos Nueces:"+"\u001b[0m");
+        System.out.println("\033[35m" + "Añadimos Nueces:" + "\u001b[0m");
         inventario.add(nuez);
         System.out.println(inventario);
 
-        System.out.println("\033[35m"+"Buscamos Berenjena:"+"\u001b[0m");
-        if (inventario.contains(berenjena)){
-            System.out.println("\33[33m"+"Tenemos "+berenjena.getNombre()+"\u001b[0m");
+        System.out.println("\033[35m" + "Buscamos Berenjena:" + "\u001b[0m");
+        if (inventario.contains(berenjena)) {
+            System.out.println("\33[33m" + "Tenemos " + berenjena.getNombre() + "\u001b[0m");
         } else {
-            System.out.println("\33[33m"+"No tenemos "+berenjena.getNombre()+"\u001b[0m");
+            System.out.println("\33[33m" + "No tenemos " + berenjena.getNombre() + "\u001b[0m");
         }
         System.out.println(inventario);
 
-        System.out.println("\033[35m"+"Añadimos Berenjena:"+"\u001b[0m");
+        System.out.println("\033[35m" + "Añadimos Berenjena:" + "\u001b[0m");
         inventario.add(berenjena);
         System.out.println(inventario);
 
-        System.out.println("\033[35m"+"Buscamos Berenjena:"+"\u001b[0m");
-        if (inventario.contains(berenjena)){
-            System.out.println("\33[33m"+"Tenemos "+berenjena.getNombre()+"\u001b[0m");
+        System.out.println("\033[35m" + "Buscamos Berenjena:" + "\u001b[0m");
+        if (inventario.contains(berenjena)) {
+            System.out.println("\33[33m" + "Tenemos " + berenjena.getNombre() + "\u001b[0m");
         } else {
-            System.out.println("\33[33m"+"No tenemos "+berenjena.getNombre()+"\u001b[0m");
+            System.out.println("\33[33m" + "No tenemos " + berenjena.getNombre() + "\u001b[0m");
         }
         System.out.println(inventario);
 
-        System.out.println("\033[35m"+"Eliminamos patatas:"+"\u001b[0m");
+        System.out.println("\033[35m" + "Eliminamos patatas:" + "\u001b[0m");
         inventario.remove(patata);
         System.out.println(inventario);
 
-        System.out.println("\033[35m"+"Eliminamos tomate:"+"\u001b[0m");
+        System.out.println("\033[35m" + "Eliminamos tomate:" + "\u001b[0m");
         inventario.remove(tomate);
         System.out.println(inventario);
 
-        System.out.println("\033[35m"+"Eliminamos tomate:"+"\u001b[0m");
+        System.out.println("\033[35m" + "Eliminamos tomate:" + "\u001b[0m");
         inventario.remove(tomate);
         System.out.println(inventario);
-        System.out.println("\33[33m"+"Al no haber una instacia con esa referencia no elimina nada"+"\u001b[0m");
+        System.out.println("\33[33m" + "Al no haber una instacia con esa referencia no elimina nada" + "\u001b[0m");
 
-        System.out.println("\033[35m"+"Eliminamos nuez:"+"\u001b[0m");
+        System.out.println("\033[35m" + "Eliminamos nuez:" + "\u001b[0m");
         inventario.remove(nuez);
         System.out.println(inventario);
 
-        System.out.println("\033[35m"+"Eliminamos albahaca:"+"\u001b[0m");
+        System.out.println("\033[35m" + "Eliminamos albahaca:" + "\u001b[0m");
         inventario.remove(albahaca);
         System.out.println(inventario);
 
-        System.out.println("\033[35m"+"Eliminamos berenjena:"+"\u001b[0m");
+        System.out.println("\033[35m" + "Eliminamos berenjena:" + "\u001b[0m");
         inventario.remove(berenjena);
         System.out.println(inventario);
         // Por definición los elementos de un HashSet no tienen un orden específico
+        System.out.println("\t\033[36mEjercicio Diego 2 | Control de Stock\n\u001b[0m");
+        inventario.add(patata);
+        inventario.add(tomate);
+        inventario.add(albahaca);
+        inventario.add(nuez);
+        inventario.add(berenjena);
+        System.out.println("\033[35m" + "Rellenamos el inventario" + "\u001b[0m");
+        System.out.println(inventario);
+        System.out.println("\033[35m" + "Modificamos las cantidades" + "\u001b[0m");
+        System.out.println("Ingresa el nombre y la cantidad a modificar:");
+        String articulo = entrada.next();
+        int nuevaCantidad = entrada.nextInt();
+        entrada.nextLine();
+        while (nuevaCantidad != 0) {
+            for (Articulito articulito : inventario) {
+                if(!inventario.contains(new Articulito(articulo))) {
+                    System.out.println("No existe el elemento "+articulo);
+                    break;
+                }else if (Objects.equals(articulito.getNombre().toLowerCase(), articulo.toLowerCase())) {
+                    articulito.setCantidad(nuevaCantidad);
+                }
 
+            }
+            System.out.println(inventario);
+            System.out.println("Ingresa el nombre y la cantidad a modificar:");
+
+            articulo = entrada.next();
+            nuevaCantidad = entrada.nextInt();
+            entrada.nextLine();
+        }
     }
 
+
     /**
-     *
      * @param charcuteria
      * @return Devuelve la siguiente Persona de la cola
-     *          si la lista está vacía imprime un mensaje en pantalla conforme no hay nadie en la lista
+     * si la lista está vacía imprime un mensaje en pantalla conforme no hay nadie en la lista
      */
     public static String turnoCharcuteria(LinkedList charcuteria) {
         if (charcuteria.peek() == null) {
@@ -667,11 +758,9 @@ public class Teoria4 {
     }
 
     /**
-     *
      * @param alumno
      * @param entero
-     * @param vector
-     * Modifica los valores de un entero, de una instancia y de un array para comprobar si se modifica el original o no
+     * @param vector Modifica los valores de un entero, de una instancia y de un array para comprobar si se modifica el original o no
      */
     public static void miMetodo(Alumno alumno, int entero, int[] vector) {
         alumno.setNombre("Don " + alumno.getNombre());
