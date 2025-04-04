@@ -578,46 +578,84 @@ public class Teoria4 {
         System.out.println("\t\033[36mEjercicio Héctor\n\u001b[0m");
 
         resolverEjercicioMapa();
+
+        // 04 de Abril de 2025
+
+        /// Genéricos en Java
+        System.out.println("\t\033[36mGenéricos en Java\n\u001b[0m");
+
+        Generico<Integer> iOb = new Generico<Integer>(28);
+        iOb.mostrarTipo();
+        int v = iOb.getObjeto(); // Fijarse que no es necesaria la conversión
+        System.out.println("Valor: " + v);
+        System.out.println();
+
+        Generico<String> strOb = new Generico<String>("Prueba de genéricos");
+        strOb.mostrarTipo();
+        String str = strOb.getObjeto(); // de nuevo, sin conversión de tipo
+        System.out.println("Valor: " + str);
+
+        System.out.println("\t\033[36mInicialización de Colecciones\n\u001b[0m");
+
+        List<Integer> miLista = Arrays.asList(3, 1, 4);
+
+        System.out.println(miLista);
+
+        System.out.println("Si queremos usar un miLista.add(6) dará un error porque es inmutable");
+
+        List<Integer> miLista2 = new ArrayList<Integer>(Arrays.asList(3, 1, 4));
+
+        System.out.println(miLista2);
+
+        miLista2.add(7);
+
+        System.out.println(miLista2);
+
+        List<Integer> miLista3 = new ArrayList<Integer>() {{
+            add(3);
+            add(1);
+            add(4);
+        }};
+
+        System.out.println("Para poder inicializar una lista con contenido debemos añadir el new ArrayList");
     }
 
-    public static void resolverEjercicioMapa(){
+    public static void resolverEjercicioMapa() {
         /*Imagina que trabajas en un almacén que gestiona productos electrónicos.
         Cada producto tiene un ID único, un nombre y su precio*/
         System.out.println("\t\033[36mGestión de Productos\n\u001b[0m");
 
 
-
         System.out.println("\t\033[36mOrden de Productos\n\u001b[0m");
-
 
 
         System.out.println("\t\033[36mGestión de Descuentos\n\u001b[0m");
 
     }
 
-    public static void inventarioHashMap(){
+    public static void inventarioHashMap() {
         HashMap<String, Integer> inventarioMapa = new HashMap<>();
-        inventarioMapa.put("Pablo",10);
-        inventarioMapa.put("Nabil",5);
-        inventarioMapa.put("Carla",0);
-        inventarioMapa.put("Diego",7);
-        inventarioMapa.put(null,7);
+        inventarioMapa.put("Pablo", 10);
+        inventarioMapa.put("Nabil", 5);
+        inventarioMapa.put("Carla", 0);
+        inventarioMapa.put("Diego", 7);
+        inventarioMapa.put(null, 7);
         System.out.println(inventarioMapa);
         inventarioMapa.remove(null);
 
         System.out.println("\033[35m" + "Recorremos el Mapa según la clave" + "\u001b[0m");
 
-        for (String clave : inventarioMapa.keySet()){
+        for (String clave : inventarioMapa.keySet()) {
             System.out.println(clave);
         }
         System.out.println("\033[35m" + "Recorremos el Mapa según el valor" + "\u001b[0m");
-        for (Integer valor : inventarioMapa.values()){
+        for (Integer valor : inventarioMapa.values()) {
             System.out.println(valor);
         }
         System.out.println("\033[35m" + "Recorremos el Mapa según la clave y el valor" + "\u001b[0m");
-        for (Map.Entry<String, Integer> entidad : inventarioMapa.entrySet()){
+        for (Map.Entry<String, Integer> entidad : inventarioMapa.entrySet()) {
             System.out.println(entidad);
-            System.out.println(entidad.getKey()+"\t\t"+entidad.getValue());
+            System.out.println(entidad.getKey() + "\t\t" + entidad.getValue());
         }
 
         TreeMap<String, Integer> inventarioTreeMap = new TreeMap<>();
@@ -630,7 +668,7 @@ public class Teoria4 {
         inventarioTreeMap.put("Fabián", 9);
 
         System.out.println("\033[35m" + "Recorremos el TreeMap según la clave y el valor" + "\u001b[0m");
-        for (Map.Entry<String, Integer> entidad: inventarioTreeMap.entrySet()){
+        for (Map.Entry<String, Integer> entidad : inventarioTreeMap.entrySet()) {
             System.out.println(entidad);
         }
         /*Muestra las Claves y Valores ordenados por el String*/
@@ -726,10 +764,10 @@ public class Teoria4 {
         entrada.nextLine();
         while (nuevaCantidad != 0) {
             for (Articulito articulito : inventario) {
-                if(!inventario.contains(new Articulito(articulo))) {
-                    System.out.println("No existe el elemento "+articulo);
+                if (!inventario.contains(new Articulito(articulo))) {
+                    System.out.println("No existe el elemento " + articulo);
                     break;
-                }else if (Objects.equals(articulito.getNombre().toLowerCase(), articulo.toLowerCase())) {
+                } else if (Objects.equals(articulito.getNombre().toLowerCase(), articulo.toLowerCase())) {
                     articulito.setCantidad(nuevaCantidad);
                 }
 
