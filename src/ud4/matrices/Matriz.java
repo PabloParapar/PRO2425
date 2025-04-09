@@ -1,5 +1,7 @@
 package src.ud4.matrices;
 
+import java.util.Vector;
+
 public class Matriz {
     public static void main(String[] args) {
 
@@ -40,7 +42,6 @@ public class Matriz {
             }
             System.out.println();
         }
-
 
         //System.out.println(Arrays.toString(enteros));
     }
