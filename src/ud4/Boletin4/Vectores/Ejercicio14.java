@@ -1,6 +1,5 @@
 package src.ud4.Boletin4.Vectores;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ejercicio14 {
