@@ -17,25 +17,46 @@ public class Ejercicio19 {
         for (int entero : enteros){
             System.out.printf("%02d ",entero);
         }
+        System.out.println("\n\nOrdenamiento en burbuja");
+        int[] burbuja = ordenarBurbuja(enteros);
+        for (int entero : burbuja){
+            System.out.printf("%02d ",entero);
+        }
     }
 
     public static int [] ordenarBurbuja(int [] origen){
-        int [] vectorOrigen = origen.clone();
-        int [] vectorOrdenado = new int[origen.length];
-
-
+        int [] vectorOrdenado = origen.clone();
+        //int [] vectorOrdenado = new int[origen.length];
+        int contadorMovimientos = 1;
+        while (contadorMovimientos != 0){
+            contadorMovimientos = 0;
+            for (int i = 0; i < vectorOrdenado.length-1; i++) {
+                int numero1 = vectorOrdenado[i];
+                int numero2 = vectorOrdenado[i+1];
+                if(numero1 > numero2){
+                    vectorOrdenado[i] = numero2;
+                    vectorOrdenado[i+1] = numero1;
+                    contadorMovimientos++;
+                }
+            }
+        }
         return vectorOrdenado;
     }
     public static int [] ordenarQuicksort(int [] origen){
-        int [] vectorOrigen = origen.clone();
-        int [] vectorOrdenado = new int[origen.length];
+        int [] vectorOrdenado = origen.clone();
+        int contadorMovimientos = 1;
+        while (contadorMovimientos != 0){
+            contadorMovimientos = 0;
+            int pivote = vectorOrdenado[vectorOrdenado.length];
+            for (int i = 0; i < vectorOrdenado.length; i++) {
 
+            }
+        }
 
         return vectorOrdenado;
     }
     public static int [] ordenarMergesort(int [] origen){
-        int [] vectorOrigen = origen.clone();
-        int [] vectorOrdenado = new int[origen.length];
+        int [] vectorOrdenado = origen.clone();
 
 
         return vectorOrdenado;
