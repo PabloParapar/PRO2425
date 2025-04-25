@@ -18,10 +18,9 @@ public class Ejercicio28 {
             }
         }
 
-        for (int i = 0; i < matriz.length; i++) {
+        for (int[] value : matriz) {
             System.out.println();
-            for (int j = 0; j < matriz[i].length; j++) {
-                int numero = matriz[i][j];
+            for (int numero : value) {
                 System.out.printf("%03d ", numero);
             }
         }
@@ -33,10 +32,9 @@ public class Ejercicio28 {
         matriz[indice1] = matriz[indice2];
         matriz[indice2] = temporal;
 
-        for (int i = 0; i < matriz.length; i++) {
+        for (int[] ints : matriz) {
             System.out.println();
-            for (int j = 0; j < matriz[i].length; j++) {
-                int numero = matriz[i][j];
+            for (int numero : ints) {
                 System.out.printf("%03d ", numero);
             }
         }
