@@ -22,7 +22,6 @@ public class Ejercicio2Test {
                 "Pablo", "López", "Parapar",
                 Madurez.adulto, persona1, iesMuralla, "1-DAM DUAL", Casa.Ravenclaw);
 
-        System.out.println("pelicano dorado");
         assertEquals(1, 1);
     }
 }
