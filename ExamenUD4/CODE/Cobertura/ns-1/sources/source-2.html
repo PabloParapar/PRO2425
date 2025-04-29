@@ -1,0 +1,172 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>Coverage Report > Pila</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">Ejercicio1</a>
+</div>
+
+<h1>Coverage Summary for Class: Pila (Ejercicio1)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Branch, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">Pila</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/7)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/10)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/22)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package Ejercicio1;
+&nbsp;
+&nbsp;public class Pila {
+&nbsp;    Libro [] lista;
+&nbsp;
+<b class="nc">&nbsp;    public Pila() {</b>
+<b class="nc">&nbsp;        this.lista = new Libro[0];</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public Boolean empty(){
+<b class="nc">&nbsp;        if (size() == 0){</b>
+<b class="nc">&nbsp;            return true;</b>
+&nbsp;        } else {
+<b class="nc">&nbsp;            return false;</b>
+&nbsp;        }
+&nbsp;    }
+&nbsp;
+&nbsp;    public void push(Libro libro){
+<b class="nc">&nbsp;        Libro [] listaNueva = new Libro[lista.length+1];</b>
+<b class="nc">&nbsp;        listaNueva[0] = libro;</b>
+<b class="nc">&nbsp;        for (int i = 0; i &lt; lista.length; i++) {</b>
+<b class="nc">&nbsp;            listaNueva[i+1] = lista[i];</b>
+&nbsp;        }
+<b class="nc">&nbsp;        this.lista = listaNueva;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public Libro peek(){
+<b class="nc">&nbsp;        return lista[0];</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public Libro pop(){
+<b class="nc">&nbsp;        Libro libro = peek();</b>
+<b class="nc">&nbsp;        Libro [] listaNueva = new Libro[lista.length-1];</b>
+<b class="nc">&nbsp;        for (int i = 0; i &lt; lista.length-1; i++) {</b>
+<b class="nc">&nbsp;            listaNueva[i] = lista[i+1];</b>
+&nbsp;        }
+<b class="nc">&nbsp;        lista = listaNueva;</b>
+<b class="nc">&nbsp;        return libro;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public Integer size(){
+<b class="nc">&nbsp;        return lista.length;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void mostrarContenido(){
+<b class="nc">&nbsp;        if (!this.empty()) {</b>
+<b class="nc">&nbsp;            for (Libro libro : lista) {</b>
+<b class="nc">&nbsp;                System.out.println(libro);</b>
+&nbsp;            }
+&nbsp;        } else {
+<b class="nc">&nbsp;            System.out.println(&quot;La lista está vacía&quot;);</b>
+&nbsp;        }
+&nbsp;    }
+&nbsp;}
+&nbsp;
+&nbsp;
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2025-04-25 21:07</div>
+</div>
+</body>
+</html>
